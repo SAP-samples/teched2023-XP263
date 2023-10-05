@@ -56,4 +56,4 @@ You can find the shared views and tables in **Repository Explorer**. Those share
 
 The goal of this introduction was to give a clear understanding of the concepts and techniques involved in creating a Datasphere live data connection to Google BigQuery and exploring the provided data model. 
 
-Continue to - [Exercise 1 -  Build and expose data views on SAP Datasphere](../ex1/README.md)
+Continue to - [Exercise 2.2 -  Build and expose data views on SAP Datasphere](../ex1/README.md)

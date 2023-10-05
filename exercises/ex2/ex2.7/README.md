@@ -1,4 +1,4 @@
-## Exercise 6- Creating **Input Controls** for the dashboard
+## Exercise 2.7- Creating **Input Controls** for the dashboard
 
 This exercise focusses on creating "Input Controls" for the dashboard to filter the data displayed on the dashboard. Input Controls allow users to interact with the dashboard and dynamically change the data displayed based on their preferences.
 

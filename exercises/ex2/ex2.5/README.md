@@ -1,4 +1,4 @@
-# Exercise 4 - Create a Category Management Dashboard on SAP Analytics Cloud
+# Exercise 2.5- Create a Category Management Dashboard on SAP Analytics Cloud
 
 This exercise will focus on leveraging previously created views to create rich Category Management reports in SAP Analytics Cloud. By integrating these data sources, the reports will allow for powerful data analysis and visualization of the sales performance of different product categories. The information gathered from these reports can be used to make informed decisions about product assortment, pricing, and promotions. The use of Big Query and SAP source systems will ensure that the data used in these reports is accurate, up-to-date, and consistent, providing a solid foundation for effective Category Management decision-making.
 
@@ -50,4 +50,4 @@ This exercise focuses on adding the **"Product_Sales_Country_Discount"** view fr
 
 Congratulations on completing your Exercise 4! You have successfully created the layout for "Category Management Dashboard" and assigned data from SAP Datasphere to Dashboard!
 
-Let's Continue to - [Exercise 5 - Creating the Charts in Category Management Dashboard for displaying Data](../ex5/README.md)
+Let's Continue to - [Exercise 2.6 - Creating the Charts in Category Management Dashboard for displaying Data](../ex2.6/README.md)

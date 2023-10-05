@@ -1,4 +1,4 @@
-# Exercise 5- Creating the Charts in Category Management Dashboard for displaying Data
+# Exercise 2.6- Creating the Charts in Category Management Dashboard for displaying Data
 
 ## Exercise 5.1 Creating the first Chart for displaying **Quantity per Product Category**
 
@@ -137,4 +137,4 @@ Your objective is to create a chart that accurately displays the sales quantity 
 
 Congratulations on completing your Exercise 5! You have successfully created Charts in Category Management Dashboard for displaying Data!
 
-Let's Continue to - [Exercise 6 - Creating the Charts in Category Management Dashboard for displaying Data](../ex6/README.md)
+Let's Continue to - [Exercise 2.7 - Creating the Charts in Category Management Dashboard for displaying Data](../ex2.7/README.md)
