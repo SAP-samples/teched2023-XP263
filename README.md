@@ -1,14 +1,22 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2023-XP263)](https://api.reuse.software/info/github.com/SAP-samples/teched2023-XP263)
 
-# XP263 - Develop a Cross-Platform Scenario with SAP BTP and Google, Microsoft Azure, or AWS
+# XP263 - Develop a Cross-Platform Scenario with SAP BTP and GCP/Microsoft Azure/AWS
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2023 session called XP263 - Develop a Cross-Platform Scenario with SAP BTP and Google, Microsoft Azure, or AWS.  
+This repository contains the hands-on material for the SAP TechEd 2023 session-  XP263: Develop a Cross-Platform Scenario with SAP BTP and GCP/ Microsoft Azure/AWS.  
 
 ## Overview
 
-This session introduces attendees the hands-on scenarios to develop a Cross-Platform Schenario with SAP B a Full-Stack application to extend SAP S/4HANA Business Partner validation on BTP via SAP/Azure Private Link Services.​
+The scenarios for each of the hyperscalers are as follows:
+
+- **Amazon Web Services**: Build an SAP BTP Extension application to validate a SAP Business Partner and setup AWS Account to send notifications via AWS SNS Service.
+
+- **Google Cloud Platform**: Build a simple category management application with data integration from Google BigQuery and SAP S/4HANA.
+
+- **Microsoft Azure**: Build an SAP BTP application and integrate with Azure openAI using SAP AI Core LLM Service
+
+
 
 ## Requirements
 
@@ -26,9 +34,11 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
 ## Exercises
 
 - [Getting Started](exercises/ex0/)
+
 - [Exercise 1 - Scenario with Azure](exercises/ex1/)
     - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
     - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
+
 - [Exercise 2 - Scenario with GCP](exercises/ex2/)
     - [Exercise 2.1 -Getting Started](exercises/ex2/ex2.1/)
     - [Exercise 2.2 - Build and expose data views on SAP Datasphere](exercises/ex2/ex2.2/)
@@ -46,6 +56,8 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
     - [Exercise 3 - Scenario with AWS](exercises/ex2/)
     - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
     - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+
+- [Exercise 1 - Scenario with Azure](exercises/ex1/)
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
