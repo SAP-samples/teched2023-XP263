@@ -1,0 +1,80 @@
+{
+  "name": "business-partner-validation",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@aws-sdk/client-sns": "^3.377.0",
+    "@sap-cloud-sdk/http-client": "^3.3.0",
+    "@sap/cds": "^6",
+    "@sap/xssec": "^3",
+    "express": "^4",
+    "hdb": "^0.19.0",
+    "passport": "^0"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.108.10",
+    "rimraf": "^3.0.2",
+    "sqlite3": "^5.1.6"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-opensap-aws-week3-ui": "cds watch --open opensap-aws-week3-ui/webapp/index.html?sap-ui-xx-viewCache=false",
+    "undeploy": "cf undeploy undefined --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sql",
+        "credentials": {
+          "database": "db/businesspartnersrv.db"
+        }
+      },
+      "s4_mock_server": {
+        "kind": "odata",
+        "model": "srv/external/s4-mock-server",
+        "[sandbox]": {
+          "credentials": {
+            "url": "https://REPLACE-WITH-YOUR-S4-MOCK-SERVER-DOMAIN-NAME/op-api-business-partner-srv"
+          }
+        },
+        "[production]": {
+          "credentials": {
+            "url": "https://REPLACE-WITH-YOUR-S4-MOCK-SERVER-DOMAIN-NAME/op-api-business-partner-srv"
+          }
+        }
+      },
+      "aws": {
+        "sns": {
+            "topicArn": "REPLACE-WITH-YOUR-AMAZON-SNS-TOPIC-ARN-VALUE",
+            "region": "REPLACE-WITH-YOUR-AMAZON-SNS-TOPIC-REGION-VALUE"
+        },
+        "iam": {
+            "accessKey": "REPLACE-WITH-YOUR-AMAZON-IAM-USER-ACCESS-KEY-VALUE",
+            "secretAccessKey": "REPLACE-WITH-YOUR-AMAZON-IAM-USER-SECRET-ACCESS-KEY-VALUE"
+        }
+      },
+      "launchpad": {
+        "url": "REPLACE-WITH-YOUR-FIORI-APP-HOST-NAME-IN-THE-SAP-BUILD-WORK-ZONE/BusinessPartner(BusinessPartner='',IsActiveEntity=true)"
+      },
+      "[production]": {
+        "auth": {
+          "kind": "xsuaa"
+        },
+        "db": {
+          "kind": "hana-cloud"
+        },
+        "approuter": {
+          "kind": "cloudfoundry"
+        }
+      }
+    }
+  },
+  "sapux": [
+    "app/opensap-aws-week3-ui"
+  ]
+}

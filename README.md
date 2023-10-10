@@ -22,7 +22,15 @@ The scenarios for each of the hyperscalers are as follows:
 
 The requirements to follow the exercises in this repository are:
 
-### For Azure scenario
+### For Amazon Web Service scenario
+
+1. A [SAP Business Technology Platform](https://www.sap.com/india/products/technology-platform.html) account. To setup your own SAP Business Technology Platform account you can follow the instruction [Get a Free Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
+
+2. A [SAP Business Application Studio](https://www.sap.com/products/technology-platform/business-application-studio.html) in the SAP Business Technology Platform account. To setup a SAP Business Application Studio you can follow the instruction [Set Up SAP Business Application Studio for Development](https://developers.sap.com/tutorials/appstudio-onboarding.html)
+
+3. A [SAP HANA Database in the SAP HANA Cloud Service](https://www.sap.com/india/products/technology-platform/hana.html). To setup a SAP HANA Database in the SAP HANA Cloud Service you can follow the instruction [Start using SAP HANA Cloud in SAP BTP Cockpit](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html) 
+
+4. A [SAP Build Work Zone](https://www.sap.com/india/products/technology-platform/workzone.html). To setup a SAP Build Work Zone you can follow the instruction [Set Up SAP Build Work Zone](https://developers.sap.com/tutorials/cp-portal-cloud-foundry-getting-started.html)  
 
 
 ### For Google Cloud Platform scenario
@@ -35,15 +43,7 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
 
 3. A [Google cloud account](https://cloud.google.com) with a google cloud project enabled with the BigQuery API. If you're new to Google Cloud, [create a Google cloud account](https://cloud.google.com/free/) and create a [Google Cloud project](https://developers.google.com/workspace/guides/create-project). For new Projects, the BigQuery the BigQuery API is automatically enabled. 
 
-### For Amazon Web Service scenario
-
-1. A [SAP Business Technology Platform](https://www.sap.com/india/products/technology-platform.html) account. To setup your own SAP Business Technology Platform account you can follow the instruction [Get a Free Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
-
-2. A [SAP Business Application Studio](https://www.sap.com/products/technology-platform/business-application-studio.html) in the SAP Business Technology Platform account. To setup a SAP Business Application Studio you can follow the instruction [Set Up SAP Business Application Studio for Development](https://developers.sap.com/tutorials/appstudio-onboarding.html)
-
-3. A [SAP HANA Database in the SAP HANA Cloud Service](https://www.sap.com/india/products/technology-platform/hana.html). To setup a SAP HANA Database in the SAP HANA Cloud Service you can follow the instruction [Start using SAP HANA Cloud in SAP BTP Cockpit](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html) 
-
-4. A [SAP Build Work Zone](https://www.sap.com/india/products/technology-platform/workzone.html). To setup a SAP Build Work Zone you can follow the instruction [Set Up SAP Build Work Zone](https://developers.sap.com/tutorials/cp-portal-cloud-foundry-getting-started.html)  
+### For Azure scenario
 
 ## Exercises
 
@@ -54,7 +54,7 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
     - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
 
 - [Exercise 2 - Scenario with GCP](exercises/ex2/)
-    - [Exercise 2.1 -Getting Started](exercises/ex2/ex2.1/)
+    - [Exercise 2.1 - Getting Started](exercises/ex2/ex2.1/)
     - [Exercise 2.2 - Build and expose data views on SAP Datasphere](exercises/ex2/ex2.2/)
         - [Exercise 2.2.1 - Creating a new view of "Product Sales Country"](exercises/ex2/ex2.2/#exercise-1--creating-a-new-view-of-product-sales-country)
     - [Exercise 2.3 - Creating a new view of "Product Sales Country Discount"](exercises/ex2/ex2.3/)
@@ -71,7 +71,9 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
     - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
     - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
 
-- [Exercise 1 - Scenario with Azure](exercises/ex1/)
+- [Exercise 3 - Scenario with AWS](exercises/AmazonWebServices/)
+    - [Exercise 3.1 -Getting Started](exercises/AmazonWebServices/ex3.1/)
+    - [Exercise 3.2 - ]
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
