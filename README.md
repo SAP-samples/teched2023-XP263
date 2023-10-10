@@ -50,9 +50,9 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
 - [Getting Started](exercises/ex0/)
 
 - [Exercise 1 - Scenario with AWS](exercises/AmazonWebServices/)
-    - [Exercise 1.1 -Getting Started](exercises/AmazonWebServices/ex3.1/)
-    - [Exercise 1.2 - ](exercises/AmazonWebServices/ex3.2/)
-    - [Exercise 1.3 - ](exercises/AmazonWebServices/ex3.2/)
+    - [Exercise 1.1 - Getting Started](exercises/AmazonWebServices/ex3.1/)
+    - [Exercise 1.2 -](exercises/AmazonWebServices/ex3.2/)
+    - [Exercise 1.3 -](exercises/AmazonWebServices/ex3.2/)
 - [Exercise 2 - Scenario with GCP](exercises/GoogleCloudPlatform/)
     - [Exercise 2.1 - Getting Started](exercises/GoogleCloudPlatform/ex2.1/)
     - [Exercise 2.2 - Build and expose data views on SAP Datasphere](exercises/ex2/ex2.2/)
