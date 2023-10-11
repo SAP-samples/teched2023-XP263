@@ -1,4 +1,4 @@
-# Unit 3.4 Integrate the CAP Application with Amazon SNS
+# Exercise 1.3 Integrate the CAP Application with Amazon SNS
 
 This exercise is part of the openSAP course [Build Resilient Applications on SAP BTP with Amazon Web Services](https://open.sap.com/courses/aws1), Week 3 Unit 4 - Integrate the CAP Application with Amazon SNS.
 
@@ -9,7 +9,7 @@ In the exercie of this unit, we will intorduce how to integrate the Amazon Simpl
 
 **You could find the complete sample code of this exercise [here](../sample-code)**.
 
-## Section 1. Setup Amazon Simple Notification Service (SNS)
+## Exercise 1.3.1 Setup Amazon Simple Notification Service (SNS)
 
 > - Please not down below values after you finish this section
 >   - Amazon SNS Topic ARN
@@ -140,7 +140,7 @@ Amazon Simple Notification Service is a regional service, please create the Amaz
 
 </details>
 
-## Section 2. Consuming the Amazon Simple Notification Service Topic in SAP CAP Project.
+## Exercise 1.3.2 Consuming the Amazon Simple Notification Service Topic in SAP CAP Project.
 
 ### Prerequisites
 You have completed the [Section 1. Setup Amazon Simple Notification Service (SNS)](https://github.com/anbazhagan-uma/opensap-btp-aws/blob/main/Week%203/Unit%203.4/README.md#section-1-setup-amazon-simple-notification-service-sns) and have the below values handy.
@@ -287,7 +287,7 @@ async function syncData(req){
 </details>
 
 
-## Section 3. Testing the Business Partner Validation Application from End-to-End
+## Exercise 1.3.3 Testing the Business Partner Validation Application from End-to-End
 
 **3.1** Go back to your SAP BTP Trial subaccount. Go to **Instance and Subscriptions**. Click **Go to application** button of the **SAP Build Work Zone, standard edition** service subscription.
 
@@ -319,4 +319,6 @@ async function syncData(req){
 
 ![Alt text](./images/aws-cap-dev-16.png)
 
-**Congratulation, you have successfully integrated the Amazon Simple Notification service with SAP CAP project and deployed the entire project to the SAP BTP Trial subaccount successfully. Well done !!**
+## Congratulation!
+ 
+Conratulations, you have successfully integrated the Amazon Simple Notification service with SAP CAP project and deployed the entire project to the SAP BTP Trial subaccount successfully. Well done !!

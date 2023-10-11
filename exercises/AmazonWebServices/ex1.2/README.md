@@ -204,3 +204,9 @@ You should see the **business-partner-validation-srv** is under the **started** 
 ![Alt text](./images/cap-dev-105.png)
 
 6. Now you will see that the upodated ZipCode value 12345 has been persisted back to the S4-Mock-Server, and our application is working as desired. We are all set now.
+
+## Congratulations!
+
+Congratulations on completing your Exercise 1.1! You have successfully Extended a Business Process Using a CAP Application on SAP BTP!
+
+Let's continue to - [Exercise 1.3 - Integrate the CAP Application with Amazon SNS](../ex1.3/README.md)

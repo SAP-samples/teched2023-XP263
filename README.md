@@ -55,6 +55,11 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
         - [Exercise 1.2.1 - Create Business Partner Validation Application](exercises/AmazonWebServices/ex1.2#exercise-121--create-business-partner-validation-application)
         - [Exercise 1.2.2 - Consume S4-Mock-Server API by using Remote Service functionality](exercises/AmazonWebServices/ex1.2#exercise-122--consume-s4-mock-server-api-by-using-remote-service-functionality-provided-by-sap-cap)
         - [Exercise 1.2.3- Build your Business Partner Validation Application](exercises/AmazonWebServices/ex1.2#exercise-123--create-business-partner-validation-application)
+        - [Exercise 1.2.4- Deploy your Business Partner Validation Application in the SAP BTP Subaccount](exercises/AmazonWebServices/ex1.2#exercise-124--deploy-your-business-partner-validation-application-in-the-sap-btp-subaccount)
+        - [Exercise 1.2.5- Verify the Deployment Result](exercises/AmazonWebServices/ex1.2#exercise-125--verify-the-deployment-result)
+        - [Exercise 1.2.6- Setup Fiori UI Application in SAP Build WorkZone](exercises/AmazonWebServices/ex1.2#exercise-126--setup-fiori-ui-application-in-sap-build-workzone)
+        - [Exercise 1.2.7- Assign Business Partner Viewer and Business Partner Validator Role on SAP BTP](exercises/AmazonWebServices/ex1.2#exercise-127--assign-business-partner-viewer-and-business-partner-validator-role-on-sap-btp)
+        - [Exercise 1.2.8- Testing the Business Partner Validation App from End-to-End](exercises/AmazonWebServices/ex1.2#exercise-128--testing-the-business-partner-validation-app-from-end-to-end)
       
 - [Exercise 2 - Scenario with GCP](exercises/GoogleCloudPlatform/)
     - [Exercise 2.1 - Getting Started](exercises/GoogleCloudPlatform/ex2.1/)
