@@ -21,9 +21,6 @@ Amazon Simple Notification Service is a regional service, please create the Amaz
 
 ### Step 1. Create Amazon SNS Topic
 
-<details>
- 
----
 **1.1** Open **Amazon Simple Notification Service Management Console**, click **Topics** on the left panel, then click the **Create Topic** button.
 
 ![Alt text](./images/aws-sns-1.png)
@@ -48,13 +45,8 @@ Amazon Simple Notification Service is a regional service, please create the Amaz
 
 ![Alt text](./images/aws-sns-18.png)
 
-</details>
-
 ### Step 2. Setup Amazon IAM Access Policy
 
-<details>
-
----
 **2.1** Open the Amazon **Identity and Access Management (IAM)** management console. Select **Policies** on the left menu and then click **Create policy** blue button to create a new IAM policy.
 
 ![Alt text](./images/aws-sns-7.png)
@@ -67,13 +59,8 @@ Amazon Simple Notification Service is a regional service, please create the Amaz
 
 ![Alt text](./images/aws-sns-9.png)
 
-</details>
-
 ### Step 3. Setup Amazon IAM User with Access Key and Secret Access Key
 
-<details>
-
----
 **3.1** Open the Amazon **Identity and Access Management (IAM)** management console. Select **Users** on the left menu and then click **Add users** blue button to create a new IAM user.
 
 ![Alt text](./images/aws-sns-6.png)
@@ -104,13 +91,7 @@ Amazon Simple Notification Service is a regional service, please create the Amaz
 
 ![Alt text](./images/aws-sns-15.png)
 
-</details>
-
 ### Step 4. Update Access Policy of Amazon SNS Topic
-
-<details>
-
----
 
 **4.1** Go back to the **Amazon Simple Notification Service Management Console** and select the SNS Topic we just created in the previsou step. Click Edit button.
 
@@ -138,8 +119,6 @@ Amazon Simple Notification Service is a regional service, please create the Amaz
 
 ![Alt text](./images/aws-sns-17.png)
 
-</details>
-
 ## Exercise 1.3.2 Consuming the Amazon Simple Notification Service Topic in SAP CAP Project.
 
 ### Prerequisites
@@ -153,9 +132,6 @@ You have completed the [Section 1. Setup Amazon Simple Notification Service (SNS
 
 ### Step 1. Install AWS SDK for Node.js in the SAP CAP Project
 
-<details>
-
----
 **1.1** Open the Business Partner Validation project in the SAP Business Application Studio. Open a new ternimal and then issue the command **npm install @aws-sdk/client-sns --save**.
 
 ![Alt text](./images/aws-cap-dev-1.png)
@@ -164,13 +140,8 @@ You have completed the [Section 1. Setup Amazon Simple Notification Service (SNS
 
 ![Alt text](./images/aws-cap-dev-2.png)
 
-</details>
-
 ### Step 2. Modify the SAP CAP Project Code
 
-<details>
-
----
 **2.1** Let's **modify the package.json file** under the **project's root directory**, so that we could add the AWS SNS credentials, and also the frontend Fiori application's endpint as the environment variables. Add te code shown on below into your package.json file under the **cds.requires** section.
 
 ```node.js
@@ -265,15 +236,10 @@ async function syncData(req){
 
 ![Alt text](./images/aws-cap-dev-6.png)
 
-</details>
-
 ### Step 3. Deploy the Code Changes to the SAP BTP Trial Subaccount
 
 > - Make sure your SAP HANA DB is in the running status. The SAP HANA DB in the SAP BTP trial account will stop every single night automatically.
 
-<details>
-
----
 **3.1** **Right click** on the **mat.yaml** file under your project root directory, and then choose **Build MTA Project** from the menu. 
 
 ![Alt text](./images/aws-cap-dev-8.png)
@@ -283,9 +249,6 @@ async function syncData(req){
 ![Alt text](./images/aws-cap-dev-7.png)
 
 **3.3** Wait until the deployment process to be completed. Grab a cup of coffee and take a rest as the deployment process will take some times.
-
-</details>
-
 
 ## Exercise 1.3.3 Testing the Business Partner Validation Application from End-to-End
 
