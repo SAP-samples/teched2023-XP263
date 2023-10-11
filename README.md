@@ -60,6 +60,10 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
         - [Exercise 1.2.6- Setup Fiori UI Application in SAP Build WorkZone](exercises/AmazonWebServices/ex1.2#exercise-126--setup-fiori-ui-application-in-sap-build-workzone)
         - [Exercise 1.2.7- Assign Business Partner Viewer and Business Partner Validator Role on SAP BTP](exercises/AmazonWebServices/ex1.2#exercise-127--assign-business-partner-viewer-and-business-partner-validator-role-on-sap-btp)
         - [Exercise 1.2.8- Testing the Business Partner Validation App from End-to-End](exercises/AmazonWebServices/ex1.2#exercise-128--testing-the-business-partner-validation-app-from-end-to-end)
+    - [Exercise 1.3 - Integrate the CAP Application with Amazon SNS](exercises/AmazonWebServices/ex1.3/)
+        - [Exercise 1.3.1 Setup Amazon Simple Notification Service (SNS)](exercises/AmazonWebServices/ex1.3#exercise-131-setup-amazon-simple-notification-service-sns)
+        - [Exercise 1.3.2 Consuming the Amazon Simple Notification Service Topic in SAP CAP Project](exercises/AmazonWebServices/ex1.3#exercise-132-consuming-the-amazon-simple-notification-service-topic-in-sap-cap-project)
+        - [Exercise 1.3.3 Testing the Business Partner Validation Application from End-to-End](exercises/AmazonWebServices/ex1.3#exercise-133-testing-the-business-partner-validation-application-from-end-to-end)
       
 - [Exercise 2 - Scenario with GCP](exercises/GoogleCloudPlatform/)
     - [Exercise 2.1 - Getting Started](exercises/GoogleCloudPlatform/ex2.1/)
