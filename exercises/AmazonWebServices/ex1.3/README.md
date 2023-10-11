@@ -1,7 +1,5 @@
 # Exercise 1.3 Integrate the CAP Application with Amazon SNS
 
-This exercise is part of the openSAP course [Build Resilient Applications on SAP BTP with Amazon Web Services](https://open.sap.com/courses/aws1), Week 3 Unit 4 - Integrate the CAP Application with Amazon SNS.
-
 In the exercie of this unit, we will intorduce how to integrate the Amazon Simple Notification Service (SNS) with our Business Partner Validation application, By using the AWS SDK for SNS. After finish this exercise, you will achieve the following objectives
  - Understand how to conifugre the Amazon Simple Notification Service Topic on the AWS Management Console.
  - Understand how to protect your Amazon SNS Topic with Amazon IAM Access Policy.
@@ -19,85 +17,83 @@ In the exercie of this unit, we will intorduce how to integrate the Amazon Simpl
 
 Amazon Simple Notification Service is a regional service, please create the Amazon SNS Topic in the AWS region which is equals to the region of your BTP subaccount, so that we could minimize the lattency.
 
-### Step 1. Create Amazon SNS Topic
-
-**1.1** Open **Amazon Simple Notification Service Management Console**, click **Topics** on the left panel, then click the **Create Topic** button.
+1. 👉 Open **Amazon Simple Notification Service Management Console**, click **Topics** on the left panel, then click the **Create Topic** button.
 
 ![Alt text](./images/aws-sns-1.png)
 
 ![Alt text](./images/aws-sns-2.png)
 
-**1.2** Select **Standard** Topic type, give the proper topic name and display name. **Leave everything as what it is**, and click the **Create topic** button. 
+2. 👉 Select **Standard** Topic type, give the proper topic name and display name. **Leave everything as what it is**, and click the **Create topic** button. 
 
 ![Alt text](./images/cap-sns-3.JPG)
 
-**1.3** Once the topic creation complete successfully, **note down** the **Topic ARN** (Amazon Resource Name) and **Topic Region** value. We will use it later in the exercise.
+3. 👉 Once the topic creation complete successfully, **note down** the **Topic ARN** (Amazon Resource Name) and **Topic Region** value. We will use it later in the exercise.
 
 > - You could find the Topic Region value inside of the Topic ARN.
 
 ![Alt text](./images/aws-sns-4.png)
 
-**1.4** Click on the **Create subscription** button. In the **Create subscription screen**, choose **Protocol** as **Email**, and then **give your email address** to the **Endpoint**, then click the **Create subscription** button to complete the topic subscription. 
+4. 👉 Click on the **Create subscription** button. In the **Create subscription screen**, choose **Protocol** as **Email**, and then **give your email address** to the **Endpoint**, then click the **Create subscription** button to complete the topic subscription. 
 
 ![Alt text](./images/aws-sns-5.png)
 
-**1.5** You will receive an email and asking for comfirm the topic subscription. Follow the instruction in the email to confirm the subscription.
+5. 👉 You will receive an email and asking for comfirm the topic subscription. Follow the instruction in the email to confirm the subscription.
 
 ![Alt text](./images/aws-sns-18.png)
 
-### Step 2. Setup Amazon IAM Access Policy
+## Exercise 1.3.2 Setup Amazon IAM Access Policy
 
-**2.1** Open the Amazon **Identity and Access Management (IAM)** management console. Select **Policies** on the left menu and then click **Create policy** blue button to create a new IAM policy.
+1. 👉 Open the Amazon **Identity and Access Management (IAM)** management console. Select **Policies** on the left menu and then click **Create policy** blue button to create a new IAM policy.
 
 ![Alt text](./images/aws-sns-7.png)
 
-**2.2** In the **Specificy permissions** screen, select **Service** as **SNS**, choose **Actions allowed** as **Publish**, and enter the **SNS Topic ARN** value with the one we just created. Click **Next**.
+2. 👉 In the **Specificy permissions** screen, select **Service** as **SNS**, choose **Actions allowed** as **Publish**, and enter the **SNS Topic ARN** value with the one we just created. Click **Next**.
 
 ![Alt text](./images/aws-sns-8.png)
 
-**2.3** In the **Review and create** screen, give a proper, read-friendly name for this new IAM policy. Review everything, if it is all looks good, click the **Create policy** blue button to create the new IAM policy. **Note Down the name of this policy**, as we will need it in the next step.
+3. 👉 In the **Review and create** screen, give a proper, read-friendly name for this new IAM policy. Review everything, if it is all looks good, click the **Create policy** blue button to create the new IAM policy. **Note Down the name of this policy**, as we will need it in the next step.
 
 ![Alt text](./images/aws-sns-9.png)
 
-### Step 3. Setup Amazon IAM User with Access Key and Secret Access Key
+## Exercise 1.3.3 Setup Amazon IAM User with Access Key and Secret Access Key
 
-**3.1** Open the Amazon **Identity and Access Management (IAM)** management console. Select **Users** on the left menu and then click **Add users** blue button to create a new IAM user.
+1. 👉 Open the Amazon **Identity and Access Management (IAM)** management console. Select **Users** on the left menu and then click **Add users** blue button to create a new IAM user.
 
 ![Alt text](./images/aws-sns-6.png)
 
-**3.2** Give the proper, read-friendly name to your new IAM user, **do not grant AWS management console access**, then click Next.
+2. 👉 Give the proper, read-friendly name to your new IAM user, **do not grant AWS management console access**, then click Next.
 
 ![Alt text](./images/aws-sns-10.png)
 
-**3.3** Choose **Attach policies directly**, then **attach the IAM policy we just created in the last step** to it. Click **Next**.
+3. 👉 Choose **Attach policies directly**, then **attach the IAM policy we just created in the last step** to it. Click **Next**.
 
 ![Alt text](./images/aws-sns-11.png)
 
-**3.4** Review everything, if it is all looks good, click the **Create user** orange button to create the new IAM user.
+4. 👉 Review everything, if it is all looks good, click the **Create user** orange button to create the new IAM user.
 
 ![Alt text](./images/aws-sns-12.png)
 
-**3.5** Find out the Amazon IAM user we just created. Switch to the **Security credentials** tab, and then click **Create access key** button in the Access keys section.
+5. 👉 Find out the Amazon IAM user we just created. Switch to the **Security credentials** tab, and then click **Create access key** button in the Access keys section.
 
 ![Alt text](./images/aws-sns-13.png)
 
-**3.6** Choose **Application running outside AWS**. Click **Next**.
+6. 👉Choose **Application running outside AWS**. Click **Next**.
 
 ![Alt text](./images/aws-sns-14.png)
 
-**3.7** Click **Create access key** button to finish the access keys creation.
+7. 👉 Click **Create access key** button to finish the access keys creation.
 
-**3.8** **Note down** the value of **Access Key**, **Secret access key**, and **IAM User ARN**. This is the only time that you could view the value of these keys.
+8. 👉 **Note down** the value of **Access Key**, **Secret access key**, and **IAM User ARN**. This is the only time that you could view the value of these keys.
 
 ![Alt text](./images/aws-sns-15.png)
 
-### Step 4. Update Access Policy of Amazon SNS Topic
+## Exercise 1.3.4 Update Access Policy of Amazon SNS Topic
 
-**4.1** Go back to the **Amazon Simple Notification Service Management Console** and select the SNS Topic we just created in the previsou step. Click Edit button.
+1. 👉 Go back to the **Amazon Simple Notification Service Management Console** and select the SNS Topic we just created in the previsou step. Click Edit button.
 
 ![Alt text](./images/aws-sns-16.png)
 
-**4.2** Expand the **Access policy** tab. Overwrite the access policy as shown on below. Then click **Save changes** button.
+2. 👉 Expand the **Access policy** tab. Overwrite the access policy as shown on below. Then click **Save changes** button.
 
 ```node.js
 {
@@ -119,7 +115,7 @@ Amazon Simple Notification Service is a regional service, please create the Amaz
 
 ![Alt text](./images/aws-sns-17.png)
 
-## Exercise 1.3.2 Consuming the Amazon Simple Notification Service Topic in SAP CAP Project.
+## Exercise 1.3.5 Consuming the Amazon Simple Notification Service Topic in SAP CAP Project.
 
 ### Prerequisites
 You have completed the [Section 1. Setup Amazon Simple Notification Service (SNS)](https://github.com/anbazhagan-uma/opensap-btp-aws/blob/main/Week%203/Unit%203.4/README.md#section-1-setup-amazon-simple-notification-service-sns) and have the below values handy.
@@ -129,20 +125,17 @@ You have completed the [Section 1. Setup Amazon Simple Notification Service (SNS
 - **Amazon IAM User Secret Access Key**
 - **Frontend Fiori application's URL** 
 
-
-### Step 1. Install AWS SDK for Node.js in the SAP CAP Project
-
-**1.1** Open the Business Partner Validation project in the SAP Business Application Studio. Open a new ternimal and then issue the command **npm install @aws-sdk/client-sns --save**.
+1. 👉 Let's Install AWS SDK for Node.js in the SAP CAP Project. Open the Business Partner Validation project in the SAP Business Application Studio. Open a new ternimal and then issue the command **npm install @aws-sdk/client-sns --save**.
 
 ![Alt text](./images/aws-cap-dev-1.png)
 
-**1.2** After the installation completed, open the **package.json** file under your project root directory. You will see that the AWS SDK - SNS Client has been addedd under the **dependencies** section.
+2. 👉 After the installation completed, open the **package.json** file under your project root directory. You will see that the AWS SDK - SNS Client has been addedd under the **dependencies** section.
 
 ![Alt text](./images/aws-cap-dev-2.png)
 
-### Step 2. Modify the SAP CAP Project Code
+## Exercise 1.3.6 Modify the SAP CAP Project Code
 
-**2.1** Let's **modify the package.json file** under the **project's root directory**, so that we could add the AWS SNS credentials, and also the frontend Fiori application's endpint as the environment variables. Add te code shown on below into your package.json file under the **cds.requires** section.
+1. 👉 Let's **modify the package.json file** under the **project's root directory**, so that we could add the AWS SNS credentials, and also the frontend Fiori application's endpint as the environment variables. Add te code shown on below into your package.json file under the **cds.requires** section.
 
 ```node.js
 "cds":{
@@ -169,7 +162,7 @@ You have completed the [Section 1. Setup Amazon Simple Notification Service (SNS
 ![Alt text](./images/aws-cap-dev-3.png)
 
 
-**2.2** Open the **srv/businesspartner-service.js** file. Let's first import the AWS SNS Client, and CAP CDS environment variables we just defined into this file. 
+2. 👉 Open the **srv/businesspartner-service.js** file. Let's first import the AWS SNS Client, and CAP CDS environment variables we just defined into this file. 
 
 ```node.js
 const { SNSClient, PublishCommand } = require('@aws-sdk/client-sns');
@@ -178,7 +171,7 @@ const { aws, launchpad } = cds.env.requires;
 
 ![Alt text](./images/aws-cap-dev-4.png)
 
-**2.3** Let's creates an new async function, which will be responsible for sending out the email notification programmatically to the Amazon SNS Topic.
+3. 👉 Let's creates an new async function, which will be responsible for sending out the email notification programmatically to the Amazon SNS Topic.
 
 ```node.js
 async function sendEmailNotification(bpID){
@@ -218,7 +211,7 @@ async function sendEmailNotification(bpID){
 
 ![Alt text](./images/aws-cap-dev-5.png)
 
-**2.4** Finally, let's **enhance** the **syncData function** to **leavage the sendEmailNotification function** we just created. Add the code shown on below at the **very end** of the syncData function.
+4. 👉 Finally, let's **enhance** the **syncData function** to **leavage the sendEmailNotification function** we just created. Add the code shown on below at the **very end** of the syncData function.
 
 ```node.js
 
@@ -236,49 +229,49 @@ async function syncData(req){
 
 ![Alt text](./images/aws-cap-dev-6.png)
 
-### Step 3. Deploy the Code Changes to the SAP BTP Trial Subaccount
+## Exercise 1.3.7 Deploy the Code Changes to the SAP BTP Trial Subaccount
 
 > - Make sure your SAP HANA DB is in the running status. The SAP HANA DB in the SAP BTP trial account will stop every single night automatically.
 
-**3.1** **Right click** on the **mat.yaml** file under your project root directory, and then choose **Build MTA Project** from the menu. 
+1. 👉 **Right click** on the **mat.yaml** file under your project root directory, and then choose **Build MTA Project** from the menu. 
 
 ![Alt text](./images/aws-cap-dev-8.png)
 
-**3.2** Once the MTA Build process is complete, expand the **mta_archives** folder, **right click** on the **business-partner-validation_1.0.0.mtar** file. Choose **Deploy MTA Archive** from the menu to trigger the SAP BTP trial deployment process.
+2. 👉 Once the MTA Build process is complete, expand the **mta_archives** folder, **right click** on the **business-partner-validation_1.0.0.mtar** file. Choose **Deploy MTA Archive** from the menu to trigger the SAP BTP trial deployment process.
 
 ![Alt text](./images/aws-cap-dev-7.png)
 
-**3.3** Wait until the deployment process to be completed. Grab a cup of coffee and take a rest as the deployment process will take some times.
+3. 👉 Wait until the deployment process to be completed. Grab a cup of coffee and take a rest as the deployment process will take some times.
 
-## Exercise 1.3.3 Testing the Business Partner Validation Application from End-to-End
+## Exercise 1.3.8 Testing the Business Partner Validation Application from End-to-End
 
-**3.1** Go back to your SAP BTP Trial subaccount. Go to **Instance and Subscriptions**. Click **Go to application** button of the **SAP Build Work Zone, standard edition** service subscription.
+1. 👉 Go back to your SAP BTP Trial subaccount. Go to **Instance and Subscriptions**. Click **Go to application** button of the **SAP Build Work Zone, standard edition** service subscription.
 
 ![Alt text](./images/aws-cap-dev-9.png)
 
-**3.2** Click **Go to site** button to navigate to the OpenSAP-AWS-Course-Week3 site.
+2. 👉 Click **Go to site** button to navigate to the OpenSAP-AWS-Course-Week3 site.
 
 ![Alt text](./images/aws-cap-dev-10.png)
 
-**3.3** Click Manage Business Partner App.
+3. 👉 Click Manage Business Partner App.
 
 ![Alt text](./images/aws-cap-dev-11.png)
 
-**3.4** Now click **Go** to browse all unblocked Business Partner Data fetching from S4-Mock-Server. Now you will see all the Business Partners are in the VERIFIED status.
+4. 👉 Now click **Go** to browse all unblocked Business Partner Data fetching from S4-Mock-Server. Now you will see all the Business Partners are in the VERIFIED status.
 
 ![Alt text](./images/aws-cap-dev-12.png)
 
 ![Alt text](./images/aws-cap-dev-13.png)
 
-**3.5** Click on the first Business Partner 1004155 record in the table, this will navigate you to the details page. Let's now try to update the address data of this business partner by clicking the edit button.
+5. 👉 Click on the first Business Partner 1004155 record in the table, this will navigate you to the details page. Let's now try to update the address data of this business partner by clicking the edit button.
 
 ![Alt text](./images/aws-cap-dev-14.png)
 
-**3.6** **Update the business partner data as shown on the image below**. Then click **Save** to persist the updated data to the SAP HANA DB. **Make sure to update the Verification Status value from V to P by selecting from the dropdown**. Now we should expected to receive an email notification sent from the Amazon SNS topic we created previsouly.
+6. 👉 **Update the business partner data as shown on the image below**. Then click **Save** to persist the updated data to the SAP HANA DB. **Make sure to update the Verification Status value from V to P by selecting from the dropdown**. Now we should expected to receive an email notification sent from the Amazon SNS topic we created previsouly.
 
 ![Alt text](./images/aws-cap-dev-15.png)
 
-**3.7** Open your email box, then you should see an email with the tilte **AWS Notifications**. Open this email and you should see the message to indicate us the Business Partner 1004155 record has been changed. The Fiori application of the Business Partner Validation app is also includes in the emial. We could click on this URL and it will redirect us back to the Fiori application.
+7. 👉 Open your email box, then you should see an email with the tilte **AWS Notifications**. Open this email and you should see the message to indicate us the Business Partner 1004155 record has been changed. The Fiori application of the Business Partner Validation app is also includes in the emial. We could click on this URL and it will redirect us back to the Fiori application.
 
 ![Alt text](./images/aws-cap-dev-16.png)
 

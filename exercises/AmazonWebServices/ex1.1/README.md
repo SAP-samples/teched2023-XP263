@@ -30,4 +30,4 @@ Once the SAP S/4HANA Admin has completed the changes, there will be an email not
 
 The goal of this introduction was to give a clear understanding of the concepts and techniques involved in creating a Resilient Applications on SAP BTP with Amazon Web Services.
 
-Continue to - [Exercise 2.2 -  Build and expose data views on SAP Datasphere](../ex1/README.md)
+Continue to - [Exercise 1.2 -  Extend a Business Process Using a CAP Application on SAP BTP](../ex1.2/README.md)
