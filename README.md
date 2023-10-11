@@ -50,9 +50,12 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
 - [Getting Started](exercises/ex0/)
 
 - [Exercise 1 - Scenario with AWS](exercises/AmazonWebServices/)
-    - [Exercise 1.1 - Getting Started](exercises/AmazonWebServices/ex3.1/)
-    - [Exercise 1.2 -](exercises/AmazonWebServices/ex3.2/)
-    - [Exercise 1.3 -](exercises/AmazonWebServices/ex3.2/)
+    - [Exercise 1.1 - Getting Started](exercises/AmazonWebServices/ex1.1/)
+    - [Exercise 1.2 - Extend a Business Process Using a CAP Application on SAP BTP](exercises/AmazonWebServices/ex1.2/)
+        - [Exercise 1.2.1 - Create Business Partner Validation Application](exercises/AmazonWebServices/ex1.2#exercise-121--create-business-partner-validation-application)
+        - [Exercise 1.2.2 - Consume S4-Mock-Server API by using Remote Service functionality provided by SAP CAP](exercises/AmazonWebServices/ex1.2#exercise-122--consume-s4-mock-server-api-by-using-remote-service-functionality-provided-by-sap-cap)
+        - [Exercise 1.2.3- Build your Business Partner Validation Application](exercises/AmazonWebServices/ex1.2#exercise-123--create-business-partner-validation-application)
+      
 - [Exercise 2 - Scenario with GCP](exercises/GoogleCloudPlatform/)
     - [Exercise 2.1 - Getting Started](exercises/GoogleCloudPlatform/ex2.1/)
     - [Exercise 2.2 - Build and expose data views on SAP Datasphere](exercises/ex2/ex2.2/)
@@ -67,6 +70,7 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
         - [Exercise 2.6.2 - Creating another Chart for displaying **Discount per Product Category**](exercises/GoogleCloudPlatform/ex2.6#exercise-52-creating-another-chart-for-displaying-discount-per-product-category)
         - [Exercise 2.6.3 - Creating the last Chart for displaying **Sales Quantity over Time** ](exercises/GoogleCloudPlatform/ex2.6#exercise-53-creating-the-last-chart-for-displaying-sales-quantity-over-time)
     - [Exercise 2.7 - Creating **Input Controls** for the dashboard](exercises/GoogleCloudPlatform/ex2.7/)
+
 - [Exercise 3 - Scenario with Azure](exercises/ex3/)
     - [Exercise 3.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
     - [Exercise 3.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)

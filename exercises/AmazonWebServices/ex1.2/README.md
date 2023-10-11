@@ -1,6 +1,6 @@
-# Exercise 2.1- Extend a Business Process Using a CAP Application on SAP BTP
+# Exercise 1.2- Extend a Business Process Using a CAP Application on SAP BTP
 
-## Exercise 2.1.1- Create Business Partner Validation Application
+## Exercise 1.2.1- Create Business Partner Validation Application
 
 In this section we will focus on creating a Node.js CAP project in the Business Application Studio
 
@@ -37,7 +37,7 @@ In this section we will focus on creating a Node.js CAP project in the Business 
 
   ![add workspace](./images/cap-dev-4.png)
 
-## Exercise 2.1.2- Consume S4-Mock-Server API by using Remote Service functionality provided by SAP CAP
+## Exercise 1.2.2- Consume S4-Mock-Server API by using Remote Service functionality provided by SAP CAP
 
 In our Business Partner Service, we need to fetch the latest Business Partner data from the S4-Mock-Server by consuming the OP_API_BUSINESS_PARTNER_SRV API exposed by S4-Mocker-Server application.
 
@@ -69,7 +69,7 @@ Open the package.json file under the root directory of your CAP Project and appe
 ```
 ![Alt text](./images/external-url.png)
 
-## Exercise 2.1.3- Build your Business Partner Validation Application
+## Exercise 1.2.3- Build your Business Partner Validation Application
 
 In this section, we will show you how to deploy your Business Partner Validation CAP project and Fiori UI Application to your SAP BTP subaccount as Multi-Target Application (MTA)
 
@@ -84,7 +84,7 @@ In this section, we will show you how to deploy your Business Partner Validation
 ![Alt text](./images/cap-dev-75.png)
 
 
-## Exercise 2.1.4- Deploy your Business Partner Validation Application in the SAP BTP Subaccount
+## Exercise 1.2.4- Deploy your Business Partner Validation Application in the SAP BTP Subaccount
 
 1. Right click on the generated **business-partner-validation_1.0.0.mtar** file under the **mta_archieve** folder. Then select **Deploy MTA Achive** option from the menu. This will start the deployment process.
 
@@ -103,7 +103,7 @@ In this section, we will show you how to deploy your Business Partner Validation
 ![Alt text](./images/cap-dev-83.png)
 
 
-## Exercise 2.1.5- Verify the Deployment Result. 
+## Exercise 1.2.5- Verify the Deployment Result. 
 
 1. Let's verify whether our backend CAP project is run and running on your SAP BTP subaccount. Issue the command **cf apps** in your terminal. 
 
@@ -117,7 +117,7 @@ You should see the **business-partner-validation-srv** is under the **started** 
 
 3. If you click on the **BusinessPartner**, **BusinessPartnerAddress** you will see the **401 Unauthorized** error. This means that the XSUAA deployment was also success, since we do not assign BusinessPartnerView or BusinessPartnerValidator role to us on the SAP BTP subaccount.
 
-## Exercise 2.1.6- Setup Fiori UI Application in SAP Build WorkZone.
+## Exercise 1.2.6- Setup Fiori UI Application in SAP Build WorkZone.
 
 1. Go back to your SAP BTP  subaccount main page. Go to **Instance and Subscription**. Click the **Go to Application** button of the **SAP Build Work Zone, standard edition** service subscription.
 
@@ -169,7 +169,7 @@ You should see the **business-partner-validation-srv** is under the **started** 
 
 ![Alt text](./images/cap-dev-98.png)
 
-## Exercise 2.1.7- Assign Business Partner Viewer and Business Partner Validator Role on SAP BTP 
+## Exercise 1.2.7- Assign Business Partner Viewer and Business Partner Validator Role on SAP BTP 
 
 1.  Go back to your SAP BTP subaccount main page. Go to **Security -> Users**. Click on the entry of your user, then click the **Assign Role Collection** button.
 
@@ -179,7 +179,7 @@ You should see the **business-partner-validation-srv** is under the **started** 
 
 ![Alt text](./images/cap-dev-100.png)
 
-## Exercise 2.1.8- Testing the Business Partner Validation App from End-to-End
+## Exercise 1.2.8- Testing the Business Partner Validation App from End-to-End
 
 1. Now go back to the **Manage Business Partner** app in the **SAP Build WorkZone**. Click the **Go** Button to view the Business Partner entry fetched from the S4-Mock-Server.
 
