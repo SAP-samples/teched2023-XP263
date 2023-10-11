@@ -53,7 +53,7 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
     - [Exercise 1.1 - Getting Started](exercises/AmazonWebServices/ex1.1/)
     - [Exercise 1.2 - Extend a Business Process Using a CAP Application on SAP BTP](exercises/AmazonWebServices/ex1.2/)
         - [Exercise 1.2.1 - Create Business Partner Validation Application](exercises/AmazonWebServices/ex1.2#exercise-121--create-business-partner-validation-application)
-        - [Exercise 1.2.2 - Consume S4-Mock-Server API by using Remote Service functionality provided by SAP CAP](exercises/AmazonWebServices/ex1.2#exercise-122--consume-s4-mock-server-api-by-using-remote-service-functionality-provided-by-sap-cap)
+        - [Exercise 1.2.2 - Consume S4-Mock-Server API by using Remote Service functionality](exercises/AmazonWebServices/ex1.2#exercise-122--consume-s4-mock-server-api-by-using-remote-service-functionality-provided-by-sap-cap)
         - [Exercise 1.2.3- Build your Business Partner Validation Application](exercises/AmazonWebServices/ex1.2#exercise-123--create-business-partner-validation-application)
       
 - [Exercise 2 - Scenario with GCP](exercises/GoogleCloudPlatform/)
