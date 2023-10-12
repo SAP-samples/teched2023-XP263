@@ -1,32 +1,31 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2023-XP263)](https://api.reuse.software/info/github.com/SAP-samples/teched2023-XP263)
 
-# XP263 - Develop a Cross-Platform Scenario with SAP BTP and GCP/Microsoft Azure/AWS
+# XP263 - Develop a Cross-Platform Scenario with SAP BTP and Amazon Web Services/Google Cloud Platform/Microsoft Azure
 
 ## Description
 
-This repository contains the hands-on material for the SAP TechEd 2023 session-  XP263: Develop a Cross-Platform Scenario with SAP BTP and GCP/ Microsoft Azure/AWS.  
+This repository contains the hands-on material for the SAP TechEd 2023 session - XP263: Develop a Cross-Platform Scenario with SAP BTP and any one of the Hyperscalers - Amazon Web Services/Google Cloud Platform/Microsoft Azure. 
 
 ## Overview
 
-The scenarios for each of the hyperscalers are as follows:
+The scenarios for each of the Hyperscalers are as follows:
 
-- **Amazon Web Services**: Build an SAP BTP Extension application to validate a SAP Business Partner and setup AWS Account to send notifications via AWS SNS Service.
+- **Amazon Web Services**: Build an SAP BTP Extension application to validate an SAP Business Partner and set up an AWS Account to send notifications via AWS SNS Service.
 
-- **Google Cloud Platform**: Build a simple category management application with data integration from Google BigQuery and SAP S/4HANA.
+- **Google Cloud Platform**: Build a category management application with data integration from Google BigQuery and SAP S/4HANA.
 
-- **Microsoft Azure**: Build an SAP BTP application and integrate with Azure openAI using SAP AI Core LLM Service
-
+- **Microsoft Azure**: Build an SAP BTP application and integrate with Azure openAI using SAP AI Core LLM Service.
 
 
 ## Requirements
 
 The requirements to follow the exercises in this repository are:
 
-### For Amazon Web Service scenario
+For the Amazon Web Service scenario
 
-1. A [SAP Business Technology Platform](https://www.sap.com/india/products/technology-platform.html) account. To setup your own SAP Business Technology Platform account you can follow the instruction [Get a Free Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
+1. A [SAP Business Technology Platform](https://www.sap.com/india/products/technology-platform.html) account. To set up your own SAP Business Technology Platform account you can follow the instructions [Get a](https://developers.sap.com/tutorials/hcp-create-trial-account.html) Free Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
 
-2. A [SAP Business Application Studio](https://www.sap.com/products/technology-platform/business-application-studio.html) in the SAP Business Technology Platform account. To setup a SAP Business Application Studio you can follow the instruction [Set Up SAP Business Application Studio for Development](https://developers.sap.com/tutorials/appstudio-onboarding.html)
+2. A [SAP Business Application Studio](https://www.sap.com/products/technology-platform/business-application-studio.html) in the SAP Business Technology Platform account. To setup a SAP Business Application Studio you can follow the instructions [Set Up](https://developers.sap.com/tutorials/appstudio-onboarding.html) SAP Business Application Studio for Development](https://developers.sap.com/tutorials/appstudio-onboarding.html)
 
 3. A [SAP HANA Database in the SAP HANA Cloud Service](https://www.sap.com/india/products/technology-platform/hana.html). To setup a SAP HANA Database in the SAP HANA Cloud Service you can follow the instruction [Start using SAP HANA Cloud in SAP BTP Cockpit](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html) 
 
