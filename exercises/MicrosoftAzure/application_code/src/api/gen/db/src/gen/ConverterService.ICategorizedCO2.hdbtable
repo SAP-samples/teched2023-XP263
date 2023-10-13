@@ -1,4 +1,0 @@
-COLUMN TABLE ConverterService_ICategorizedCO2 (
-  category NVARCHAR(5000),
-  co2 DOUBLE
-)

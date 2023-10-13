@@ -1,5 +1,0 @@
-COLUMN TABLE ConverterService_IMonthlyCO2 (
-  "YEAR" NVARCHAR(5000),
-  "MONTH" NVARCHAR(5000),
-  co2 DOUBLE
-)

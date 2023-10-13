@@ -1,5 +1,0 @@
-COLUMN TABLE ConverterService_IHabitSummary (
-  option NVARCHAR(5000),
-  context NVARCHAR(5000),
-  factor DOUBLE
-)

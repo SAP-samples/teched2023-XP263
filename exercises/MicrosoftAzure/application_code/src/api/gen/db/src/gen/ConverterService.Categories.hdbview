@@ -1,8 +1,0 @@
-VIEW ConverterService_Categories AS SELECT
-  Categories_0.ID,
-  Categories_0.description,
-  Categories_0.icon
-FROM carbon_Categories AS Categories_0
-WITH ASSOCIATIONS (
-  MANY TO MANY JOIN ConverterService_MCC AS mccs ON (mccs.category_ID = ID)
-)
