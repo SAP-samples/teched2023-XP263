@@ -1,0 +1,14 @@
+VIEW ConverterService_Transactions AS SELECT
+  Transactions_0.ID,
+  Transactions_0.account_ID,
+  Transactions_0.currency,
+  Transactions_0.amount,
+  Transactions_0."DATE",
+  Transactions_0.description,
+  Transactions_0.mcc_ID,
+  Transactions_0.amount * mcc_1.factor AS CO2Score
+FROM (carbon_Transactions AS Transactions_0 LEFT JOIN carbon_MCC AS mcc_1 ON Transactions_0.mcc_ID = mcc_1.ID)
+WITH ASSOCIATIONS (
+  MANY TO ONE JOIN ConverterService_Accounts AS account ON (account.ID = account_ID),
+  MANY TO ONE JOIN ConverterService_MCC AS mcc ON (mcc.ID = mcc_ID)
+)

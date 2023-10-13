@@ -1,0 +1,13 @@
+VIEW ConverterService_Habits AS SELECT
+  Habits_0.ID,
+  Habits_0.habitCategory_ID,
+  Habits_0.code,
+  Habits_0.tag,
+  Habits_0.option,
+  Habits_0.additionalInformation,
+  Habits_0.factor,
+  Habits_0.default
+FROM carbon_Habits AS Habits_0
+WITH ASSOCIATIONS (
+  MANY TO ONE JOIN ConverterService_HabitCategories AS habitCategory ON (habitCategory.ID = habitCategory_ID)
+)

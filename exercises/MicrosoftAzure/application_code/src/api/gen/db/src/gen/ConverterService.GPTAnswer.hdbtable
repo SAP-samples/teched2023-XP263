@@ -1,0 +1,3 @@
+COLUMN TABLE ConverterService_GPTAnswer (
+  "TEXT" NVARCHAR(5000)
+)

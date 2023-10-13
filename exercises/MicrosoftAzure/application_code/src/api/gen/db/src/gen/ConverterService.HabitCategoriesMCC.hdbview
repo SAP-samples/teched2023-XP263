@@ -1,0 +1,8 @@
+VIEW ConverterService_HabitCategoriesMCC AS SELECT
+  HabitCategoriesMCC_0.habitCategory_ID,
+  HabitCategoriesMCC_0.mcc_ID
+FROM carbon_HabitCategoriesMCC AS HabitCategoriesMCC_0
+WITH ASSOCIATIONS (
+  MANY TO ONE JOIN ConverterService_HabitCategories AS habitCategory ON (habitCategory.ID = habitCategory_ID),
+  MANY TO ONE JOIN ConverterService_MCC AS mcc ON (mcc.ID = mcc_ID)
+)

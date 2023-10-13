@@ -1,0 +1,9 @@
+COLUMN TABLE carbon_Accounts (
+  ID NVARCHAR(36) NOT NULL,
+  name NVARCHAR(5000),
+  PRIMARY KEY(ID)
+) WITH ASSOCIATIONS (
+  MANY TO MANY JOIN carbon_Transactions AS transactions ON (transactions.account_ID = ID),
+  MANY TO MANY JOIN carbon_ChallengesUsers AS challenges ON (challenges.account_ID = ID),
+  MANY TO MANY JOIN carbon_AccountHabits AS habits ON (habits.account_ID = ID)
+)

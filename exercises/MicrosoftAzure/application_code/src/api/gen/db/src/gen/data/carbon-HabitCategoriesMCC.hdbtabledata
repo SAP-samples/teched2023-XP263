@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "CARBON_HABITCATEGORIESMCC",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "carbon-HabitCategoriesMCC.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "HABITCATEGORY_ID",
+          "MCC_ID"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "HABITCATEGORY_ID": "HABITCATEGORY_ID",
+        "MCC_ID": "MCC_ID"
+      }
+    }
+  ]
+}

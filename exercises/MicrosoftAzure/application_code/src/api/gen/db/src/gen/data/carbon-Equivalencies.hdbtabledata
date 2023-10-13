@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "CARBON_EQUIVALENCIES",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "carbon-Equivalencies.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "ID",
+          "VEGAN",
+          "BUCKET",
+          "CO2PERKG",
+          "ACTIVITY",
+          "DESCRIPTION",
+          "IMAGE"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "ID": "ID",
+        "VEGAN": "VEGAN",
+        "BUCKET": "BUCKET",
+        "CO2PERKG": "CO2PERKG",
+        "ACTIVITY": "ACTIVITY",
+        "DESCRIPTION": "DESCRIPTION",
+        "IMAGE": "IMAGE"
+      }
+    }
+  ]
+}

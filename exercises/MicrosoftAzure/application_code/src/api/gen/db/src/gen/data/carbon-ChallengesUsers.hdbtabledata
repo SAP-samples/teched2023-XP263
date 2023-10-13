@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "CARBON_CHALLENGESUSERS",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "carbon-ChallengesUsers.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "ID",
+          "ACCOUNT_ID",
+          "CHALLENGE_ID",
+          "STARTDATE",
+          "DUEDATE",
+          "MARKEDDATES",
+          "ISCOMPLETED"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "ID": "ID",
+        "ACCOUNT_ID": "ACCOUNT_ID",
+        "CHALLENGE_ID": "CHALLENGE_ID",
+        "STARTDATE": "STARTDATE",
+        "DUEDATE": "DUEDATE",
+        "MARKEDDATES": "MARKEDDATES",
+        "ISCOMPLETED": "ISCOMPLETED"
+      }
+    }
+  ]
+}

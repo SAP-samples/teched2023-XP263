@@ -1,0 +1,10 @@
+COLUMN TABLE carbon_Equivalencies (
+  ID NVARCHAR(36) NOT NULL,
+  vegan BOOLEAN,
+  bucket NVARCHAR(5000),
+  co2PerKg DOUBLE,
+  activity NVARCHAR(5000),
+  description NVARCHAR(5000),
+  image NVARCHAR(5000),
+  PRIMARY KEY(ID)
+)

@@ -1,0 +1,10 @@
+COLUMN TABLE carbon_MCC (
+  ID NVARCHAR(36) NOT NULL,
+  MCC NVARCHAR(5000),
+  description NVARCHAR(5000),
+  factor DOUBLE,
+  category_ID NVARCHAR(36),
+  PRIMARY KEY(ID)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN carbon_Categories AS category ON (category.ID = category_ID)
+)

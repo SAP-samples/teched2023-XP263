@@ -1,0 +1,2058 @@
+{
+  "namespace": "carbon",
+  "definitions": {
+    "carbon.Transactions": {
+      "kind": "entity",
+      "includes": [
+        "cuid"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "account": {
+          "type": "cds.Association",
+          "target": "carbon.Accounts",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "currency": {
+          "type": "cds.String"
+        },
+        "amount": {
+          "type": "cds.Double"
+        },
+        "date": {
+          "type": "cds.Timestamp"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "mcc": {
+          "type": "cds.Association",
+          "target": "carbon.MCC",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "CO2Score": {
+          "@Core.Computed": true,
+          "virtual": true,
+          "type": "cds.Double",
+          "default": {
+            "val": 0
+          }
+        }
+      }
+    },
+    "carbon.Challenges": {
+      "kind": "entity",
+      "includes": [
+        "cuid"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "title": {
+          "type": "cds.String"
+        },
+        "description": {
+          "type": "cds.LargeString"
+        },
+        "icon": {
+          "type": "cds.String"
+        },
+        "category": {
+          "type": "cds.String"
+        },
+        "mcc": {
+          "type": "cds.Association",
+          "target": "carbon.MCC",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "daysToMark": {
+          "type": "cds.Integer"
+        },
+        "avoidableEmissionsPerDay": {
+          "type": "cds.Double"
+        }
+      }
+    },
+    "carbon.ChallengesUsers": {
+      "kind": "entity",
+      "includes": [
+        "cuid"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "account": {
+          "type": "cds.Association",
+          "target": "carbon.Accounts",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "challenge": {
+          "type": "cds.Association",
+          "target": "carbon.Challenges",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "startDate": {
+          "type": "cds.Date"
+        },
+        "dueDate": {
+          "type": "cds.Date"
+        },
+        "markedDates": {
+          "items": {
+            "type": "cds.Date"
+          }
+        },
+        "isCompleted": {
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "carbon.Equivalencies": {
+      "kind": "entity",
+      "includes": [
+        "cuid"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "vegan": {
+          "type": "cds.Boolean"
+        },
+        "bucket": {
+          "type": "cds.String",
+          "enum": {
+            "XS": {
+              "val": "XS"
+            },
+            "S": {
+              "val": "S"
+            },
+            "M": {
+              "val": "M"
+            },
+            "L": {
+              "val": "L"
+            },
+            "XL": {
+              "val": "XL"
+            }
+          }
+        },
+        "co2PerKg": {
+          "type": "cds.Double"
+        },
+        "activity": {
+          "type": "cds.String"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "image": {
+          "type": "cds.String"
+        },
+        "amount": {
+          "@Core.Computed": true,
+          "virtual": true,
+          "type": "cds.Integer",
+          "default": {
+            "val": -1
+          }
+        }
+      }
+    },
+    "carbon.Accounts": {
+      "kind": "entity",
+      "includes": [
+        "cuid"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "name": {
+          "type": "cds.String"
+        },
+        "transactions": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "carbon.Transactions",
+          "on": [
+            {
+              "ref": [
+                "transactions",
+                "account"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "challenges": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "carbon.ChallengesUsers",
+          "on": [
+            {
+              "ref": [
+                "challenges",
+                "account"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "habits": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "carbon.AccountHabits",
+          "on": [
+            {
+              "ref": [
+                "habits",
+                "account"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "carbon.Categories": {
+      "kind": "entity",
+      "includes": [
+        "cuid"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "icon": {
+          "type": "cds.String"
+        },
+        "mccs": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "carbon.MCC",
+          "on": [
+            {
+              "ref": [
+                "mccs",
+                "category"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "carbon.MCC": {
+      "kind": "entity",
+      "includes": [
+        "cuid"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "MCC": {
+          "type": "cds.String"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "factor": {
+          "type": "cds.Double"
+        },
+        "category": {
+          "type": "cds.Association",
+          "target": "carbon.Categories",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "carbon.HabitCategories": {
+      "kind": "entity",
+      "includes": [
+        "cuid"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "question": {
+          "type": "cds.String"
+        },
+        "additionalInformation": {
+          "type": "cds.String"
+        },
+        "options": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "carbon.Habits",
+          "on": [
+            {
+              "ref": [
+                "options",
+                "habitCategory"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "mccs": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "carbon.HabitCategoriesMCC",
+          "on": [
+            {
+              "ref": [
+                "mccs",
+                "habitCategory"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "icon": {
+          "type": "cds.String"
+        },
+        "category": {
+          "type": "cds.String"
+        }
+      }
+    },
+    "carbon.HabitCategoriesMCC": {
+      "kind": "entity",
+      "elements": {
+        "habitCategory": {
+          "key": true,
+          "type": "cds.Association",
+          "target": "carbon.HabitCategories",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "mcc": {
+          "key": true,
+          "type": "cds.Association",
+          "target": "carbon.MCC",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "carbon.Habits": {
+      "kind": "entity",
+      "includes": [
+        "cuid"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "habitCategory": {
+          "type": "cds.Association",
+          "target": "carbon.HabitCategories",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "code": {
+          "type": "cds.String",
+          "enum": {
+            "VEGAN": {
+              "val": "VEGAN"
+            },
+            "VEGETARIAN": {
+              "val": "VEGETARIAN"
+            },
+            "PESCATARIAN": {
+              "val": "PESCATARIAN"
+            },
+            "LOW_MEAT_EATER": {
+              "val": "LOW_MEAT_EATER"
+            },
+            "DIET_AVERAGE": {
+              "val": "DIET_AVERAGE"
+            },
+            "HIGH_MEAT_EATER": {
+              "val": "HIGH_MEAT_EATER"
+            },
+            "DIESEL": {
+              "val": "DIESEL"
+            },
+            "PETROL": {
+              "val": "PETROL"
+            },
+            "FOOD": {
+              "val": "FOOD"
+            },
+            "ELECTRICITY": {
+              "val": "ELECTRICITY"
+            },
+            "DEFAULT": {
+              "val": "DEFAULT"
+            }
+          }
+        },
+        "tag": {
+          "type": "cds.String"
+        },
+        "option": {
+          "type": "cds.String"
+        },
+        "additionalInformation": {
+          "type": "cds.String"
+        },
+        "factor": {
+          "type": "cds.Double"
+        },
+        "default": {
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "carbon.AccountHabits": {
+      "kind": "entity",
+      "includes": [
+        "cuid"
+      ],
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "account": {
+          "type": "cds.Association",
+          "target": "carbon.Accounts",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "habit": {
+          "type": "cds.Association",
+          "target": "carbon.Habits",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "transaction": {
+          "type": "cds.Association",
+          "target": "carbon.Transactions",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ConverterService": {
+      "@source": "srv/converter.cds",
+      "kind": "service"
+    },
+    "ConverterService.Transactions": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.Transactions"
+          ]
+        },
+        "columns": [
+          "*",
+          {
+            "xpr": [
+              {
+                "ref": [
+                  "amount"
+                ]
+              },
+              "*",
+              {
+                "ref": [
+                  "mcc",
+                  "factor"
+                ]
+              }
+            ],
+            "as": "CO2Score",
+            "cast": {
+              "type": "cds.Double"
+            }
+          }
+        ]
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "account": {
+          "type": "cds.Association",
+          "target": "ConverterService.Accounts",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "currency": {
+          "type": "cds.String"
+        },
+        "amount": {
+          "type": "cds.Double"
+        },
+        "date": {
+          "type": "cds.Timestamp"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "mcc": {
+          "type": "cds.Association",
+          "target": "ConverterService.MCC",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "CO2Score": {
+          "@Core.Computed": true,
+          "type": "cds.Double"
+        }
+      }
+    },
+    "ConverterService.AccountHabits": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.AccountHabits"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "account": {
+          "type": "cds.Association",
+          "target": "ConverterService.Accounts",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "habit": {
+          "type": "cds.Association",
+          "target": "ConverterService.Habits",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "transaction": {
+          "type": "cds.Association",
+          "target": "ConverterService.Transactions",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ConverterService.Accounts": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.Accounts"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "name": {
+          "type": "cds.String"
+        },
+        "transactions": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "ConverterService.Transactions",
+          "on": [
+            {
+              "ref": [
+                "transactions",
+                "account"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "challenges": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "ConverterService.ChallengesUsers",
+          "on": [
+            {
+              "ref": [
+                "challenges",
+                "account"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "habits": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "ConverterService.AccountHabits",
+          "on": [
+            {
+              "ref": [
+                "habits",
+                "account"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ConverterService.Habits": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.Habits"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "habitCategory": {
+          "type": "cds.Association",
+          "target": "ConverterService.HabitCategories",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "code": {
+          "type": "cds.String",
+          "enum": {
+            "VEGAN": {
+              "val": "VEGAN"
+            },
+            "VEGETARIAN": {
+              "val": "VEGETARIAN"
+            },
+            "PESCATARIAN": {
+              "val": "PESCATARIAN"
+            },
+            "LOW_MEAT_EATER": {
+              "val": "LOW_MEAT_EATER"
+            },
+            "DIET_AVERAGE": {
+              "val": "DIET_AVERAGE"
+            },
+            "HIGH_MEAT_EATER": {
+              "val": "HIGH_MEAT_EATER"
+            },
+            "DIESEL": {
+              "val": "DIESEL"
+            },
+            "PETROL": {
+              "val": "PETROL"
+            },
+            "FOOD": {
+              "val": "FOOD"
+            },
+            "ELECTRICITY": {
+              "val": "ELECTRICITY"
+            },
+            "DEFAULT": {
+              "val": "DEFAULT"
+            }
+          }
+        },
+        "tag": {
+          "type": "cds.String"
+        },
+        "option": {
+          "type": "cds.String"
+        },
+        "additionalInformation": {
+          "type": "cds.String"
+        },
+        "factor": {
+          "type": "cds.Double"
+        },
+        "default": {
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "ConverterService.Challenges": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.Challenges"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "title": {
+          "type": "cds.String"
+        },
+        "description": {
+          "type": "cds.LargeString"
+        },
+        "icon": {
+          "type": "cds.String"
+        },
+        "category": {
+          "type": "cds.String"
+        },
+        "mcc": {
+          "type": "cds.Association",
+          "target": "ConverterService.MCC",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "daysToMark": {
+          "type": "cds.Integer"
+        },
+        "avoidableEmissionsPerDay": {
+          "type": "cds.Double"
+        }
+      }
+    },
+    "ConverterService.ChallengesUsers": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.ChallengesUsers"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "account": {
+          "type": "cds.Association",
+          "target": "ConverterService.Accounts",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "challenge": {
+          "type": "cds.Association",
+          "target": "ConverterService.Challenges",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "startDate": {
+          "type": "cds.Date"
+        },
+        "dueDate": {
+          "type": "cds.Date"
+        },
+        "markedDates": {
+          "items": {
+            "type": "cds.Date"
+          }
+        },
+        "isCompleted": {
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "ConverterService.Categories": {
+      "kind": "entity",
+      "@readonly": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.Categories"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "icon": {
+          "type": "cds.String"
+        },
+        "mccs": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "ConverterService.MCC",
+          "on": [
+            {
+              "ref": [
+                "mccs",
+                "category"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ConverterService.MCC": {
+      "kind": "entity",
+      "@readonly": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.MCC"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "MCC": {
+          "type": "cds.String"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "factor": {
+          "type": "cds.Double"
+        },
+        "category": {
+          "type": "cds.Association",
+          "target": "ConverterService.Categories",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ConverterService.HabitCategories": {
+      "kind": "entity",
+      "@readonly": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.HabitCategories"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "question": {
+          "type": "cds.String"
+        },
+        "additionalInformation": {
+          "type": "cds.String"
+        },
+        "options": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "ConverterService.Habits",
+          "on": [
+            {
+              "ref": [
+                "options",
+                "habitCategory"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "mccs": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "ConverterService.HabitCategoriesMCC",
+          "on": [
+            {
+              "ref": [
+                "mccs",
+                "habitCategory"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        },
+        "icon": {
+          "type": "cds.String"
+        },
+        "category": {
+          "type": "cds.String"
+        }
+      }
+    },
+    "ConverterService.Equivalencies": {
+      "kind": "entity",
+      "@readonly": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.Equivalencies"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "vegan": {
+          "type": "cds.Boolean"
+        },
+        "bucket": {
+          "type": "cds.String",
+          "enum": {
+            "XS": {
+              "val": "XS"
+            },
+            "S": {
+              "val": "S"
+            },
+            "M": {
+              "val": "M"
+            },
+            "L": {
+              "val": "L"
+            },
+            "XL": {
+              "val": "XL"
+            }
+          }
+        },
+        "co2PerKg": {
+          "type": "cds.Double"
+        },
+        "activity": {
+          "type": "cds.String"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "image": {
+          "type": "cds.String"
+        },
+        "amount": {
+          "@Core.Computed": true,
+          "virtual": true,
+          "type": "cds.Integer",
+          "default": {
+            "val": -1
+          }
+        }
+      }
+    },
+    "ConverterService.getEquivalencies": {
+      "kind": "function",
+      "params": {
+        "co2": {
+          "type": "cds.Integer"
+        },
+        "account": {
+          "type": "cds.UUID"
+        }
+      },
+      "returns": {
+        "items": {
+          "type": "ConverterService.Equivalencies"
+        }
+      }
+    },
+    "ConverterService.getAccountData": {
+      "kind": "function",
+      "params": {
+        "account": {
+          "type": "cds.UUID"
+        }
+      },
+      "returns": {
+        "type": "ConverterService.Accounts"
+      }
+    },
+    "ConverterService.aiProxy": {
+      "kind": "action",
+      "params": {
+        "prompt": {
+          "type": "cds.String"
+        }
+      },
+      "returns": {
+        "type": "ConverterService.GPTAnswer"
+      }
+    },
+    "ConverterService.ISuggestion": {
+      "kind": "entity",
+      "elements": {
+        "title": {
+          "type": "cds.String"
+        },
+        "description": {
+          "type": "cds.String"
+        }
+      }
+    },
+    "ConverterService.IMonthlyCO2": {
+      "kind": "entity",
+      "elements": {
+        "year": {
+          "type": "cds.String"
+        },
+        "month": {
+          "type": "cds.String"
+        },
+        "co2": {
+          "type": "cds.Double"
+        }
+      }
+    },
+    "ConverterService.ICategorizedCO2": {
+      "kind": "entity",
+      "elements": {
+        "category": {
+          "type": "cds.String"
+        },
+        "co2": {
+          "type": "cds.Double"
+        }
+      }
+    },
+    "ConverterService.IHabitSummary": {
+      "kind": "entity",
+      "elements": {
+        "option": {
+          "type": "cds.String"
+        },
+        "context": {
+          "type": "cds.String"
+        },
+        "factor": {
+          "type": "cds.Double"
+        }
+      }
+    },
+    "ConverterService.GPTAnswer": {
+      "kind": "entity",
+      "elements": {
+        "text": {
+          "type": "cds.String"
+        }
+      }
+    },
+    "ConverterService.generateSuggestions": {
+      "kind": "action",
+      "params": {
+        "category": {
+          "type": "cds.String"
+        },
+        "spendings": {
+          "type": "cds.Double"
+        },
+        "CO2Score": {
+          "type": "cds.Double"
+        },
+        "amountOfTransactions": {
+          "type": "cds.Double"
+        }
+      },
+      "returns": {
+        "items": {
+          "type": "ConverterService.ISuggestion"
+        }
+      }
+    },
+    "ConverterService.generateCategorizedSummary": {
+      "kind": "action",
+      "params": {
+        "categorizedSummary": {
+          "items": {
+            "type": "ConverterService.ICategorizedCO2"
+          }
+        }
+      },
+      "returns": {
+        "type": "ConverterService.GPTAnswer"
+      }
+    },
+    "ConverterService.generateHistoricalSummary": {
+      "kind": "action",
+      "params": {
+        "historicalSummary": {
+          "items": {
+            "type": "ConverterService.IMonthlyCO2"
+          }
+        }
+      },
+      "returns": {
+        "type": "ConverterService.GPTAnswer"
+      }
+    },
+    "ConverterService.askForComposition": {
+      "kind": "action",
+      "params": {
+        "name": {
+          "type": "cds.String"
+        },
+        "contract": {
+          "type": "cds.String"
+        },
+        "address": {
+          "type": "cds.String"
+        },
+        "provider": {
+          "type": "cds.String"
+        }
+      },
+      "returns": {
+        "type": "ConverterService.GPTAnswer"
+      }
+    },
+    "ConverterService.askForGreenContract": {
+      "kind": "action",
+      "params": {
+        "name": {
+          "type": "cds.String"
+        },
+        "contract": {
+          "type": "cds.String"
+        },
+        "address": {
+          "type": "cds.String"
+        },
+        "provider": {
+          "type": "cds.String"
+        }
+      },
+      "returns": {
+        "type": "ConverterService.GPTAnswer"
+      }
+    },
+    "ConverterService.askForChallengeBenefits": {
+      "kind": "action",
+      "params": {
+        "title": {
+          "type": "cds.String"
+        },
+        "description": {
+          "type": "cds.String"
+        },
+        "avoidableEmissionsPerDay": {
+          "type": "cds.String"
+        }
+      },
+      "returns": {
+        "type": "ConverterService.GPTAnswer"
+      }
+    },
+    "ConverterService.askForHabitRecommendation": {
+      "kind": "action",
+      "params": {
+        "question": {
+          "type": "cds.String"
+        },
+        "currentHabit": {
+          "type": "cds.String"
+        },
+        "habitSummaries": {
+          "items": {
+            "type": "ConverterService.IHabitSummary"
+          }
+        }
+      },
+      "returns": {
+        "type": "ConverterService.GPTAnswer"
+      }
+    },
+    "ConverterService.startChallenge": {
+      "kind": "action",
+      "params": {
+        "account": {
+          "type": "cds.String"
+        },
+        "challengeId": {
+          "type": "cds.UUID"
+        }
+      },
+      "returns": {
+        "elements": {
+          "challengeId": {
+            "type": "cds.String"
+          }
+        }
+      }
+    },
+    "ConverterService.cancelChallenge": {
+      "kind": "action",
+      "params": {
+        "id": {
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "ConverterService.completeChallenge": {
+      "kind": "action",
+      "params": {
+        "id": {
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "ConverterService.setHabit": {
+      "kind": "action",
+      "params": {
+        "account": {
+          "type": "cds.String"
+        },
+        "habitCategory": {
+          "type": "cds.String"
+        },
+        "habit": {
+          "type": "cds.String"
+        },
+        "transaction": {
+          "type": "cds.String"
+        }
+      }
+    },
+    "Language": {
+      "kind": "type",
+      "@title": "{i18n>Language}",
+      "@description": "{i18n>LanguageCode.Description}",
+      "type": "cds.Association",
+      "target": "sap.common.Languages",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "Currency": {
+      "kind": "type",
+      "@title": "{i18n>Currency}",
+      "@description": "{i18n>CurrencyCode.Description}",
+      "type": "cds.Association",
+      "target": "sap.common.Currencies",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "kind": "type",
+      "@title": "{i18n>Country}",
+      "@description": "{i18n>CountryCode.Description}",
+      "type": "cds.Association",
+      "target": "sap.common.Countries",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "sap.common": {
+      "kind": "context"
+    },
+    "sap.common.Locale": {
+      "kind": "type",
+      "@title": "{i18n>LanguageCode}",
+      "type": "cds.String",
+      "length": 14
+    },
+    "sap.common.Languages": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Languages.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Languages.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Countries": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@title": "{i18n>CountryCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Countries.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Countries.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Currencies": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@title": "{i18n>CurrencyCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "symbol": {
+          "@title": "{i18n>CurrencySymbol}",
+          "type": "cds.String",
+          "length": 5
+        },
+        "minorUnit": {
+          "@title": "{i18n>CurrencyMinorUnit}",
+          "type": "cds.Int16"
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Currencies.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Currencies.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.CodeList": {
+      "kind": "aspect",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        }
+      }
+    },
+    "sap.common.TextsAspect": {
+      "kind": "aspect",
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        }
+      }
+    },
+    "cuid": {
+      "kind": "aspect",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "managed": {
+      "kind": "aspect",
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        }
+      }
+    },
+    "temporal": {
+      "kind": "aspect",
+      "elements": {
+        "validFrom": {
+          "@cds.valid.from": true,
+          "type": "cds.Timestamp"
+        },
+        "validTo": {
+          "@cds.valid.to": true,
+          "type": "cds.Timestamp"
+        }
+      }
+    },
+    "User": {
+      "kind": "type",
+      "@title": "{i18n>UserID}",
+      "@description": "{i18n>UserID.Description}",
+      "type": "cds.String",
+      "length": 255
+    },
+    "extensible": {
+      "kind": "aspect",
+      "elements": {
+        "extensions__": {
+          "@cds.api.ignore": true,
+          "type": "cds.String"
+        }
+      }
+    },
+    "sap.common.Languages.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        }
+      }
+    },
+    "sap.common.Countries.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>CountryCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "sap.common.Currencies.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>CurrencyCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "ConverterService.HabitCategoriesMCC": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "projection": {
+        "from": {
+          "ref": [
+            "carbon.HabitCategoriesMCC"
+          ]
+        }
+      },
+      "elements": {
+        "habitCategory": {
+          "key": true,
+          "type": "cds.Association",
+          "target": "ConverterService.HabitCategories",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "mcc": {
+          "key": true,
+          "type": "cds.Association",
+          "target": "ConverterService.MCC",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v3.9.8",
+    "flavor": "inferred"
+  },
+  "$version": "2.0"
+}

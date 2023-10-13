@@ -1,0 +1,9 @@
+VIEW ConverterService_Equivalencies AS SELECT
+  Equivalencies_0.ID,
+  Equivalencies_0.vegan,
+  Equivalencies_0.bucket,
+  Equivalencies_0.co2PerKg,
+  Equivalencies_0.activity,
+  Equivalencies_0.description,
+  Equivalencies_0.image
+FROM carbon_Equivalencies AS Equivalencies_0

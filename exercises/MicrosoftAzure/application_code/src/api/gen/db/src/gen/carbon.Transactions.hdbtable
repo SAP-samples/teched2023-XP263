@@ -1,0 +1,13 @@
+COLUMN TABLE carbon_Transactions (
+  ID NVARCHAR(36) NOT NULL,
+  account_ID NVARCHAR(36),
+  currency NVARCHAR(5000),
+  amount DOUBLE,
+  "DATE" TIMESTAMP,
+  description NVARCHAR(5000),
+  mcc_ID NVARCHAR(36),
+  PRIMARY KEY(ID)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN carbon_Accounts AS account ON (account.ID = account_ID),
+  MANY TO ONE JOIN carbon_MCC AS mcc ON (mcc.ID = mcc_ID)
+)

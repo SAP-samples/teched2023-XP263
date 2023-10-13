@@ -1,0 +1,8 @@
+COLUMN TABLE carbon_Categories (
+  ID NVARCHAR(36) NOT NULL,
+  description NVARCHAR(5000),
+  icon NVARCHAR(5000),
+  PRIMARY KEY(ID)
+) WITH ASSOCIATIONS (
+  MANY TO MANY JOIN carbon_MCC AS mccs ON (mccs.category_ID = ID)
+)

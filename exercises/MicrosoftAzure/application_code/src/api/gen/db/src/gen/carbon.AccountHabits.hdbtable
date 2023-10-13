@@ -1,0 +1,11 @@
+COLUMN TABLE carbon_AccountHabits (
+  ID NVARCHAR(36) NOT NULL,
+  account_ID NVARCHAR(36),
+  habit_ID NVARCHAR(36),
+  transaction_ID NVARCHAR(36),
+  PRIMARY KEY(ID)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN carbon_Accounts AS account ON (account.ID = account_ID),
+  MANY TO ONE JOIN carbon_Habits AS habit ON (habit.ID = habit_ID),
+  MANY TO ONE JOIN carbon_Transactions AS transaction ON (transaction.ID = transaction_ID)
+)

@@ -1,0 +1,8 @@
+COLUMN TABLE carbon_HabitCategoriesMCC (
+  habitCategory_ID NVARCHAR(36) NOT NULL,
+  mcc_ID NVARCHAR(36) NOT NULL,
+  PRIMARY KEY(habitCategory_ID, mcc_ID)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN carbon_HabitCategories AS habitCategory ON (habitCategory.ID = habitCategory_ID),
+  MANY TO ONE JOIN carbon_MCC AS mcc ON (mcc.ID = mcc_ID)
+)

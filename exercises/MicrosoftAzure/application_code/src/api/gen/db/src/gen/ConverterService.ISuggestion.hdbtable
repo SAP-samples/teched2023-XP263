@@ -1,0 +1,4 @@
+COLUMN TABLE ConverterService_ISuggestion (
+  title NVARCHAR(5000),
+  description NVARCHAR(5000)
+)

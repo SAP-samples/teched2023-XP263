@@ -1,0 +1,39 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "CARBON_CHALLENGES",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "carbon-Challenges.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "ID",
+          "TITLE",
+          "DESCRIPTION",
+          "ICON",
+          "CATEGORY",
+          "MCC_ID",
+          "DAYSTOMARK",
+          "AVOIDABLEEMISSIONSPERDAY"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "ID": "ID",
+        "TITLE": "TITLE",
+        "DESCRIPTION": "DESCRIPTION",
+        "ICON": "ICON",
+        "CATEGORY": "CATEGORY",
+        "MCC_ID": "MCC_ID",
+        "DAYSTOMARK": "DAYSTOMARK",
+        "AVOIDABLEEMISSIONSPERDAY": "AVOIDABLEEMISSIONSPERDAY"
+      }
+    }
+  ]
+}

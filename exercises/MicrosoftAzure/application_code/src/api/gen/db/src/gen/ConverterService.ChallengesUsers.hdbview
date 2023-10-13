@@ -1,0 +1,13 @@
+VIEW ConverterService_ChallengesUsers AS SELECT
+  ChallengesUsers_0.ID,
+  ChallengesUsers_0.account_ID,
+  ChallengesUsers_0.challenge_ID,
+  ChallengesUsers_0.startDate,
+  ChallengesUsers_0.dueDate,
+  ChallengesUsers_0.markedDates,
+  ChallengesUsers_0.isCompleted
+FROM carbon_ChallengesUsers AS ChallengesUsers_0
+WITH ASSOCIATIONS (
+  MANY TO ONE JOIN ConverterService_Accounts AS account ON (account.ID = account_ID),
+  MANY TO ONE JOIN ConverterService_Challenges AS challenge ON (challenge.ID = challenge_ID)
+)
