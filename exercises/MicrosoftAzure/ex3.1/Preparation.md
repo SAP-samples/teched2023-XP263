@@ -17,4 +17,4 @@ Make sure that all necessary entitlements are set on the Subaccount you want to 
 - SAP Authorization and Trust Management Service
 - SAP HANA Schemas & HDI Containers
 
-Continue to - [Exercise 2: Integrate with SAP LLM Services ](../ex3.2/API_CAP_Deployment.md)
+Continue to - [Exercise 2: API CAP Deployment ](../ex3.2/API_CAP_Deployment.md)
