@@ -1,25 +1,31 @@
 # Build SAP CAP Application and Integrate with Amazon SNS Service for Notification
 
->## Checklist
+>## Prerequistics 
 
 - Access the mock server URL and check whether you can view the records for Business Partner.
 - Check whether the HANA DB is up and running.
+- Assign the roles for accessing SAP Business Application Studio. 
+  
+  Search for your user under **Security -> Users**. Click on **...** to seelct Assign Role Collection, search for **Business_Application_Studio** and assign all the roles to your user.
 
-## Exercise 1.1- Create a Business Partner Validation Application
+  ![Alt text](./images/pre-basrole.png)
+
+ 
+## Step 1 - Create a Business Partner Validation Application
 
 In this section, you will focus on updating and deploying a Node.js CAP project in the Business Application Studio
 
-1. 👉 Login into your SAP BTP subaccount. Click the **Instance and Subscriptions** on the left menu, and then click **Go to Application** button of the SAP Business Application Studio service subscription.
+1. 👉 Login into your SAP BTP subaccount. Click the **Instance and Subscriptions** on the left menu, and then click the **Go to Application** button of the SAP Business Application Studio service subscription. Click on the Default Identity Provider to log in to SAP BAS.
 
-![Alt text](./images/cap-dev-1.png)
+    ![Alt text](./images/cap-dev-1.png)
 
-2. 👉 Now you will see the Dev Space we created previously is in **STOPPED** status, Let activate it by clicking the Run botton 
+2. 👉 Create a Dev Space.
 
-![Alt text](./images/cap-dev-2.png)
+    ![Alt text](./images/cap-dev-2.png)
 
 3. 👉 When it’s ready, open your dev space by clicking on the name. 
 
-![Alt text](./images/cap-dev-3.png)
+    ![Alt text](./images/cap-dev-3.png)
 
 
 4. 👉 In the menu in SAP Business Application Studio, select **Terminal** &rarr; **New Terminal** and navigate to the projects folder using:
@@ -28,7 +34,7 @@ In this section, you will focus on updating and deploying a Node.js CAP project 
       cd projects
    ```
 
-5. 👉 Clone the mock server GitHub repository:
+5. 👉 Clone the SAP CAP Application from the GitHub repository. 
 
    ```bash
       git clone https://github.com/alphageek7443/business-partner-validation
@@ -36,15 +42,15 @@ In this section, you will focus on updating and deploying a Node.js CAP project 
 
 6. 👉 Choose **File** in the menu on the top and then select **Add Folder to Workspace** from the dropdown menu.
 
-  ![add workspace](./images/add_workspace.png)
+    ![add workspace](./images/add_workspace.png)
 
-7. 👉 Open the project by choosing **projects** &rarr; **business-partner-validation** and choose **Open**.
+7. 👉 Open the project by choosing the **projects** &rarr; **business-partner-validation** and choose **Open**.
 
-  ![add workspace](./images/cap-dev-4.png)
+    ![add workspace](./images/cap-dev-4.png)
 
-## Exercise 1.2.2- Consume S4-Mock-Server API by using Remote Service functionality provided by SAP CAP
+## Step 2- Consume S4-Mock-Server API by using Remote Service functionality provided by SAP CAP
 
-In our Business Partner Service, we need to fetch the latest Business Partner data from the S4-Mock-Server by consuming the OP_API_BUSINESS_PARTNER_SRV API exposed by S4-Mocker-Server application.
+In the SAP CAP Application, in the Business Partner Service that is created, we need to fetch the latest Business Partner data from the S4-Mock-Server by consuming the OP_API_BUSINESS_PARTNER_SRV API exposed by S4-Mock-Server application.
 
 In this section, we will introduce how to consume the external APIs by using the [Remote Service](https://cap.cloud.sap/docs/guides/using-services#introduction) functionality in the SAP CAP application.
 
@@ -54,7 +60,7 @@ In this section, we will introduce how to consume the external APIs by using the
 >
 > The CAP runtimes for node.js not only supports consuming the service via [Axios](https://axios-http.com/docs/intro), Fetch API, but also provides you an easy functionlity, called [Remote Service](https://cap.cloud.sap/docs/guides/using-services#introduction) to consume the external CAP service or OData Service.
 
-1. 👉 Now let's define the S4-Mock-Server service endpoint, and install the required NPM packages of CAP project, so that we could consume the S4-Mock-Server in the CAP project successfully.
+1. 👉 Now let's define the S4-Mock-Server service endpoint, and install the required NPM packages so that we can consume the S4-Mock-Server in the CAP project successfully.
 
 Open the package.json file under the root directory of your CAP Project and append the code shown on below under the **cds.requires.s4_mock_server**. 
 
@@ -87,7 +93,6 @@ In this section, we will show you how to deploy your Business Partner Validation
 2. 👉 Once the MTA Build process success, you will see the **build complete message** in your **terminal**. Also there will be a **business-partner-validation_1.0.0.mtar** file generated under the **mta_archieve folder**.
 
 ![Alt text](./images/cap-dev-75.png)
-
 
 ## Exercise 1.2.4- Deploy your Business Partner Validation Application in the SAP BTP Subaccount
 
