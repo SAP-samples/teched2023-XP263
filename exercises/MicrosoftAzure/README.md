@@ -70,4 +70,4 @@ Step 4: Run the Mobile Application
 Step 5: Integrate CAP App with BTP LLM Access Service 
 Step 6: Run the mobile application to get Gen AI data
  
-Continue to - [Step 1 - Prepare and Deploy SAP CAP Application](../MicrosoftAzure/ex3.1/README.md)
+Continue to - [Step 1 - Prepare and Deploy SAP CAP Application](../MicrosoftAzure/ex3.1/Preparation.md)
