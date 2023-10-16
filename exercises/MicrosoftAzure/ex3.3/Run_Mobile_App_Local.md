@@ -92,3 +92,5 @@ Enter your <_PARAMETERS_> to the `app.json` file in the `src/mobile-app/` direct
 Perfect! You should now be able to use the app.
 
 > **Note** If you have problems connecting to the app within Expo Go, you may have restrictive networking conditions. To resolve that, please check the [tunneling option](https://docs.expo.dev/more/expo-cli/#tunneling) of Expo.
+
+> Continue to - [Exercise 4: Publish Mobile App (Optional](../ex3.4/Publish_Mobile_App(OPTIONAL).md)
