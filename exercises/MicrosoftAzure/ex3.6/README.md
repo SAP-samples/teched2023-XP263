@@ -1,1 +1,0 @@
-Step 6: Run the mobile application to get Gen AI data
