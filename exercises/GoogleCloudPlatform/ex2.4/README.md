@@ -2,19 +2,19 @@
 This exercise focuses on creating a new analytical model called **"Product Sales Country Discount"**. This model will be created by importing **"Product Sales Country Discount"** View to expose data for visualisation in SAP Analytics Cloud.
 
 To complete this exercise, you will need to follow these steps:
-1. Import all the measures and dimensions of  **"Product Sales Country Discount"** View.
+1. Import all the measures and dimensions of the **"Product Sales Country Discount"** View.
 
 2. Finalyse the analytical model by giving a name relevant to the **"Product Sales Country Discount"** View.
 
-Your goal is to navigate through these steps and create an analytical model for **"Product Sales Country Discount"** view that will be used for consumption. Best of luck!
+Your goal is to navigate through these steps and create an analytical model for the **"Product Sales Country Discount"** view that will be used for consumption. Best of luck!
 
 ![New View](images/finalmodel.png)
 
-### Step by Step Solution Guide
+### Step-by-Step Solution Guide
 
 Refer to the provided solution below for a detailed, step-by-step guide on how to complete Exercise 3.
 
-1. 👉 Go to **SAP Datasphere Data Builder** and create **New Analytical Model**
+1. 👉 Go to **SAP Datasphere Data Builder** and create a **New Analytical Model**
 
 ![New AM](images/NewAnalyticalModel.png)
 

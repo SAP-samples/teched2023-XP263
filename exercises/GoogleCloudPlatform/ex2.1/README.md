@@ -4,14 +4,14 @@
 
 ## Role of SAP Business Technology Platform (SAP BTP)
  - With SAP Datasphere, customers can federate queries across source systems (SAP and Google) without the need for data replication. 
- - SAP Analytics Cloud (SAC) customers can execute live on the fly analysis across cross-cloud data sources in real-time (and live analytics to SAP HANA systems).
+ - SAP Analytics Cloud (SAC) customers can execute live on-the-fly analysis across cross-cloud data sources in real-time (and live analytics to SAP HANA systems).
  - Unified SAP data model and semantics propagated from SAP S/4HANA and SAP CX systems to SAP Datasphere and SAC
 
 ## Role of Google Cloud 
  - Query all data types with BigQuery: structured, semi-structured, and unstructured.
  - Scale seamlessly to store and analyze petabytes to exabytes of data with ease.
- - Easily access customer-centric measurement across sites and apps in order to understand what is working and what is not.
- - Google Analytics has easy-to-use interface and shareable reports for integration.
+ - Easily access customer-centric measurement across sites and apps to understand what is working and what is not.
+ - Google Analytics has an easy-to-use interface and shareable reports for integration.
 
 In this hands-on session, you will work with a sample BigQuery and sample SAP S/4HANA dataset. 
 To analyze category performance for digital/online sales you can combine external source systems like Google Analytics and sales, discounts, and stock data from SAP S/4HANA systems.
@@ -31,7 +31,7 @@ To achieve this we can use public data sets of Google Analytics. In Google BigQu
 
 Connections provide access to data from a wide range of sources, cloud as well as on-premise sources, SAP and Non-SAP sources, and partner tools. They allow space members to use entities from the connected source to acquire, prepare and access data from those sources in SAP Datasphere.
 
-In the "Connections" section of SAP Datasphere we already created live connectivity to Google Bigquery by providing a service key from GCP account. This connection is used in the next steps of Hands-on challenges to create data views on remote tables from Google BigQuery.
+In the "Connections" section of SAP Datasphere we already created live connectivity to Google Bigquery by providing a service key from the GCP account. This connection is used in the next steps of Hands-on challenges to create data views on remote tables from Google BigQuery.
 
 >**IMPORTANT**: Please note, that for this hands-on session, you will not have permission to see the connection in your account like shown in a image below, nevertheless, you can explore how such a connection can be established.
 
@@ -56,4 +56,4 @@ You can find the shared views and tables in **Repository Explorer**. Those share
 
 The goal of this introduction was to give a clear understanding of the concepts and techniques involved in creating a Datasphere live data connection to Google BigQuery and exploring the provided data model. 
 
-Continue to - [Exercise 2.2 -  Build and expose data views on SAP Datasphere](../ex1/README.md)
+Continue to - [Exercise 2.2 -  Build and expose data views on SAP Datasphere](../ex2.2/README.md)

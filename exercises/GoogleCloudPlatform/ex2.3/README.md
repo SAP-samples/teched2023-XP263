@@ -18,11 +18,11 @@ Your goal is to navigate through these steps and create a comprehensive data vie
 
 Refer to the provided solution below for a detailed, step-by-step guide on how to complete Exercise 2.
 
-1. 👉 Go to **SAP Datasphere Data Builder** and create **New Graphical View**
+1. 👉 Go to **SAP Datasphere Data Builder** and create a **New Graphical View**
     
 ![New View](images/V_Data_Builder.png)
 
-2. 👉 Open the **Shared Objects** from Repository, expand the views and drag and drop the **"discount_by_category_date_view"** into the canvas.
+2. 👉 Open the **Shared Objects** from the Repository, expand the views and drag and drop the **"discount_by_category_date_view"** into the canvas.
 
 3. 👉 Open the **Views** from the Repository and drop the **"Product_Sales_Country"** view into the canvas.
    

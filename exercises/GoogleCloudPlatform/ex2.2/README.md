@@ -21,17 +21,17 @@ Your goal is to navigate through these steps and create a detailed data view tha
 
 ![New View](images/V_Product_Sales_Country.png)
 
-### Step by Step Solution Guide
+### Step-by-Step Solution Guide
 
 Refer to the provided solution below for a detailed, step-by-step guide on how to complete Exercise 1.
 
 1. 👉 Open your [SAP Datasphere](https://a4d7e443-c962-4380-a0cb-53e3d6aca317.ap11.hcs.cloud.sap/dwaas-ui/index.html#/home) using the provided credentials.
 
-      Your user is associated with unique space (TECHED_\<USER_NO>) where you can work and create your data artifacts. 
+      Your user is associated with a unique space (TECHED_\<USER_NO>) where you can work and create your data artifacts. 
 
       ![New View](images/SAPDatashpere.png)
 
-2. 👉 Go to SAP Datasphere Data Builder and create New Graphical View
+2. 👉 Go to SAP Datasphere Data Builder and create a New Graphical View
 
       ![New View](images/V_Data_Builder.png)
 
@@ -63,12 +63,12 @@ Refer to the provided solution below for a detailed, step-by-step guide on how t
       - Business Name: *DATESTR*
       - Technical Name: *DATESTR*
       - Data Type: *String*
-      - Lenght: *10*
+      - Length: *10*
       - Expression: *TO_NVARCHAR(DATE, 'YYYYMMDD')*
 
       ![Join](images/cc_column_properties.png)
 
-9. 👉 Drag and move **Calculated Column** on top of **hits_session_country_view** to create the second **JOIN**
+9. 👉 Drag and move the **Calculated Column** on top of **hits_session_country_view** to create the second **JOIN**
    
       ![Join](images/join2.png)
 
