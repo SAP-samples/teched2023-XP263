@@ -71,8 +71,8 @@ Step 6: Run the mobile application to get Gen AI data
 
 Session Content Table:
 
-Exercise 1 - [Prepatory Steps](../MicrosoftAzure/ex3.1/Preparation.md)
-Exercise 2 - [API CAP Deployment](../MicrosoftAzure/ex3.2/API_CAP_Deployment.md)
-Exercise 3 - [Deploy Mobile App](../MicrosoftAzure/ex3.3/Run_Mobile_App_Local.md)
-Exercise 4 - [Publish App (Optional)](../MicrosoftAzure/ex3.4/Publish_Mobile_App(OPTIONAL).md)
+Exercise 1 - [Prepatory Steps](../MicrosoftAzure/ex3.1/Preparation.md) \
+Exercise 2 - [API CAP Deployment](../MicrosoftAzure/ex3.2/API_CAP_Deployment.md) \
+Exercise 3 - [Deploy Mobile App](../MicrosoftAzure/ex3.3/Run_Mobile_App_Local.md) \
+Exercise 4 - [Publish App (Optional)](../MicrosoftAzure/ex3.4/Publish_Mobile_App(OPTIONAL).md) \
 Exercise 5 - [Enable LLM Access](../MicrosoftAzure/ex3.5/Add_LLM_Access.md)
