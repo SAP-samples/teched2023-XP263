@@ -1,0 +1,42 @@
+import { EndpointParameterInstructions } from "@smithy/middleware-endpoint";
+import { Command as $Command } from "@smithy/smithy-client";
+import {
+  Handler,
+  HttpHandlerOptions as __HttpHandlerOptions,
+  MetadataBearer as __MetadataBearer,
+  MiddlewareStack,
+} from "@smithy/types";
+import {
+  ListPhoneNumbersOptedOutInput,
+  ListPhoneNumbersOptedOutResponse,
+} from "../models/models_0";
+import {
+  ServiceInputTypes,
+  ServiceOutputTypes,
+  SNSClientResolvedConfig,
+} from "../SNSClient";
+export { __MetadataBearer, $Command };
+export interface ListPhoneNumbersOptedOutCommandInput
+  extends ListPhoneNumbersOptedOutInput {}
+export interface ListPhoneNumbersOptedOutCommandOutput
+  extends ListPhoneNumbersOptedOutResponse,
+    __MetadataBearer {}
+export declare class ListPhoneNumbersOptedOutCommand extends $Command<
+  ListPhoneNumbersOptedOutCommandInput,
+  ListPhoneNumbersOptedOutCommandOutput,
+  SNSClientResolvedConfig
+> {
+  readonly input: ListPhoneNumbersOptedOutCommandInput;
+  static getEndpointParameterInstructions(): EndpointParameterInstructions;
+  constructor(input: ListPhoneNumbersOptedOutCommandInput);
+  resolveMiddleware(
+    clientStack: MiddlewareStack<ServiceInputTypes, ServiceOutputTypes>,
+    configuration: SNSClientResolvedConfig,
+    options?: __HttpHandlerOptions
+  ): Handler<
+    ListPhoneNumbersOptedOutCommandInput,
+    ListPhoneNumbersOptedOutCommandOutput
+  >;
+  private serialize;
+  private deserialize;
+}

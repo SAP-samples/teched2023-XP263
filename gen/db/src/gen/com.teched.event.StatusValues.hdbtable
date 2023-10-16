@@ -1,0 +1,7 @@
+COLUMN TABLE com_teched_event_StatusValues (
+  code NVARCHAR(5000) NOT NULL,
+  value NVARCHAR(5000),
+  criticality INTEGER,
+  updateCode BOOLEAN,
+  PRIMARY KEY(code)
+)

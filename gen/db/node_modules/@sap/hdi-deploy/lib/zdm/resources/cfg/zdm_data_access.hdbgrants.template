@@ -1,0 +1,10 @@
+{
+    "{{dataContainer}}": {
+        "object_owner": {
+            "container_roles": [ "zdm_access#" ]
+        }{{#if applicationUser.containerRoles}}, 
+        "application_user": {
+            "container_roles": [{{#each applicationUser.containerRoles}} "{{this}}"{{#unless @last}}, {{/unless}}{{/each}}]
+        }{{/if}}
+    }
+}

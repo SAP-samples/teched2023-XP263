@@ -1,0 +1,13 @@
+VIEW BusinessPartnerService_BusinessPartner AS SELECT
+  A_BusinessPartner_0.BusinessPartner,
+  A_BusinessPartner_0.BusinessPartnerName,
+  A_BusinessPartner_0.BusinessPartnerFullName,
+  A_BusinessPartner_0.FirstName,
+  A_BusinessPartner_0.LastName,
+  A_BusinessPartner_0.BusinessPartnerIsBlocked,
+  A_BusinessPartner_0.verificationStatus_code
+FROM com_teched_event_A_BusinessPartner AS A_BusinessPartner_0
+WITH ASSOCIATIONS (
+  MANY TO ONE JOIN BusinessPartnerService_StatusValues AS verificationStatus ON (verificationStatus.code = verificationStatus_code),
+  MANY TO MANY JOIN BusinessPartnerService_BusinessPartnerAddress AS to_BusinessPartnerAddress ON (to_BusinessPartnerAddress.BusinessPartner_BusinessPartner = BusinessPartner)
+)

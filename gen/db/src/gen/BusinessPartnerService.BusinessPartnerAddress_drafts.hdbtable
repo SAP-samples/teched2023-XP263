@@ -1,0 +1,18 @@
+COLUMN TABLE BusinessPartnerService_BusinessPartnerAddress_drafts (
+  BusinessPartner_BusinessPartner NVARCHAR(10) NOT NULL,
+  AddressID NVARCHAR(10) NOT NULL,
+  StreetName NVARCHAR(60) NULL,
+  HouseNumber NVARCHAR(10) NULL,
+  PostalCode NVARCHAR(10) NULL,
+  CityName NVARCHAR(40) NULL,
+  Country NVARCHAR(3) NULL,
+  isModified BOOLEAN NULL DEFAULT FALSE,
+  IsActiveEntity BOOLEAN,
+  HasActiveEntity BOOLEAN,
+  HasDraftEntity BOOLEAN,
+  DraftAdministrativeData_DraftUUID NVARCHAR(36) NOT NULL,
+  PRIMARY KEY(BusinessPartner_BusinessPartner, AddressID)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN BusinessPartnerService_BusinessPartner_drafts AS BusinessPartner ON (BusinessPartner.BusinessPartner = BusinessPartner_BusinessPartner),
+  MANY TO ONE JOIN BusinessPartnerService_DraftAdministrativeData AS DraftAdministrativeData ON (DraftAdministrativeData.DraftUUID = DraftAdministrativeData_DraftUUID)
+)

@@ -1,0 +1,6 @@
+VIEW BusinessPartnerService_StatusValues AS SELECT
+  StatusValues_0.code,
+  StatusValues_0.value,
+  StatusValues_0.criticality,
+  StatusValues_0.updateCode
+FROM com_teched_event_StatusValues AS StatusValues_0

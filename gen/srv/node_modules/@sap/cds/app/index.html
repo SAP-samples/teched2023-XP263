@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{package}}</title>
+        <meta name="color-scheme" content="dark light">
+        <style>
+            body {
+                font-family: Avenir Next, sans-serif;
+                margin: 44px;
+                line-height: 1.5em;
+            }
+            h1 {
+                margin-bottom: 0
+            }
+            h1 + .subtitle {
+                margin: .2em;
+                font-weight: 300;
+            }
+            h1, h2, h3 {
+                font-weight: 400;
+            }
+            h1, a {
+                text-decoration: none;
+            }
+            a.preview {
+                font-size: 90%;
+            }
+            footer {
+                border-top: .5px solid;
+                margin-top: 44px;
+                padding-top: 22px;
+                width: 400px;
+                font-size: 90%;
+            }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background:#001119;
+                color: #789;
+            }
+            h1 + .subtitle {
+                color:#fb0;
+            }
+            h1, a {
+                color:#fb0;
+            }
+            h2, h3 {
+                color:#89a;
+            }
+            a.preview {
+                color: #678;
+            }
+            footer {
+                border-top: .5px solid #456;
+                color: #567;
+            }
+        }
+        </style>
+    </head>
+    <body>
+
+        <h1> Welcome to <i>@sap/cds</i> Server </h1>
+        <p class="subtitle"> Serving {{package}} </p>
+
+        <p> These are the paths currently served &hellip;</p>
+
+        <h2> Web Applications: </h2>
+        <ul>
+            {{apps}}
+        </ul>
+
+        <h2> Service Endpoints: </h2>
+        {{services}}
+
+        <footer>
+            This is an automatically generated page. <br>
+            You can replace it with a custom <code>./{{app}}/index.html</code>.
+        </footer>
+
+    </body>
+</html>

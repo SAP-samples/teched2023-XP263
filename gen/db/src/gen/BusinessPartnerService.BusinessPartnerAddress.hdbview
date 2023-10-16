@@ -1,0 +1,13 @@
+VIEW BusinessPartnerService_BusinessPartnerAddress AS SELECT
+  A_BusinessPartnerAddress_0.BusinessPartner_BusinessPartner,
+  A_BusinessPartnerAddress_0.AddressID,
+  A_BusinessPartnerAddress_0.StreetName,
+  A_BusinessPartnerAddress_0.HouseNumber,
+  A_BusinessPartnerAddress_0.PostalCode,
+  A_BusinessPartnerAddress_0.CityName,
+  A_BusinessPartnerAddress_0.Country,
+  A_BusinessPartnerAddress_0.isModified
+FROM com_teched_event_A_BusinessPartnerAddress AS A_BusinessPartnerAddress_0
+WITH ASSOCIATIONS (
+  MANY TO ONE JOIN BusinessPartnerService_BusinessPartner AS BusinessPartner ON (BusinessPartner.BusinessPartner = BusinessPartner_BusinessPartner)
+)

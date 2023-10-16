@@ -1,0 +1,42 @@
+import { EndpointParameterInstructions } from "@smithy/middleware-endpoint";
+import { Command as $Command } from "@smithy/smithy-client";
+import {
+  Handler,
+  HttpHandlerOptions as __HttpHandlerOptions,
+  MetadataBearer as __MetadataBearer,
+  MiddlewareStack,
+} from "@smithy/types";
+import {
+  ListOriginationNumbersRequest,
+  ListOriginationNumbersResult,
+} from "../models/models_0";
+import {
+  ServiceInputTypes,
+  ServiceOutputTypes,
+  SNSClientResolvedConfig,
+} from "../SNSClient";
+export { __MetadataBearer, $Command };
+export interface ListOriginationNumbersCommandInput
+  extends ListOriginationNumbersRequest {}
+export interface ListOriginationNumbersCommandOutput
+  extends ListOriginationNumbersResult,
+    __MetadataBearer {}
+export declare class ListOriginationNumbersCommand extends $Command<
+  ListOriginationNumbersCommandInput,
+  ListOriginationNumbersCommandOutput,
+  SNSClientResolvedConfig
+> {
+  readonly input: ListOriginationNumbersCommandInput;
+  static getEndpointParameterInstructions(): EndpointParameterInstructions;
+  constructor(input: ListOriginationNumbersCommandInput);
+  resolveMiddleware(
+    clientStack: MiddlewareStack<ServiceInputTypes, ServiceOutputTypes>,
+    configuration: SNSClientResolvedConfig,
+    options?: __HttpHandlerOptions
+  ): Handler<
+    ListOriginationNumbersCommandInput,
+    ListOriginationNumbersCommandOutput
+  >;
+  private serialize;
+  private deserialize;
+}

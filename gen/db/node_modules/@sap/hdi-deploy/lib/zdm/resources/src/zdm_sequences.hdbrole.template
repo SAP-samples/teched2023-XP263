@@ -1,0 +1,12 @@
+{
+	"role": {
+		"name": "zdm_sequences",
+		"object_privileges": [{{#each sequences}}
+			{
+				"name": "{{this.fullname}}",
+				"type": "SEQUENCE",
+				"privileges": [ "SELECT" ]
+			}{{#unless @last}}, {{/unless}}{{/each}}
+		]
+	}
+}

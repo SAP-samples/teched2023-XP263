@@ -1,0 +1,13 @@
+COLUMN TABLE com_teched_event_A_BusinessPartnerAddress (
+  BusinessPartner_BusinessPartner NVARCHAR(10) NOT NULL,
+  AddressID NVARCHAR(10) NOT NULL,
+  StreetName NVARCHAR(60),
+  HouseNumber NVARCHAR(10),
+  PostalCode NVARCHAR(10),
+  CityName NVARCHAR(40),
+  Country NVARCHAR(3),
+  isModified BOOLEAN DEFAULT FALSE,
+  PRIMARY KEY(BusinessPartner_BusinessPartner, AddressID)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN com_teched_event_A_BusinessPartner AS BusinessPartner ON (BusinessPartner.BusinessPartner = BusinessPartner_BusinessPartner)
+)

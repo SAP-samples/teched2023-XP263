@@ -1,0 +1,10 @@
+{
+	"role": {
+		"name": "zdm_access#",
+		"schema_privileges": [
+			{
+				"privileges_with_grant_option":[ {{#if writeAccess}}"SELECT", "INSERT", "UPDATE", "DELETE"{{else}}"SELECT"{{/if}} ]
+			}
+		]
+	}
+}

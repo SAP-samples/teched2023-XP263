@@ -1,0 +1,33 @@
+import { EndpointParameterInstructions } from "@smithy/middleware-endpoint";
+import { Command as $Command } from "@smithy/smithy-client";
+import {
+  Handler,
+  HttpHandlerOptions as __HttpHandlerOptions,
+  MetadataBearer as __MetadataBearer,
+  MiddlewareStack,
+} from "@smithy/types";
+import { UnsubscribeInput } from "../models/models_0";
+import {
+  ServiceInputTypes,
+  ServiceOutputTypes,
+  SNSClientResolvedConfig,
+} from "../SNSClient";
+export { __MetadataBearer, $Command };
+export interface UnsubscribeCommandInput extends UnsubscribeInput {}
+export interface UnsubscribeCommandOutput extends __MetadataBearer {}
+export declare class UnsubscribeCommand extends $Command<
+  UnsubscribeCommandInput,
+  UnsubscribeCommandOutput,
+  SNSClientResolvedConfig
+> {
+  readonly input: UnsubscribeCommandInput;
+  static getEndpointParameterInstructions(): EndpointParameterInstructions;
+  constructor(input: UnsubscribeCommandInput);
+  resolveMiddleware(
+    clientStack: MiddlewareStack<ServiceInputTypes, ServiceOutputTypes>,
+    configuration: SNSClientResolvedConfig,
+    options?: __HttpHandlerOptions
+  ): Handler<UnsubscribeCommandInput, UnsubscribeCommandOutput>;
+  private serialize;
+  private deserialize;
+}

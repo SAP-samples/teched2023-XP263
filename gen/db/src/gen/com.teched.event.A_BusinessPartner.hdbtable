@@ -1,0 +1,13 @@
+COLUMN TABLE com_teched_event_A_BusinessPartner (
+  BusinessPartner NVARCHAR(10) NOT NULL,
+  BusinessPartnerName NVARCHAR(5000),
+  BusinessPartnerFullName NVARCHAR(5000),
+  FirstName NVARCHAR(5000),
+  LastName NVARCHAR(5000),
+  BusinessPartnerIsBlocked BOOLEAN DEFAULT FALSE,
+  verificationStatus_code NVARCHAR(5000),
+  PRIMARY KEY(BusinessPartner)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN com_teched_event_StatusValues AS verificationStatus ON (verificationStatus.code = verificationStatus_code),
+  MANY TO MANY JOIN com_teched_event_A_BusinessPartnerAddress AS to_BusinessPartnerAddress ON (to_BusinessPartnerAddress.BusinessPartner_BusinessPartner = BusinessPartner)
+)

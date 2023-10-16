@@ -1,0 +1,18 @@
+COLUMN TABLE BusinessPartnerService_BusinessPartner_drafts (
+  BusinessPartner NVARCHAR(10) NOT NULL,
+  BusinessPartnerName NVARCHAR(5000) NULL,
+  BusinessPartnerFullName NVARCHAR(5000) NULL,
+  FirstName NVARCHAR(5000) NULL,
+  LastName NVARCHAR(5000) NULL,
+  BusinessPartnerIsBlocked BOOLEAN NULL DEFAULT FALSE,
+  verificationStatus_code NVARCHAR(5000) NULL,
+  IsActiveEntity BOOLEAN,
+  HasActiveEntity BOOLEAN,
+  HasDraftEntity BOOLEAN,
+  DraftAdministrativeData_DraftUUID NVARCHAR(36) NOT NULL,
+  PRIMARY KEY(BusinessPartner)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN BusinessPartnerService_StatusValues AS verificationStatus ON (verificationStatus.code = verificationStatus_code),
+  MANY TO MANY JOIN BusinessPartnerService_BusinessPartnerAddress_drafts AS to_BusinessPartnerAddress ON (to_BusinessPartnerAddress.BusinessPartner_BusinessPartner = BusinessPartner),
+  MANY TO ONE JOIN BusinessPartnerService_DraftAdministrativeData AS DraftAdministrativeData ON (DraftAdministrativeData.DraftUUID = DraftAdministrativeData_DraftUUID)
+)

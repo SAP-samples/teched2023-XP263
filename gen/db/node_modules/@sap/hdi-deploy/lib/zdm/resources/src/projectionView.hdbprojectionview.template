@@ -1,0 +1,5 @@
+PROJECTION VIEW "{{entity.fullname}}" (
+	{{#each entity.columns}}"{{this.viewName}}"{{#unless @last}}, {{/unless}}{{/each}}
+) AS SELECT 
+	{{#each entity.columns}}"{{this.tableName}}"{{#unless @last}}, {{/unless}}{{/each}}
+FROM "{{entity.fullname}}";
