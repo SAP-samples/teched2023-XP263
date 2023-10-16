@@ -85,4 +85,4 @@ That's it! Your React Native app is now published at Expo
 > **Note**
 > The app is only available for the owner and users that have been granted access by inviting them as -at least- Viewer to the owner's Expo account via: https://expo.dev/accounts/OWNER/settings/members (make sure to exchange the placeholder _OWNER_ with the owners identifier)
 
-Continue to - [Exercise 5: Integrate with SAP LLM Services ](../ex3.5/Add_LLM_Access.md)
+Continue to - [Exercise 5: Integrate with SAP LLM Services ](../ex3.5/Add_LLM_Access.md) wjere you will enable Azure Open Ai to interact with the applicaiton
