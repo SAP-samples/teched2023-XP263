@@ -1,11 +1,11 @@
 # Exercise 1.3 Integrate the CAP Application with Amazon SNS
 
-In the exercie of this unit, we will intorduce how to integrate the Amazon Simple Notification Service (SNS) with our Business Partner Validation application, By using the AWS SDK for SNS. After finish this exercise, you will achieve the following objectives
- - Understand how to conifugre the Amazon Simple Notification Service Topic on the AWS Management Console.
- - Understand how to protect your Amazon SNS Topic with Amazon IAM Access Policy.
- - Understands how to consuming the Amazon SNS Topic programmatically within the SAP CAP project by using the AWS SDK for SNS.
+In the exercise of this unit, we will introduce how to integrate the Amazon Simple Notification Service (SNS) with our Business Partner Validation application, By using the AWS SDK for SNS. After finishing this exercise, you will achieve the following objectives
+ - Understand how to configure the Amazon Simple Notification Service Topic on the AWS Management Console.
+ - Understand how to protect your Amazon SNS Topic with the Amazon IAM Access Policy.
+ - Understand how to consume the Amazon SNS Topic programmatically within the SAP CAP project by using the AWS SDK for SNS.
 
-**You could find the complete sample code of this exercise [here](../sample-code)**.
+**You can find the complete sample code of this exercise [here](../sample-code)**.
 
 ## Exercise 1.3.1 Setup Amazon Simple Notification Service (SNS)
 
@@ -15,7 +15,9 @@ In the exercie of this unit, we will intorduce how to integrate the Amazon Simpl
 >   - Amazon IAM User Access Key
 >   - Amazon IAM User Secret Access Key
 
-Amazon Simple Notification Service is a regional service, please create the Amazon SNS Topic in the AWS region which is equals to the region of your BTP subaccount, so that we could minimize the lattency.
+Amazon Simple Notification Service is a regional service, please create the Amazon SNS Topic in the AWS region which is equal to the region of your BTP subaccount, so that we can minimize the latency.
+
+Please Note: There are changes in the user interface in SAP BTP and AWS services from the time the course was recorded. All these changes will be updated constantly in the GitHub repository.
 
 1. 👉 Open **Amazon Simple Notification Service Management Console**, click **Topics** on the left panel, then click the **Create Topic** button.
 
@@ -27,7 +29,7 @@ Amazon Simple Notification Service is a regional service, please create the Amaz
 
 ![Alt text](./images/cap-sns-3.JPG)
 
-3. 👉 Once the topic creation complete successfully, **note down** the **Topic ARN** (Amazon Resource Name) and **Topic Region** value. We will use it later in the exercise.
+3. 👉 Once the topic creation is complete successfully, **note down** the **Topic ARN** (Amazon Resource Name) and **Topic Region** value. We will use it later in the exercise.
 
 > - You could find the Topic Region value inside of the Topic ARN.
 

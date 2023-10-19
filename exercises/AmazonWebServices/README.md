@@ -29,6 +29,6 @@ Once the SAP S/4HANA Admin has completed the changes, there will be an email not
 
 The goal of this introduction was to give a clear understanding of the concepts and techniques involved in building a SAP CAP Application and integrating with Amazon SNS Service for Notifications
 
-Continue to - [Exercise 1.2 -  Extend a Business Process Using a CAP Application on SAP BTP](ex1.1/README.md)
+Continue to - [Exercise 1.1 -  Extend a Business Process Using a CAP Application on SAP BTP](ex1.1/README.md)
 
 
