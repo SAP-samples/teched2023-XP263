@@ -2,13 +2,11 @@
 
 ## Preparation
 
-This step would require the user to have the latest installed version of the **Expo Go** app installed on their mobile device. Users would also require Expo Go CLI on their local systems, which can be installed by running the following command in their terminal:
+This step would require the user to have the latest installed version of the **Expo Go** app installed on their mobile device. Users must create an account using their personal email IDs and set up a username and password. The username will be useful in the below steps. Users would also require Expo Go CLI on their local systems, which can be installed by running the following command in their terminal:
 
  ```console
    $ npm install -g expo-cli
 ```
-
-If you want to publish the React Native app and make it available to other users, you will need to [create an Expo account](https://expo.dev/signup) and use the [Expo CLI](https://docs.expo.dev/more/expo-cli/). This is because Expo provides a platform for hosting and distributing the app, as well as offering tools for building, testing and deploying the project. However, if you only want to run the React Native app locally on your own device, creating an account for Expo is not necessary. You can still use the Expo CLI to serve it locally and test it on your device or emulator without the need for an Expo account. These steps are covered in the next optional exercise.
 
 Enter your <_PARAMETERS_> to the `app.json` file in the `src/mobile-app/` directory:
 
@@ -93,4 +91,4 @@ Perfect! You should now be able to use the app.
 
 > **Note** If you have problems connecting to the app within Expo Go, you may have restrictive networking conditions. To resolve that, please check the [tunneling option](https://docs.expo.dev/more/expo-cli/#tunneling) of Expo.
 
-Continue to - [Exercise 4: Publish Mobile App (Optional)](../ex3.4/Publish_Mobile_App(OPTIONAL).md) where you will deploy the application on your own Expo Go account
+Users can publish the applicatoin nuder their account as well. Expo provides a platform for hosting and distributing the app, as well as offering tools for building, testing and deploying the project. These steps are covered in the next optional exercise. Continue to - [Exercise 4: Publish Mobile App (Optional)](../ex3.4/Publish_Mobile_App(OPTIONAL).md).
