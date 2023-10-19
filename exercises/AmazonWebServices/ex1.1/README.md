@@ -34,7 +34,7 @@ In this section, you will focus on updating and deploying a Node.js CAP project 
       cd projects
    ```
 
-5. 👉 Clone the SAP CAP Application from the GitHub repository. 
+5. 👉 Clone the SAP CAP Application for Business Partner Validation from the GitHub repository. 
 
    ```bash
       git clone https://github.com/alphageek7443/business-partner-validation
@@ -70,7 +70,7 @@ Note: For this exercise, we have deployed and created the destination for access
     **Do not forget to replace the CHANGE-TO-YOUR-S4-Mocker-Server-Application-Endpoint with your real S4-Mocker-Server service endpoint.**
 
     You can get the endpoint URL from the destination. In your SAP BTP Cockpit, go to **Connectivity -> Destinations** and look for the **mockserver** destination to retrieve the URL.
-
+   
     ```node.js
     "[sandbox]": {
         "credentials": {

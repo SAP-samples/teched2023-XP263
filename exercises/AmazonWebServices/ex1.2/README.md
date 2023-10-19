@@ -23,7 +23,7 @@
 
     ![Alt text](./images/cap-dev-89.png)
 
-5. 👉 Switch to the **My Content** tab. Let us create a new Group by clicking the **+ New** button, and selecting Group from the menu.
+5. 👉 Switch to the **Content Manager** tab. Let us create a new Group by clicking the **+ New** button, and selecting Group from the menu.
 
     ![Alt text](./images/cap-dev-90.png)
 
