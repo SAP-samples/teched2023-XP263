@@ -35,9 +35,9 @@ Search for your user under **Security -> Users**. Click on **...** to seelct Ass
 
 6. Choose **File** in the menu on the top and then select **Add Folder to Workspace** from the dropdown menu.
 
-    ![add workspace](./images/add_workspace.png)
+    ![add workspace](../assets/add_workspace.png)
 
-7. Open the project by choosing the **projects** &rarr; **<project_name>** and choose **Open**.
+7. Open the project by choosing the **projects** &rarr; **<----project_name---->** and choose **Open**.
 
 8. Make sure that all necessary entitlements are set on the Subaccount you want to deploy the CAP backend to and [add the remaining entitlements](https://developers.sap.com/tutorials/cp-cf-entitlements-add.html) if missing:
   

@@ -1,6 +1,6 @@
 # Deploy CAP API to Cloud Foundry
 
-1. Set a custom _API_KEY_ (preferably a string generated on your machine) in your `mta.yaml` which will be used as simple authorization for the React Native app (and as well during testing via an API Platform like Postman setting the _API_KEY_ as header `api-key`).
+1. Set a custom _API_KEY_ (preferably a string generated on your machine) in your `mta.yaml` which will be used as simple authorization for the React Native app (and as well during testing via an API Platform like Postman setting the _API_KEY_ as header `api-key`). It is akin to any password that one sets up for a given account.
 
    ```yaml
    ...
@@ -25,9 +25,10 @@
       ...
    ```
 
-2. Via the [Clound Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) login to your Cloud Foundry space to which you want to deploy the CAP API.
-
+2. Login to your Cloud Foundry space to which you want to deploy the CAP API.
+```conosle
 ---------------------------------->>>>>>>>>>>>>**GIVE THE CF SPACE NAME AND 'cf login -a https://....... --sso' command**
+```
 
 3. Change to the respective directory of the CAP API sample (`src/api/`) and deploy the API through:
 
@@ -50,4 +51,4 @@
 
 Success, you made it. The CAP backend should now be available on SAP BTP, Cloud Foundry Runtime via the outputted URL. This URL will be used in the React Native application to connect to the CAP backend.
 
-Continue to - [Exercise 3: Run App on Local sing Expo Go](../ex3.3/Run_Mobile_App_Local.md) where you will enable the mobile app to run locally on mobile devices
+Continue to - [Exercise 3: Run App on Local using Expo Go](../ex3.3/Run_Mobile_App_Local.md) where you will enable the mobile app to run locally on mobile devices
