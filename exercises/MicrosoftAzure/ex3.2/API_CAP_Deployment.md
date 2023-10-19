@@ -51,4 +51,4 @@
 
 Success, you made it. The CAP backend should now be available on SAP BTP, Cloud Foundry Runtime via the outputted URL. This URL will be used in the React Native application to connect to the CAP backend.
 
-Continue to - [Exercise 3: Run App on Local sing Expo Go](../ex3.3/Run_Mobile_App_Local.md) where you will enable the mobile app to run locally on mobile devices
+Continue to - [Exercise 3: Run App on Local using Expo Go](../ex3.3/Run_Mobile_App_Local.md) where you will enable the mobile app to run locally on mobile devices
