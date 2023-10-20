@@ -1,4 +1,4 @@
-# tep 6- Setup Fiori UI Application in SAP Build Work Zone.
+# Exercise 1.2 Setup Fiori UI Application in SAP Build Work Zone.
 
 
 ## Step 1- Setup the SAP Build Work Zone
