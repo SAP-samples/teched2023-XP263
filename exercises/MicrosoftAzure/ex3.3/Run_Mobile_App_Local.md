@@ -87,8 +87,6 @@ Enter your <_PARAMETERS_> to the `app.json` file in the `src/mobile-app/` direct
    iOS Bundling complete 27447ms
    ```
 
-Perfect! You should now be able to use the app.
-
 > **Note** If you have problems connecting to the app within Expo Go, you may have restrictive networking conditions. To resolve that, please check the [tunneling option](https://docs.expo.dev/more/expo-cli/#tunneling) of Expo.
 
-Users can publish the applicatoin nuder their account as well. Expo provides a platform for hosting and distributing the app, as well as offering tools for building, testing and deploying the project. These steps are covered in the next optional exercise. Continue to - [Exercise 4: Publish Mobile App (Optional)](../ex3.4/Publish_Mobile_App(OPTIONAL).md).
+Perfect! You should now be able to use the app. But you will notice that on calling GPT from anywhere within the app, no response will be generated. For this, users will have to enter the right credentials for the Generative AI Hub, that accsses GPT-3.5 from Azure OpenAI. This will be done in the next step.
