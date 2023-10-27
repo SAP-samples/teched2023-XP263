@@ -1,6 +1,6 @@
 # EXERCISE 1. Reference Architecture of an SAP BTP CAP Application using LLMs on Azure OpenAI via SAP Generative AI Hub
 
->## Prerequistics 
+>## Prerequisites 
 
 ## Setting-Up SAP Business Application Studio (BAS) with Smart Converter Project
 
