@@ -22,12 +22,12 @@ Enter your <_PARAMETERS_> to the `app.json` file in the `src/mobile-app/` direct
          "slug": "smart-co2nverter",
          "version": "1.0.0",
          "releaseChannel": "default",
-         "owner": "<YOUR_EXPO_USERNAME_OR_EXPO_ORG>",
+         "owner": "<YOUR_EXPO_USERNAME>", // app username that user had set up
          "privacy": "hidden", // restricts access to the project page to only the owner and other users that have been granted access: https://docs.expo.dev/versions/latest/config/app/#privacy
          #...,
          "extra": {
-             "apiKey": "<YOUR_API_KEY_FOR_CAP>", // insert the generated API_KEY which you entered in the mta.yaml from the CAP backend from the step of the CAP deployment.
-             "baseUrl": "<YOUR_CAP_BASE_URL>", // insert the base url from your deployed CAP application.
+             "apiKey": "<YOUR_API_KEY_FOR_CAP>", // insert the generated API_KEY which you entered in the mta.yaml in previous step during api deployment of the CAP backend
+             "baseUrl": "<YOUR_CAP_BASE_URL>", // insert the base url from your deployed CAP applicationas saved in previous step
              "account": "8fbaa8ca-6cf3-4ea4-9764-82e6b841480d" //account from the sample data. Do not change since this is the only "user" we provide within this sample.
          }
      }
@@ -39,13 +39,13 @@ Enter your <_PARAMETERS_> to the `app.json` file in the `src/mobile-app/` direct
 1. To install the dependencies, change to the `src/mobile-app/` directory and execute:
 
    ```console
-   $ npm install # using NPM
+   $ npm i
    ```
 
 2. In order to start the React Native app, execute one of the following commands:
 
    ```console
-   $ npm start # using NPM
+   $ npm start
    ```
 
    If everything is performed correctly, you should see an output like this:
