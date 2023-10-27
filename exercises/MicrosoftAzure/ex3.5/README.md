@@ -23,9 +23,13 @@ Users would now update credentials on their BTP sub-account.
 7. The **Edit** button has to be clicked which will allow the user to change the configuration of the fields. Following credentials will be provided which need updating on the editor as discussed in the last step.
    
    -> URL
+   
    -> Token Service URL
+   
    -> Client ID
+   
    -> Client Secret
+   
 ![auth8](../assets/auth_8.png)
 
 9. Once entered, user has to click on **Save** to preserve the configuration. Now the application is setup to run the LLM service.
