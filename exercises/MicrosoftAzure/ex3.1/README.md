@@ -1,6 +1,6 @@
 # EXERCISE 1. Reference Architecture of an SAP BTP CAP Application using LLMs on Azure OpenAI via SAP Generative AI Hub
 
->## Prerequistics 
+>## Prerequisites 
 
 ## Setting-Up SAP Business Application Studio (BAS) with Smart Converter Project
 
@@ -37,7 +37,9 @@ Search for your user under **Security -> Users**. Click on **...** to seelct Ass
 
     ![add workspace](../assets/add_workspace.png)
 
-7. Open the project by choosing/typing the **projects** &rarr; **teched2023-XP263/exercises/MicrosoftAzure/applsrcication_codes** and choose **Open**.
-
-  
+7. Open the project by choosing/typing the below then choosing **Open**:
+    ```bash
+    projects --> teched2023-XP263/exercises/MicrosoftAzure/src
+    ```
+    
 Continue to - [Exercise 2: API CAP Deployment ](../ex3.2/README.md) where you will deploy the backend API of the Smart CO2 Converter App.

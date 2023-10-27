@@ -1,6 +1,6 @@
 # EXERCISE 2. Deploy CAP API to Cloud Foundry
 
-1. Set a custom _API_KEY_ (preferably a string generated on your machine) in your `mta.yaml` which will be used as simple authorization for the React Native app (and as well during testing via an API Platform like Postman setting the _API_KEY_ as header `api-key`). It is akin to any password that one sets up for a given account.
+1. Set a custom _API_KEY_ (preferably a string generated on your machine) in your `src/api/mta.yaml` which will be used as simple authorization for the React Native app (and as well during testing via an API Platform like Postman setting the _API_KEY_ as header `api-key`). It is akin to any password that one sets up for a given account.
 
    ```yaml
    ...
@@ -37,7 +37,6 @@
 4. Deploy the API through:
    ```console
    $ npm run deploy # using NPM
-   $ yarn deploy # using yarn
    ```
 
 If all entitlements of your SAP BTP Subaccount are set correctly, you should get the following output at the end of the deployment:
