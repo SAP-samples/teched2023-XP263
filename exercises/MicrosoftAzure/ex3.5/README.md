@@ -20,13 +20,15 @@ Users would now update credentials on their BTP sub-account.
 6. On the next page, user will have to click the **sap-generative-ai-hub** field. This will open the _Destination Configuration_ editor. 
 ![auth7](../assets/auth_7.png)
 
-7. The **Edit** button has to be clicked which will allow the user to change the configuration of the fields. Following credentials will be provided which need updating on the editor.
+7. The **Edit** button has to be clicked which will allow the user to change the configuration of the fields. Following credentials will be provided which need updating on the editor as discussed in the last step.
+   
+-> URL
 -> Token Service URL
 -> Client ID
 -> Client Secret
 ![auth8](../assets/auth_8.png)
 
-8. Once entered, user has to click on **Save** to preserve the configuration. Now the application is setup to run the LLM service.
+9. Once entered, user has to click on **Save** to preserve the configuration. Now the application is setup to run the LLM service.
 ![auth9](../assets/auth_9.png)
 
 Great! The SAP generative AI hub destination is now set up. Users will now be able to utilize the LLM capabilities and experience personalized summaries and suggestions to mitigate CO2 emissions.
