@@ -40,14 +40,12 @@ Enter your <_PARAMETERS_> to the `app.json` file in the `src/mobile-app/` direct
 
    ```console
    $ npm install # using NPM
-   $ yarn install # using yarn
    ```
 
 2. In order to start the React Native app, execute one of the following commands:
 
    ```console
    $ npm start # using NPM
-   $ yarn start # using yarn
    ```
 
    If everything is performed correctly, you should see an output like this:
