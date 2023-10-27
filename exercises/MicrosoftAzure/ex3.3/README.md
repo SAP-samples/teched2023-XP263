@@ -7,7 +7,6 @@ This step would require the user to have the latest version of the **Expo Go** a
   <img src="../assets/Expo_Go_QR.png" alt="Expo Go QR Code" width="200" height="200" />
 </p>
 
-
 Users must create an account using their personal email IDs and set up a username and password. The username will be useful in the below steps. Users would also require Expo Go CLI on their local systems, which can be installed by running the following command in their terminal:
 
  ```console
