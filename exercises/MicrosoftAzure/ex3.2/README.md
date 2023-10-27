@@ -27,8 +27,7 @@
 
 2. Open new terminal and login to your Cloud Foundry space to deploy the CAP API.
    ```conosle
-   cf login -a https://api.cf.ap21.hana.ondemand.com --sso
-
+   $ cf login -a https://api.cf.ap21.hana.ondemand.com --sso
    ```
 3. Change to the respective directory of the CAP API sample `src/api/` from terminal, or open new integrated terminal as shown below.
   ![integ_terminal](../assets/open_integ_terminal.png)
