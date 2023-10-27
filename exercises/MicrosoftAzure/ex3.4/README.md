@@ -22,7 +22,7 @@ https://sdcprod-preview.enable-now.cloud.sap/wa/main/~tag/published/index.html?s
 
 Once the credentials are obtained, users will be able to connect to SAP generative AI hub by updating destination credentials from their SAP BTP cockpit as performd in [Exercise 5: Update Destination Credentials in BTP Sub-Account](../ex3.5/README.md).
 
-In the CAP application, the following part from `src/api/srv/mta.yaml` is where the credentials are housed. On updating them, users will be able to interact with the LLM, in this case GPT-3.5 Turbo.
+In the CAP application, the following part from `src/api/srv/mta.yaml` is where the credentials are housed. On updating them through BTP cockpit, users will be able to interact with the LLM (in this case, gpt-3.5-turbo) in the mobile app.
 
 ```yaml
 .
