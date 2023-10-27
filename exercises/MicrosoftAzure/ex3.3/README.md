@@ -2,7 +2,7 @@
 
 ## Preparation
 
-This step would require the user to have the latest version of the **Expo Go** app installed on their mobile device. Scan the below QR code to download the app.
+This step would require the user to have the latest version of the **Expo Go** app installed on their mobile device. Scan the below QR code to download the app. Users can also directy head to ANdroid Playstore or APple Store and search for Expo Go and directly install the app.
 <p align="center">
   <img src="../assets/Expo_Go_QR.png" alt="Expo Go QR Code" width="200" height="200" />
 </p>
