@@ -25,7 +25,7 @@
       ...
    ```
 
-2. Login to your Cloud Foundry space to which you want to deploy the CAP API.
+2. Open new terminal and login to your Cloud Foundry space to deploy the CAP API.
    ```conosle
    cf login -a https://api.cf.ap21.hana.ondemand.com --sso
 
