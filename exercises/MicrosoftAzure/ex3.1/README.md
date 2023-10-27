@@ -28,13 +28,13 @@ Search for your user under **Security -> Users**. Click on **...** to seelct Ass
    Navigate to the projects folder by typing below in the terminal:
 
    ```bash
-      cd projects
+   $ cd projects
    ```
 
 7. Clone the SAP CAP Application from the GitHub repository. 
 
    ```bash
-      git clone https://github.com/SAP-samples/teched2023-XP263.git
+   $ git clone https://github.com/SAP-samples/teched2023-XP263.git
    ```
 
 8. Choose **File** in the menu on the top and then select **Add Folder to Workspace** from the dropdown menu.
