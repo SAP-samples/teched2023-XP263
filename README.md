@@ -55,8 +55,8 @@ Select any one of the scenarios you want to develop.
     - [Exercise 1.1 - Build and Deploy SAP CAP Application](exercises/AmazonWebServices/ex1.1/README.md)
     - [Exercise 1.2 -  Configure Amazon SNS Service and integrate with SAP CAP Application](exercises/AmazonWebServices/ex1.2/README.md)
       
-- [Exercise 2 - Scenario with GCP](exercises/GoogleCloudPlatform/)
-    - [Exercise 2.1 - Getting Started](exercises/GoogleCloudPlatform/ex2.1/)
+- [Exercise 2 - Scenario with GCP](exercises/GoogleCloud/teched2023-DA264/exercises/)
+    - [Exercise 2.1 - Getting Started](exercises/GoogleCloud/teched2023-DA264/exercises/ex0/README.md)
     - [Exercise 2.2 - Build and expose data views on SAP Datasphere](exercises/ex2/ex2.2/)
     - [Exercise 2.3 - Creating a new view of "Product Sales Country Discount"](exercises/GoogleCloudPlatform/ex2.3/)
     - [Exercise 2.4 - Creating a new analytical model for "Product Sales Country Discount"](exercises/GoogleCloudPlatform/ex2.4/)
