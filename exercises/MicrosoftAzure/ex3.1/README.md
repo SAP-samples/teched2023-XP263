@@ -21,25 +21,29 @@ Search for your user under **Security -> Users**. Click on **...** to seelct Ass
     ![Alt text](../assets/cap-dev-3.png)
 
 
-4. In the menu in SAP Business Application Studio, select **Terminal** &rarr; **New Terminal** and navigate to the projects folder using:
+4. In the menu in SAP Business Application Studio, select **Terminal** &rarr; **New Terminal**.
+  
+    ![Alt text](../assets/bas_menu.png)
+
+   Navigate to the projects folder by typing below in the terminal:
 
    ```bash
       cd projects
    ```
 
-5. Clone the SAP CAP Application from the GitHub repository. 
+7. Clone the SAP CAP Application from the GitHub repository. 
 
    ```bash
       git clone https://github.com/SAP-samples/teched2023-XP263.git
    ```
 
-6. Choose **File** in the menu on the top and then select **Add Folder to Workspace** from the dropdown menu.
+8. Choose **File** in the menu on the top and then select **Add Folder to Workspace** from the dropdown menu.
 
     ![add workspace](../assets/add_workspace.png)
 
-7. Open the project by choosing/typing the below then choosing **Open**:
+9. Open the project by choosing/typing the below then clicking **Open**:
     ```bash
-    projects --> teched2023-XP263/exercises/MicrosoftAzure/src
+    projects/teched2023-XP263/exercises/MicrosoftAzure/src
     ```
     
 Continue to - [Exercise 2: API CAP Deployment ](../ex3.2/README.md) where you will deploy the backend API of the Smart CO2 Converter App.
