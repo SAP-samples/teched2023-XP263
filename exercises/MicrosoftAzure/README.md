@@ -44,7 +44,7 @@ Refer to this documentation for more details - https://github.com/SAP/sap-btp-re
 ## Technical Architecture 
 
 <p align="center">
-<img src="images/architecture.png" alt="architecture" width="1000" />
+<img src="assets/architecture.png" alt="architecture" width="1000" />
 </p>
 
 ## Exercise Outcome
@@ -52,10 +52,10 @@ Refer to this documentation for more details - https://github.com/SAP/sap-btp-re
 After completing these steps you will have a mobile app built using the reusable architecture principles of SAP Cloud Application Programming (CAP) model and React Native on SAP BTP. An application extension using GPT via the Azure Open AI service that combines business context with the capabilities of large language models on SAP BTP.
 
 <p>
-  <img src="images/home.gif" alt="home" width="24%" />
-  <img src="images/challenges.png" alt="challenges" width="24%" />
-  <img src="images/suggestions.png" alt="suggestions" width="24%" />
-  <img src="images/habits.png" alt="habits" width="24%" />
+  <img src="assets/home.gif" alt="home" width="24%" />
+  <img src="assets/challenges.png" alt="challenges" width="24%" />
+  <img src="assets/suggestions.png" alt="suggestions" width="24%" />
+  <img src="assets/habits.png" alt="habits" width="24%" />
 </p>
 
 
