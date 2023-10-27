@@ -37,7 +37,6 @@
 4. Deploy the API through:
    ```console
    $ npm run deploy # using NPM
-   $ yarn deploy # using yarn
    ```
 
 If all entitlements of your SAP BTP Subaccount are set correctly, you should get the following output at the end of the deployment:
