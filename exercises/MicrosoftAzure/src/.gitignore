@@ -211,9 +211,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-# config files
-api/package.json
-api/mta.yaml
-api/.env
-mobile-app/app.json
