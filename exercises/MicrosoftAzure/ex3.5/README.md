@@ -29,11 +29,7 @@ Users would now update credentials on their BTP sub-account.
 8. Once entered, user has to click on **Save** to preserve the configuration. Now the application is setup to run the LLM service.
 ![auth9](../assets/auth_9.png)
 
-Great! The SAP generative AI hub destination is now set up. Users will now be able to utilize the LLM capabilities and experience personalized summaries and suggestions ot mitigate CO2 emissions. Users can start Expo Go, with the following command, and scan the generated QR code again as in [Exercise 3](../ex3.3/Run_Mobile_App_Local.md) and experience the application.
-
-```console
-$ expo start
-```
+Great! The SAP generative AI hub destination is now set up. Users will now be able to utilize the LLM capabilities and experience personalized summaries and suggestions to mitigate CO2 emissions.
 
 ## Congratulations! You have successfully completed the hands-on exercise.
 
