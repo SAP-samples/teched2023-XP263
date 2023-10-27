@@ -3,7 +3,7 @@
 ## Preparation
 
 This step would require the user to have the latest version of the **Expo Go** app installed on their mobile device. Scan the below QR code to download the app.
-![qr](../assets/Expo_Go_QR.png)
+![qr](../assets/Expo_Go_QR.png width="50")
 
 Users must create an account using their personal email IDs and set up a username and password. The username will be useful in the below steps. Users would also require Expo Go CLI on their local systems, which can be installed by running the following command in their terminal:
 
