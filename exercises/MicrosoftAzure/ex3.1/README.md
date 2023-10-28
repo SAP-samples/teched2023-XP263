@@ -12,6 +12,10 @@ Search for your user under **Security -> Users**. Click on **...** to seelct Ass
 
     ![Alt text](../assets/cap-dev-1.png)
 
+2.  (Optional) Click and select the IAS shown below, if this screen appears.
+
+    ![Alt text](../assets/chooseIAS.png)
+
 2. Create a Dev Space.
 
     ![Alt text](../assets/cap-dev-2.png)
