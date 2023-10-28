@@ -21,35 +21,3 @@ https://sdcprod-preview.enable-now.cloud.sap/wa/main/~tag/published/index.html?s
 ```
 
 Once the credentials are obtained, users will be able to connect to SAP generative AI hub by updating destination credentials from their SAP BTP cockpit as performd in [Exercise 5: Update Destination Credentials in BTP Sub-Account](../ex3.5/README.md).
-
-In the CAP application, the following part from `src/api/srv/mta.yaml` is where the credentials are housed. On updating them through BTP cockpit, users will be able to interact with the LLM (in this case, gpt-3.5-turbo) in the mobile app.
-
-```yaml
-.
-.
-.
-  # -------------------- DESTINATION SERVICE -------------------
-  - name: smart-converter-llm-dest
-  # ------------------------------------------------------------
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: destination
-      service-plan: lite
-      config:
-        init_data:
-          instance:
-            existing_destinations_policy: update
-            destinations:
-              - Name: sap-generative-ai-hub
-                Description: SAP Generative AI Hub
-                URL: <URL> # to be entered in BTP Cockpit
-                URL.headers.Content-Type: application/json
-                Type: HTTP
-                ProxyType: Internet
-                Authentication: OAuth2ClientCredentials
-                tokenServiceURL: <token-Service-URL> # to be entered in BTP Cockpit
-                clientId: <client-Id> # to be entered in BTP Cockpit
-                clientSecret: <client-secret> # to be entered in BTP Cockpit
-                HTML5.DynamicDestination: true
-```
-
