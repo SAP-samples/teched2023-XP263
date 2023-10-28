@@ -37,7 +37,7 @@ Search for your user under **Security -> Users**. Click on **...** to seelct Ass
    $ git clone https://github.com/SAP-samples/teched2023-XP263.git
    ```
 
-8. Choose **File** in the menu on the top and then select **Add Folder to Workspace** from the dropdown menu.
+8. Click **Menu->File** and then choose **Add Folder to Workspace** from the dropdown menu.
 
     ![add workspace](../assets/add_workspace.png)
 
