@@ -1,6 +1,6 @@
 # EXERCISE 3. Run the App on Web Browser
 
-Users would also require Expo Go CLI on their local systems, which can be installed by running the following command in their terminal:
+Users would also require Expo Go CLI on their local systems. It is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React. It can be installed by running the following command in the terminal:
 
  ```console
    $ npm install -g expo-cli
