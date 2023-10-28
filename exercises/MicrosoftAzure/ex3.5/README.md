@@ -71,5 +71,5 @@ Just for reference, in the CAP application, the following part from `src/api/srv
 
 ## Congratulations! You have successfully completed the hands-on exercise.
 
-> If users wish to publish the mobile application under their own Expo Go account, they can follow steps given in SAP Discovery Center Mission [Reduce your CO2 footprint using a smart Generative AI application on SAP BTP] (https://discovery-center.cloud.sap/protected/index.html#/missiondetail/4264/4522/)
+> If users wish to publish the mobile application under their own Expo Go account, they can follow steps given in SAP Discovery Center Mission [Reduce your CO2 footprint using a smart Generative AI application on SAP BTP](https://discovery-center.cloud.sap/protected/index.html#/missiondetail/4264/4522/)
 
