@@ -49,7 +49,11 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
 
 2. A [SAP Business Application Studio](https://www.sap.com/products/technology-platform/business-application-studio.html) in the SAP Business Technology Platform account. To set up a SAP Business Application Studio you can follow the instructions [Set Up SAP Business Application Studio for Development ](https://developers.sap.com/tutorials/appstudio-onboarding.html)
 
-3. A [SAP HANA Database in the SAP HANA Cloud Service](https://www.sap.com/india/products/technology-platform/hana.html). To set up a SAP HANA Database in the SAP HANA Cloud Service you can follow the instructions [Start using SAP HANA Cloud in SAP BTP Cockpit](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html) 
+3. A [SAP HANA Database in the SAP HANA Cloud Service](https://www.sap.com/india/products/technology-platform/hana.html). To set up a SAP HANA Database in the SAP HANA Cloud Service you can follow the instructions [Start using SAP HANA Cloud in SAP BTP Cockpit](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html)
+  
+5. [SAP AI Launchpad](https://help.sap.com/docs/ai-launchpad)
+
+6. [SAP AI Core](https://community.sap.com/topics/ai-core-artificial-intelligence) 
 
 ## Exercises
 
