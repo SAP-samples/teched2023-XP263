@@ -1,13 +1,17 @@
 # EXERCISE 3. Run the Mobile App (React Native)
 
-## Preparation
+-------- Changes for running on website
 
 This step would require the user to have the latest version of the **Expo Go** app installed on their mobile device. Scan the below QR code to download the app. Users can also directy head to ANdroid Playstore or APple Store and search for Expo Go and directly install the app.
 <p align="center">
   <img src="../assets/Expo_Go_QR.png" alt="Expo Go QR Code" width="200" height="200" />
 </p>
 
-Users must create an account using their personal email IDs and set up a username and password. The username will be useful in the below steps. Users would also require Expo Go CLI on their local systems, which can be installed by running the following command in their terminal:
+Users must create an account using their personal email IDs and set up a username and password. The username will be useful in the below steps.
+
+----------
+
+Users would also require Expo Go CLI on their local systems, which can be installed by running the following command in their terminal:
 
  ```console
    $ npm install -g expo-cli
@@ -36,13 +40,16 @@ Enter your <_PARAMETERS_> to the `app.json` file in the `src/mobile-app/` direct
 
 ## Start the React Native app
 
-1. To install the dependencies, change to the `src/mobile-app/` directory and execute:
+1. Change to the `src/mobile-app/` directory through terminal or by executing steps below:
+   ![mobile_app](../assets/integ_terminal_app.png)
+
+2. To install dependencies like in previous step, user has to execute below command:
 
    ```console
    $ npm i
    ```
 
-2. In order to start the React Native app, execute one of the following commands:
+3. In order to start the React Native app, execute the following command:
 
    ```console
    $ npm start
@@ -83,7 +90,7 @@ Enter your <_PARAMETERS_> to the `app.json` file in the `src/mobile-app/` direct
    › Press ? │ show all commands
    ```
 
-3. Follow the instructions to run the app in Expo Go: _Scan the QR code above with Expo Go (Android) or the Camera app (iOS)_
+4. Follow the instructions to run the app in Expo Go: _Scan the QR code above with Expo Go (Android) or the Camera app (iOS)_
 
    ```console
    Logs for your project will appear below. Press Ctrl+C to exit.
