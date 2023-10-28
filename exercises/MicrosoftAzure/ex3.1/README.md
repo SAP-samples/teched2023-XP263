@@ -4,9 +4,9 @@
 
 ## Setting-Up SAP Business Application Studio (BAS) with Smart Converter Project
 
-Search for your user under **Security -> Users**. Click on **...** to seelct Assign Role Collection, search for **Business_Application_Studio** and assign all the roles to your user.
+<!--Search for your user under **Security -> Users**. Click on **...** to seelct Assign Role Collection, search for **Business_Application_Studio** and assign all the roles to your user.
 
-  ![Alt text](../assets/pre-basrole.png)
+  ![Alt text](../assets/pre-basrole.png)-->
 
 1. Login into your SAP BTP subaccount. Click the **Instance and Subscriptions** on the left menu, and then click the **Go to Application** button of the SAP Business Application Studio service subscription. Click on the Default Identity Provider to log in to SAP BAS.
 
