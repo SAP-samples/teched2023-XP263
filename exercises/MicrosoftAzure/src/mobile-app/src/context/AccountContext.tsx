@@ -67,7 +67,7 @@ const AccountProvider = ({ children }: any) => {
     const [state, setState] = useState<IAccount>(initialAccountState);
     const [monthlySummary, setMonthlySummary] = useState<IMonthlySummary>({} as IMonthlySummary);
     const [transactionSummaries, setTransactionSummaries] = useState<{ [month: string]: ITransactionSummary }>({});
-    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
     const [consideredMonth, setConsideredMonth] = useState<Moment>(moment());
     const [categories, setCategories] = useState<{ [categoryId: string]: ICategory }>({});
     const [challenges, setChallenges] = useState<Array<IChallenge>>([]);
@@ -79,7 +79,7 @@ const AccountProvider = ({ children }: any) => {
     const fetchData = async () => {
         setIsLoading(true);
         await Promise.all([fetchHabitCategories(), fetchCategories(), fetchAccountData(), fetchChallenges()]);
-        setIsLoading(false);
+        setTimeout(()=> setIsLoading(false), 1000);
     };
 
     useEffect(() => {

@@ -19,7 +19,7 @@ const CarouselSummary = () => {
     const { colors } = useTheme();
     return (
         <View>
-            <ScrollView
+            {/* <ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 onMomentumScrollEnd={(event) => setActiveSummary(event.nativeEvent.contentOffset.x > 0 ? 1 : 0)}
@@ -27,14 +27,15 @@ const CarouselSummary = () => {
                 decelerationRate={0}
                 contentContainerStyle={styles.container}
             >
-                <View style={styles.firstSummary}>
+                {/* <View style={styles.firstSummary}>
                     <CurrentPeriodSummary style={{ height: SUMMARY_HEIGHT }} />
-                </View>
+                </View> */} */}
 
                 <View style={styles.secondSummary}>
+                    <CurrentPeriodSummary style={{ height: SUMMARY_HEIGHT }} />
                     <PeriodicSummary style={{ height: SUMMARY_HEIGHT }} />
                 </View>
-            </ScrollView>
+            {/* </ScrollView> */}
             <HorizontalContainer style={{ position: "relative" }}>
                 {Array.from({ length: 2 }, (_: any, id: number) => (
                     <Icon

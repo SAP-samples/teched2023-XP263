@@ -13,7 +13,7 @@ build-parameters:
         - #npx -p @sap/cds-dk cds build --production
 
 modules:
-  - name: smart-converter-api-srv-${space}
+  - name: smart-converter-api-srv
     type: nodejs
     path: gen/srv
     parameters:
@@ -57,7 +57,7 @@ resources:
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: smart-converter-api-tfeindia-${space}
+        xsappname: smart-converter-api-tfeindia
         tenant-mode: dedicated
   # -------------------- DESTINATION SERVICE -------------------
   - name: smart-converter-llm-dest
@@ -73,12 +73,13 @@ resources:
             destinations:
               - Name: sap-generative-ai-hub
                 Description: SAP Generative AI Hub
-                URL: <URL> # to be entered in BTP Cockpit
+                URL: "<GEN AI Hub Deployment URL>" # to be entered in BTP Cockpit
                 URL.headers.Content-Type: application/json
+                URL.headers.AI-Resource-Group: tfe-india
                 Type: HTTP
                 ProxyType: Internet
                 Authentication: OAuth2ClientCredentials
-                tokenServiceURL: <token-Service-URL> # to be entered in BTP Cockpit
-                clientId: <client-Id> # to be entered in BTP Cockpit
-                clientSecret: <client-secret> # to be entered in BTP Cockpit
+                tokenServiceURL: "<Token Service URL>" # to be entered in BTP Cockpit
+                clientId: "<Client ID>" # to be entered in BTP Cockpit
+                clientSecret: "<Client Secret>" # to be entered in BTP Cockpit
                 HTML5.DynamicDestination: true

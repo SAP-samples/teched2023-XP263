@@ -1,9 +1,11 @@
 import cds from "@sap/cds";
+import cors from "cors";
 import express, { NextFunction, Request, Response } from "express";
 
 cds.on("bootstrap", (app: unknown) => {
     const envs = process.env as any;
     const API_KEY_CAP = envs["API_KEY"];
+    (app as express.Application).use(cors());
     (app as express.Application).get("/*", (req: Request, res: Response, next: NextFunction) => {
         const API_KEY_HEADER = req.headers["api-key"];
         if (!API_KEY_CAP) {

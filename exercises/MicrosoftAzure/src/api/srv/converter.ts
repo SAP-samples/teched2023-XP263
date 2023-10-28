@@ -69,7 +69,8 @@ export class ConverterService extends ApplicationService {
         // @ts-ignore
         const response = await generativeAIHub.send({
             // @ts-ignore
-            query: "POST",
+            // method: "POST",
+            query: "POST /chat/completions?api-version=2023-05-15",
             data: payload
         });
         return response;
@@ -88,7 +89,8 @@ export class ConverterService extends ApplicationService {
             // @ts-ignore
             const response = await generativeAIHub.send({
                 // @ts-ignore
-                query: "POST",
+                // method: "POST",
+                query: "POST /chat/completions?api-version=2023-05-15",
                 data: payload
             });
             console.log("gpt response is : " + response);

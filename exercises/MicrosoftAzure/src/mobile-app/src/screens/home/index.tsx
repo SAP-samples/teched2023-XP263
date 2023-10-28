@@ -16,7 +16,7 @@ const Home = () => {
                     <CarouselSummary />
                 </View>
                 <View style={{ marginTop: 32 }}>
-                    <Equivalencies />
+                    {/* <Equivalencies /> */}
                 </View>
                 <View style={{ marginTop: 32 }}>
                     <EmissionsByCategoryTile />

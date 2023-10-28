@@ -3,7 +3,7 @@
         "name": "smart-co2nverter-llm",
         "slug": "smart-co2nverter-llm",
         "version": "1.0.0",
-        "owner": "<YOUR_EXPO GO_USERNAME>",
+        "owner": "vedant_gupta",
         "orientation": "portrait",
         "icon": "./src/assets/icon.png",
         "userInterfaceStyle": "dark",
@@ -30,7 +30,7 @@
         },
         "extra": {
             "apiKey": "a3b8107c",
-            "baseUrl": "https://technical-field-enablement-tfe-india-dev-dev-smart-conv213f3296.cfapps.eu20.hana.ondemand.com",
+            "baseUrl": "https://sap-teched-2023-xp263-002-mnd679xc-dev01-smart-convertera006285.cfapps.ap21.hana.ondemand.com",
             "account": "8fbaa8ca-6cf3-4ea4-9764-82e6b841480d"
         }
     }
