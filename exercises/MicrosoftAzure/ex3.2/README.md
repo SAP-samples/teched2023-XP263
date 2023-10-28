@@ -25,14 +25,35 @@
       ...
    ```
 -->
-1. Open new terminal and login to your Cloud Foundry space to deploy the CAP API.
-   ```conosle
-   $ cf login -a https://api.cf.ap21.hana.ondemand.com --sso
-   ```
-2. Change to the respective directory of the CAP API sample `src/api/` from terminal, or open new integrated terminal as shown below.
+1. Now to login to cloud foundry, click the Business Application Studio search bar. Enter ">cfLogin" (including ">") and select the "CF: Login to Cloud Foundry".
+
+   ![ref](../assets/step1cflogin.png)
+
+   ![ref](../assets/step2cflogin.png)
+
+2. Choose the "SSO Passcode" option and click the "Open a new broswer page..." link.
+
+   ![ref](../assets/step3cflogin.png)
+
+3. Enter "tdct3ched1-platform" and choose "Sign in with alternative identity provider".
+
+   ![ref](../assets/step4cflogin.png)
+
+4. Click the copy button to save it to the clipboard and paste it in "SSO passcode". Click "Sign in".
+
+   ![ref](../assets/step5_1cflogin.png)
+
+   ![ref](../assets/step5cflogin.png)
+
+5. Select the cloud foundry organization and space and click "Apply".
+
+   ![ref](../assets/step6cflogin.png)
+
+2. Open new integrated terminal as shown below for the folder `src/api/` (Right click on the folder).
+
   ![integ_terminal](../assets/open_integ_terminal.png)
 
-4. Install all dependencies for the API deployment through below command:
+4. In the terminal, install all dependencies for the API deployment through below command:
    ```console
    $ npm i # creates node_moudles directory
    ```
@@ -41,22 +62,11 @@
    $ npm run deploy # command reference can be checked in src/api/package.json
    ```
 
-If all entitlements of your SAP BTP Subaccount are set correctly, you should get the following output at the end of the deployment:
+8. Wait till the deployment is finished. If all entitlements of your SAP BTP Subaccount are set correctly, you should get the following output at the end of the deployment:
 
-```console
-   ...
-   Application "smart-converter-api-srv" staged
-   Starting application "smart-converter-api-srv"...
-   Application "smart-converter-api-srv" started and available at "your-subaccount-smart-conve70da6a68.cfapps.eu10.hana.ondemand.com"
-   ...
-   Process finished.
-   ...
-```
+   ![ref](../assets/URLAPICAP.png)
 
-Success, you made it. The CAP backend should now be available on SAP BTP, Cloud Foundry Runtime via the outputted URL. For example:
-```console
-https://your-subaccount-smart-conve70da6a68.cfapps.eu10.hana.ondemand.com
-```
-This URL, which will be specific for each user, will be used in the React Native application to connect to the CAP backend.
+9. Copy this URL, which will be used in the React Native application to connect to the CAP backend
+
 
 Continue to - [Exercise 3: Run App on Local using Expo Go](../ex3.3/README.md) where you will enable the mobile app to run locally on mobile devices

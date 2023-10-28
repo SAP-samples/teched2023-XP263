@@ -29,7 +29,7 @@ const CarouselSummary = () => {
             >
                 {/* <View style={styles.firstSummary}>
                     <CurrentPeriodSummary style={{ height: SUMMARY_HEIGHT }} />
-                </View> */} */}
+                </View> */} 
 
                 <View style={styles.secondSummary}>
                     <CurrentPeriodSummary style={{ height: SUMMARY_HEIGHT }} />

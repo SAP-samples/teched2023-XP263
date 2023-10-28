@@ -30,14 +30,23 @@ Users would now update credentials on their BTP sub-account.
    
    -> Client Secret
    
-![auth8](../assets/auth_8.png)
+    ![auth8](../assets/auth_8.png)
 
 9. Once entered, user has to click on **Save** to preserve the configuration. Now the application is setup to run the LLM service.
-![auth9](../assets/auth_9.png)
+
+    ![auth9](../assets/auth_9.png)
+
 
 Great! The SAP generative AI hub destination is now set up. Users will now be able to utilize the LLM capabilities and experience personalized summaries and suggestions to mitigate CO2 emissions.
 
-Just for reference, in the CAP application, the following part from `src/api/srv/mta.yaml` is where the credentials are housed. On updating them through BTP cockpit, users will be able to interact with the LLM (in this case, gpt-3.5-turbo) in the mobile app.
+  ![auth9](../assets/genaisummarize.png)  
+
+  ![auth9](../assets/genairesults.png) 
+
+You can also try various other options, that will trigger the Gen AI service and gives the results. `(Navigate to Suggestions Or Habits tab**)`
+
+
+>Note: Just for reference, in the CAP application, the following part from `src/api/srv/mta.yaml` is where the credentials are housed. On updating them through BTP cockpit, users will be able to interact with the LLM (in this case, gpt-3.5-turbo) in the mobile app.
 
 ```yaml
 .
