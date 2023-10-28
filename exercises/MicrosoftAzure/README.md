@@ -1,6 +1,6 @@
 # Introduction
 
-In this exercise, you will develop a fully functional mobile business application that is integrated with a Large Language Model running on Azure Open AI services. You will deploy an SAP Cloud Application Programming backend that interacts with the LLM through SAP LLM Access Laye,  and a React Native mobile app implementing a Smart CO2 Converter App. 
+In this exercise users will create a robust business application that seamlessly integrates with an Azure OpenAI Large Language Model (LLM) through SAP's generative AI hub. This project comprises two essential components. Firstly, an SAP Cloud Application Programming backend is established to manage data, user authentication, and facilitate interaction with the LLM. Secondly, a user-friendly React Native app, designed as a Smart CO2 Converter, is developed. The application's primary function is to track carbon dioxide (CO2) emissions data and recommend actionable insights and recommendations. This comprehensive solution aims to promote environmental awareness and sustainability through innovative technology.
 
 Broadly, this consists of:
 
@@ -49,7 +49,7 @@ Refer to this documentation for more details - https://github.com/SAP/sap-btp-re
 
 ## Exercise Outcome
 
-After completing these steps you will have a mobile app built using the reusable architecture principles of SAP Cloud Application Programming (CAP) model and React Native on SAP BTP. An application extension using GPT via the Azure Open AI service that combines business context with the capabilities of large language models on SAP BTP.
+After completing these steps you will have an app built using the reusable architecture principles of SAP Cloud Application Programming (CAP) model and React Native on SAP BTP. An application extension using GPT via the Azure Open AI service that combines business context with the capabilities of large language models on SAP BTP.
 
 <p>
   <img src="assets/home.gif" alt="home" width="24%" />
@@ -61,8 +61,8 @@ After completing these steps you will have a mobile app built using the reusable
 
 ## Get Started
 
-Exercise 1 - [Prepatory Steps](../MicrosoftAzure/ex3.1/Preparation.md) \
-Exercise 2 - [API CAP Deployment](../MicrosoftAzure/ex3.2/API_CAP_Deployment.md) \
-Exercise 3 - [Deploy Mobile App using Expo Go](../MicrosoftAzure/ex3.3/Run_Mobile_App_Local.md) \
-Exercise 4 - [Publish App on Expo Go (Optional)](../MicrosoftAzure/ex3.4/Publish_Mobile_App(OPTIONAL).md) \
-Exercise 5 - [Enable SAP LLM Access](../MicrosoftAzure/ex3.5/Add_LLM_Access.md)
+Exercise 1 - [Prepatory Steps](../MicrosoftAzure/ex3.1/README.md) \
+Exercise 2 - [Deploy CAP API to Cloud Foundry](../MicrosoftAzure/ex3.2/README.md) \
+Exercise 3 - [Run the App on Web Browser](../MicrosoftAzure/ex3.3/README.md) \
+Exercise 4 - [Fetch SAP Generative AI Hub Credentials](../MicrosoftAzure/ex3.4/README(OPTIONAL).md) \
+Exercise 5 - [Enable LLM Access](../MicrosoftAzure/ex3.5/README.md)
