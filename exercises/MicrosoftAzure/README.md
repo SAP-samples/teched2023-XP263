@@ -63,6 +63,6 @@ After completing these steps you will have an app built using the reusable archi
 
 Exercise 1 - [Prepatory Steps](../MicrosoftAzure/ex3.1/README.md) \
 Exercise 2 - [Deploy CAP API to Cloud Foundry](../MicrosoftAzure/ex3.2/README.md) \
-Exercise 3 - [Run the App on Web Browser](../MicrosoftAzure/ex3.3/README.md) \
+Exercise 3 - [Run App Locally on Web Browser](../MicrosoftAzure/ex3.3/README.md) \
 Exercise 4 - [Fetch SAP Generative AI Hub Credentials](../MicrosoftAzure/ex3.4/README(OPTIONAL).md) \
 Exercise 5 - [Enable LLM Access](../MicrosoftAzure/ex3.5/README.md)
