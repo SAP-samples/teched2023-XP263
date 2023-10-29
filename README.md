@@ -77,7 +77,7 @@ Select any one of the scenarios you want to develop.
 - [Exercise 3 - Scenario with Azure](exercises/MicrosoftAzure/)
     - [Exercise 3.1 - Prepatory Steps](exercises/MicrosoftAzure/ex3.1/README.md)
     - [Exercise 3.2 - Deploy CAP API to Cloud Foundry](exercises/MicrosoftAzure/ex3.2/README.md)
-    - [Exercise 3.3 - Run the App on Web Browser](exercises/MicrosoftAzure/ex3.3/README.md)
+    - [Exercise 3.3 - Run App Locally on Web Browser](exercises/MicrosoftAzure/ex3.3/README.md)
     - [Exercise 3.4 - Fetch SAP Generative AI Hub Credentials](exercises/MicrosoftAzure/ex3.4/README(OPTIONAL).md)
     - [Exercise 3.5 - Enable LLM Access](exercises/MicrosoftAzure/ex3.5/README.md)
 
