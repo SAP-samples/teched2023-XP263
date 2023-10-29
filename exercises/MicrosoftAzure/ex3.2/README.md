@@ -69,4 +69,4 @@
 9. Copy this URL, which will be used in the React Native application to connect to the CAP backend
 
 
-Continue to - [Exercise 3: Run App on Local using Expo Go](../ex3.3/README.md) where you will enable the mobile app to run locally on mobile devices
+Continue to - [Exercise 3: Run App Locally on Web Browser](../ex3.3/README.md) where you will enable the mobile app to run locally on mobile devices
