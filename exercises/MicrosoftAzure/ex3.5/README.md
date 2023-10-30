@@ -32,7 +32,9 @@ Users would now update credentials on their BTP sub-account.
    
     ![auth8](../assets/auth_8.png)
 
-9. Once entered, user has to click on **Save** to preserve the configuration. Now the application is setup to run the LLM service.
+Make sure that **Use JDK truststore** box is checked. 
+
+8. Once entered, user has to click on **Save** to preserve the configuration. Now the application is setup to run the LLM service.
 
     ![auth9](../assets/auth_9.png)
 
