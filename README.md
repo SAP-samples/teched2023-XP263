@@ -23,13 +23,13 @@ The requirements to follow the exercises in this repository are:
 
 ### For the Amazon Web Service scenario
 
-1. A [SAP Business Technology Platform](https://www.sap.com/india/products/technology-platform.html) account. To set up your own SAP Business Technology Platform account you can follow the instructions on how to [Get a Free Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
+1. [SAP Business Technology Platform](https://www.sap.com/india/products/technology-platform.html) account. To set up your own SAP Business Technology Platform account you can follow the instructions on how to [Get a Free Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
 
-2. A [SAP Business Application Studio](https://www.sap.com/products/technology-platform/business-application-studio.html) in the SAP Business Technology Platform account. To set up a SAP Business Application Studio you can follow the instructions [Set Up SAP Business Application Studio for Development ](https://developers.sap.com/tutorials/appstudio-onboarding.html)
+2. [SAP Business Application Studio](https://www.sap.com/products/technology-platform/business-application-studio.html) in the SAP Business Technology Platform account. To set up a SAP Business Application Studio you can follow the instructions [Set Up SAP Business Application Studio for Development ](https://developers.sap.com/tutorials/appstudio-onboarding.html)
 
-3. A [SAP HANA Database in the SAP HANA Cloud Service](https://www.sap.com/india/products/technology-platform/hana.html). To set up a SAP HANA Database in the SAP HANA Cloud Service you can follow the instructions [Start using SAP HANA Cloud in SAP BTP Cockpit](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html) 
+3. [SAP HANA Database in the SAP HANA Cloud Service](https://www.sap.com/india/products/technology-platform/hana.html). To set up a SAP HANA Database in the SAP HANA Cloud Service you can follow the instructions [Start using SAP HANA Cloud in SAP BTP Cockpit](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html) 
 
-4. A [SAP Build Work Zone](https://www.sap.com/india/products/technology-platform/workzone.html). To set up a SAP Build Work Zone you can follow the instructions [Set Up SAP Build Work Zone](https://developers.sap.com/tutorials/cp-portal-cloud-foundry-getting-started.html)  
+4. [SAP Build Work Zone](https://www.sap.com/india/products/technology-platform/workzone.html). To set up a SAP Build Work Zone you can follow the instructions [Set Up SAP Build Work Zone](https://developers.sap.com/tutorials/cp-portal-cloud-foundry-getting-started.html)  
 
 5. Amazon Web Services Account with SNS Service.
 
@@ -45,11 +45,11 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
 
 ### For Azure scenario
 
-1. A [SAP Business Technology Platform](https://www.sap.com/india/products/technology-platform.html) account. To set up your own SAP Business Technology Platform account you can follow the instructions on how to [Get a Free Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
+1. [SAP Business Technology Platform](https://www.sap.com/india/products/technology-platform.html) account. To set up your own SAP Business Technology Platform account you can follow the instructions on how to [Get a Free Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
 
-2. A [SAP Business Application Studio](https://www.sap.com/products/technology-platform/business-application-studio.html) in the SAP Business Technology Platform account. To set up a SAP Business Application Studio you can follow the instructions [Set Up SAP Business Application Studio for Development ](https://developers.sap.com/tutorials/appstudio-onboarding.html)
+2. [SAP Business Application Studio](https://www.sap.com/products/technology-platform/business-application-studio.html) in the SAP Business Technology Platform account. To set up a SAP Business Application Studio you can follow the instructions [Set Up SAP Business Application Studio for Development ](https://developers.sap.com/tutorials/appstudio-onboarding.html)
 
-3. A [SAP HANA Database in the SAP HANA Cloud Service](https://www.sap.com/india/products/technology-platform/hana.html). To set up a SAP HANA Database in the SAP HANA Cloud Service you can follow the instructions [Start using SAP HANA Cloud in SAP BTP Cockpit](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html)
+3. [SAP HANA Database in the SAP HANA Cloud Service](https://www.sap.com/india/products/technology-platform/hana.html). To set up a SAP HANA Database in the SAP HANA Cloud Service you can follow the instructions [Start using SAP HANA Cloud in SAP BTP Cockpit](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html)
   
 5. [SAP AI Launchpad](https://help.sap.com/docs/ai-launchpad)
 
