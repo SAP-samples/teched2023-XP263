@@ -17,7 +17,7 @@ Follow the step-by-step simulator by clicking the link below. The following cred
 4. clientSecret -> from AI Core service key
 
 ```console
-https://education.hana.ondemand.com/education/pub/techtemped/index.html?show=project!PR_22050D73F86DED80:demo#2
+https://education.hana.ondemand.com/education/pub/techtemped/index.html?show=project!PR_22050D73F86DED80:uebung
 ```
 
 Once the credentials are obtained, users will be able to connect to SAP generative AI hub by updating destination credentials from their SAP BTP cockpit as performd in [Exercise 5: Update Destination Credentials in BTP Sub-Account](../ex3.5/README.md).
