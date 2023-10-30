@@ -92,37 +92,15 @@ modules:
             - Name: hana_app_business_partner_validation_repo_host
               ServiceInstanceName: business-partner-validation-html5-srv
               ServiceKeyName: business-partner-validation-repo-host-key
-              sap.cloud.service: hana.app
+              sap.cloud.service: x263.aws.0XX
             - Authentication: OAuth2UserTokenExchange
               Name: hana_app_uaa_business_partner_validation
               ServiceInstanceName: business-partner-validation-xsuaa-service
               ServiceKeyName: uaa_business-partner-validation-key
-              sap.cloud.service: hana.app
+              sap.cloud.service: x263.aws.0XX
           existing_destinations_policy: ignore
     build-parameters:
       no-source: true
-  # ------------------ App Router -------------------------------
-  - name: business-partner-validation
-  # -------------------------------------------------------------
-    type: approuter.nodejs
-    path: app/ # from cds.env.folders. Consider also cds.env.build.target -> gen/app
-    parameters:
-      keep-existing-routes: true
-      disk-quota: 1024M
-      memory: 1024M
-    build-parameters:
-      ignore:
-        - .env
-        - node_modules/
-        - default-env.json
-    requires:
-      - name: srv-api
-        group: destinations
-        properties:
-          name: srv-api # must be used in xs-app.json as well
-          url: ~{srv-url}
-          forwardAuthToken: true
-      - name: uaa_business-partner-validation
 
 resources:
   # ------------------------------------------------------------

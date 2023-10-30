@@ -1,7 +1,7 @@
 {
     "_version": "1.49.0",
     "sap.app": {
-        "id": "techedawsui",
+        "id": "techedawsui_0XX",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -151,6 +151,6 @@
     },
     "sap.cloud": {
         "public": true,
-        "service": "hana.app"
+        "service": "x263.aws.0XX"
     }
 }
