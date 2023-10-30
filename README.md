@@ -14,7 +14,7 @@ The scenarios for each of the Hyperscalers are as follows:
 
 - **Google Cloud Platform**: Learn to build a category management application with data integration from Google BigQuery and SAP S/4HANA into SAP Dataspshere. 
 
-- **Microsoft Azure**: Build an SAP BTP application and integrate with Azure openAI using SAP Generative AI Hub.
+- **Microsoft Azure**: Build an SAP BTP application and integrate with Microsfot Azure OpenAI using SAP Generative AI Hub.
 
 
 ## Requirements
@@ -43,7 +43,7 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
 
 3. A [Google Cloud account](https://cloud.google.com) with a Google Cloud project enabled with the BigQuery API. If you're new to Google Cloud, [create a Google Cloud account](https://cloud.google.com/free/) and create a [Google Cloud project](https://developers.google.com/workspace/guides/create-project). For new Projects, the BigQuery the BigQuery API is automatically enabled. 
 
-### For Azure scenario
+### For Microsfot Azure scenario
 
 1. [SAP Business Technology Platform](https://www.sap.com/india/products/technology-platform.html) account. To set up your own SAP Business Technology Platform account you can follow the instructions on how to [Get a Free Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
 
