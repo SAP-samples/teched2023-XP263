@@ -55,11 +55,11 @@
 
 4. In the terminal, install all dependencies for the API deployment through below command:
    ```console
-   $ npm i # creates node_moudles directory
+   npm i # creates node_moudles directory
    ```
 7. Deploy the API through:
    ```console
-   $ npm run deploy # command reference can be checked in src/api/package.json
+   npm run deploy # command reference can be checked in src/api/package.json
    ```
 
 8. Wait till the deployment is finished. If all entitlements of your SAP BTP Subaccount are set correctly, you should get the following output at the end of the deployment:
