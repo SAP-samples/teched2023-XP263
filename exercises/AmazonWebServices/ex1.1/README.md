@@ -1,23 +1,20 @@
 # Exercise 1.1 Extend a Business Process Using a CAP Application on SAP BTP
 
->## Prerequistics 
-
-- Access the mock server URL and check whether you can view the records for Business Partner.
-- Check whether the HANA DB is up and running.
-- Assign the roles for accessing SAP Business Application Studio. 
-  
-  Search for your user under **Security -> Users**. Click on **...** to select Assign Role Collection, search for **Business_Application_Studio** and assign all the roles to your user.
-
-  ![Alt text](./images/pre-basrole.png)
-
  
 ## Step 1 - Create a Business Partner Validation Application
 
 In this section, you will focus on updating and deploying a Node.js CAP project in the Business Application Studio
 
-1. 👉 Login into your SAP BTP subaccount. Click the **Instance and Subscriptions** on the left menu, and then click the **Go to Application** button of the SAP Business Application Studio service subscription. Click on the Default Identity Provider to log in to SAP BAS.
+1. Login to [SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/70d96fca-b36b-4215-81c8-c263e090bea5/subaccountoverview).
+
+2. 👉 Login into your SAP BTP subaccount. Click the **Instance and Subscriptions** on the left menu, and then click the **Go to Application** button of the SAP Business Application Studio service subscription. Click on the Default Identity Provider to log in to SAP BAS.
 
     ![Alt text](./images/cap-dev-1.png)
+
+2. If you see this page. Login to the below highlighted IAS:
+
+    ![Alt text](./images/CustomIAS.png)
+
 
 2. 👉 Create a Dev Space.
 
@@ -40,13 +37,21 @@ In this section, you will focus on updating and deploying a Node.js CAP project 
       git clone -b code https://github.com/SAP-samples/teched2023-XP263.git
    ```
 
-6. 👉 Choose **File** in the menu on the top and then select **Add Folder to Workspace** from the dropdown menu.
+6. 👉 Choose **File** in the menu on the top and then select **Add Folder to Workspace** from the menu and click OK.
 
     ![add workspace](./images/add_workspace.png)
 
 7. 👉 Open the project by choosing the **projects** &rarr; **business-partner-validation** and choose **Open**.
 
     ![add workspace](./images/cap-dev-4.png)
+
+8.  Open `manifest.json` file in `"app=>teched-aws-ui=>webapp"`. Update the below highlighted values from `"XX"` to `Your System ID - 01 or 02 or 40`.
+
+    ![add workspace](./images/manifestupdate.png)
+
+9.  Open `mta.yaml` file and update the below highlighted values from `"XX"` to `Your System ID - 01 or 02 or 40`.
+
+    ![add workspace](./images/mtaupdate.png)
 
 ## Step 2- Consume S4-Mock-Server API by using Remote Service functionality provided by SAP CAP
 
@@ -62,28 +67,6 @@ In this step, you will fetch the latest Business Partner data from the S4-Mock-S
 
 Note: For this exercise, we have deployed and created the destination for accessing the mock server.
 
-
-1. 👉 Now let's define the S4-Mock-Server service endpoint, and install the required NPM packages so that we can consume the S4-Mock-Server in the CAP project successfully.
-
-    Open the package.json file under the root directory of your CAP Project and update the code shown below under the **cds.requires.s4_mock_server**. 
-
-    **Do not forget to replace the CHANGE-TO-YOUR-S4-Mocker-Server-Application-Endpoint with your real S4-Mocker-Server service endpoint.**
-
-    You can get the endpoint URL from the destination. In your SAP BTP Cockpit, go to **Connectivity -> Destinations** and look for the **mockserver** destination to retrieve the URL.
-   
-    ```node.js
-    "[sandbox]": {
-        "credentials": {
-            "url": "https://CHANGE-TO-YOUR-S4-Mocker-Server-Application-Endpoint/op-api-business-partner-srv"
-        }
-    },
-    "[production]": {
-        "credentials": {
-            "url": "https://CHANGE-TO-YOUR-S4-Mocker-Server-Application-Endpoint/op-api-business-partner-srv"
-        }
-    }
-    ```
-    ![Alt text](./images/external-url.png)
 
 ## Step 3 - Build your Business Partner Validation Application
 
@@ -105,7 +88,23 @@ In this section, we will show you how to build and deploy your Business Partner 
 
     ![Alt text](./images/cap-dev-76.png)
 
-2. 👉 The **Cloud Foundry **Sign-In** and Targets**** page will be popping up. Choose the **Credentials** as the **Select authentication method**, then **enter the username and password you used to log in to the SAP BTP subaccount**. Click **Sign in**.
+2. 👉 The **Cloud Foundry **Sign-In** and Targets**** page will be popping up. Choose the **Credentials** as the **Select authentication method**, then **enter the username and select SSO Passcode**  and click the "Open a new broswer page..." link. 
+
+   ![ref](./images/step3cflogin.png)
+
+3. Enter "tdct3ched1-platform" and choose "Sign in with alternative identity provider".
+
+   ![ref](./images/step4cflogin.png)
+
+4. Click the copy button to save it to the clipboard and paste it in "SSO passcode". Click "Sign in".
+
+   ![ref](./images/step5_1cflogin.png)
+
+   ![ref](./images/step5cflogin.png)
+
+5. Select the cloud foundry organization and space and click "Apply".
+
+   ![ref](./images/step6cflogin.png)
 
     ![Alt text](./images/cap-dev-77.png)
 
@@ -128,9 +127,6 @@ You should see the **business-partner-validation-srv** is under the **started** 
 2. 👉 The public endpoint of business-partner-validation-srv service will also display in the terminal. Copy the route of the business-partner-validation-srv service from your terminal and open it in the browser.
 
     ![Alt text](./images/cap-dev-85.png)
-
-3. 👉 If you click on the **BusinessPartner**, **BusinessPartnerAddress** you will see the **401 Unauthorized** error. This means that the XSUAA deployment was also a success since we did not assign BusinessPartnerView or BusinessPartnerValidator role to user on the SAP BTP subaccount.
-
 
 ## Congratulations!
 
