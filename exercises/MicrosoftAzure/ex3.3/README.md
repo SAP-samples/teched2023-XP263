@@ -1,11 +1,5 @@
 # EXERCISE 3. Run the App on Web Browser
 
-Users would also require Expo Go CLI on their local systems. It is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React. It can be installed by running the following command in the terminal:
-
- ```console
-   $ npm install -g expo-cli
-```
-
 ## Start the React Native app
 
 1. Open the `app.json` file and paste the URL that you copied from the last exercise here `<REPLACEURL>`, as shown below.
@@ -18,16 +12,22 @@ Users would also require Expo Go CLI on their local systems. It is an open-sourc
 
    ![mobile_app](../assets/integ_terminal_app.png)
 
+   Users would also require Expo Go CLI on their local systems. It is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React. It can be installed by running the following command in the terminal:
+
+   ```console
+   npm install -g expo-cli
+   ```
+
 2. To install dependencies like in previous step, user has to execute below command:
 
    ```console
-   $ npm i
+   npm i
    ```
 
 3. In order to start the React Native app, execute the following command:
 
    ```console
-   $ npm run web
+   npm run web
    ```
 
    If everything is performed correctly, you should see an output like this:

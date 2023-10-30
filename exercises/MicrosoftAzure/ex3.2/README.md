@@ -55,11 +55,11 @@
 
 4. In the terminal, install all dependencies for the API deployment through below command:
    ```console
-   $ npm i # creates node_moudles directory
+   npm i # creates node_moudles directory
    ```
 7. Deploy the API through:
    ```console
-   $ npm run deploy # command reference can be checked in src/api/package.json
+   npm run deploy # command reference can be checked in src/api/package.json
    ```
 
 8. Wait till the deployment is finished. If all entitlements of your SAP BTP Subaccount are set correctly, you should get the following output at the end of the deployment:
@@ -69,4 +69,4 @@
 9. Copy this URL, which will be used in the React Native application to connect to the CAP backend
 
 
-Continue to - [Exercise 3: Run App on Local using Expo Go](../ex3.3/README.md) where you will enable the mobile app to run locally on mobile devices
+Continue to - [Exercise 3: Run App Locally on Web Browser](../ex3.3/README.md) where you will enable the mobile app to run locally on mobile devices

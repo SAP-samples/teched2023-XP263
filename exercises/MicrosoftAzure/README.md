@@ -1,6 +1,6 @@
 # Introduction
 
-In this exercise users will create a robust business application that seamlessly integrates with an Azure OpenAI Large Language Model (LLM) through SAP's generative AI hub. This project comprises two essential components. Firstly, an SAP Cloud Application Programming backend is established to manage data, user authentication, and facilitate interaction with the LLM. Secondly, a user-friendly React Native app, designed as a Smart CO2 Converter, is developed. The application's primary function is to track carbon dioxide (CO2) emissions data and recommend actionable insights and recommendations. This comprehensive solution aims to promote environmental awareness and sustainability through innovative technology.
+In this exercise users will create a robust business application that seamlessly integrates with an Microsoft Azure OpenAI Large Language Model (LLM) through SAP's generative AI hub. This project comprises two essential components. Firstly, an SAP Cloud Application Programming backend is established to manage data, user authentication, and facilitate interaction with the LLM. Secondly, a user-friendly React Native app, designed as a Smart CO2 Converter, is developed. The application's primary function is to track carbon dioxide (CO2) emissions data and recommend actionable insights and recommendations. This comprehensive solution aims to promote environmental awareness and sustainability through innovative technology.
 
 Broadly, this consists of:
 
@@ -19,13 +19,13 @@ SAP AI Launchpad is an application in SAP BTP. With it, one can overview one's o
 </details>
 
 
-**Chat-GPT, Large Language Models and Azure Open AI Services**
+**Chat-GPT, Large Language Models and Microsoft Azure Open AI Services**
 <details>
 ChatGPT is a large language model developed by OpenAI, based on the GPT (3.5 or GPT-4) architecture. It is a machine-learning algorithm that is capable of understanding and generating human-like text in response to user input. ChatGPT has been trained on a massive dataset of text from the internet, allowing it to generate text in a wide range of styles and formats.
 
 Large Language Models (LLMs) like ChatGPT are revolutionizing the field of natural language processing (NLP) by enabling computers to process, generate and understand human language like never before. They are capable of performing a wide range of language-related tasks, such as translation, summarization, question-answering, and even creative writing. With their advanced abilities to understand and generate human language, LLMs like ChatGPT are poised to have a profound impact on a wide range of industries, from customer service and education to healthcare and finance.
 
-Azure OpenAI Service provides REST API access to OpenAI's powerful language models. These models can be easily adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. Users can access the service through REST APIs, Python SDK, or the web-based interface in the Azure OpenAI Studio.
+Microsoft Azure OpenAI Service provides REST API access to OpenAI's powerful language models. These models can be easily adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. Users can access the service through REST APIs, Python SDK, or the web-based interface in the Microsoft Azure OpenAI Studio.
 </details>
 
 **React Native**
@@ -49,7 +49,7 @@ Refer to this documentation for more details - https://github.com/SAP/sap-btp-re
 
 ## Exercise Outcome
 
-After completing these steps you will have an app built using the reusable architecture principles of SAP Cloud Application Programming (CAP) model and React Native on SAP BTP. An application extension using GPT via the Azure Open AI service that combines business context with the capabilities of large language models on SAP BTP.
+After completing these steps you will have an app built using the reusable architecture principles of SAP Cloud Application Programming (CAP) model and React Native on SAP BTP. An application extension using GPT via the  Microsoft Azure Open AI service that combines business context with the capabilities of large language models on SAP BTP.
 
 <p>
   <img src="assets/home.gif" alt="home" width="24%" />
@@ -63,6 +63,6 @@ After completing these steps you will have an app built using the reusable archi
 
 Exercise 1 - [Prepatory Steps](../MicrosoftAzure/ex3.1/README.md) \
 Exercise 2 - [Deploy CAP API to Cloud Foundry](../MicrosoftAzure/ex3.2/README.md) \
-Exercise 3 - [Run the App on Web Browser](../MicrosoftAzure/ex3.3/README.md) \
+Exercise 3 - [Run App Locally on Web Browser](../MicrosoftAzure/ex3.3/README.md) \
 Exercise 4 - [Fetch SAP Generative AI Hub Credentials](../MicrosoftAzure/ex3.4/README(OPTIONAL).md) \
 Exercise 5 - [Enable LLM Access](../MicrosoftAzure/ex3.5/README.md)
