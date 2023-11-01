@@ -38,6 +38,8 @@ In this section, you will focus on updating and deploying a Node.js CAP project 
    ```
 
 6. 👉 Choose **File** in the menu on the top and then select **Add Folder to Workspace** from the menu and click OK.
+    
+    `/home/user/projects/teched2023-XP263/`
 
     ![add workspace](./images/add_workspace.png)
 
