@@ -41,13 +41,11 @@ Search for your user under **Security -> Users**. Click on **...** to seelct Ass
    git clone https://github.com/SAP-samples/teched2023-XP263.git
    ```
 
-8. Click **Menu->File** and then choose **Add Folder to Workspace** from the dropdown menu.
+8. Click **Menu->File** and then choose **Add Folder to Workspace** from the dropdown menu. Open the project by choosing/typing the below then clicking **Open**:
+    ```bash
+    /home/user/projects/teched2023-XP263/exercises/MicrosoftAzure/src
+    ```
 
     ![add workspace](../assets/add_workspace.png)
-
-9. Open the project by choosing/typing the below then clicking **Open**:
-    ```bash
-    projects/teched2023-XP263/exercises/MicrosoftAzure/src
-    ```
     
 Continue to - [Exercise 2: API CAP Deployment ](../ex3.2/README.md) where you will deploy the backend API of the Smart CO2 Converter App.
