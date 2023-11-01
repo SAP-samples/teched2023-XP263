@@ -16,7 +16,7 @@ The scenarios for each of the Hyperscalers are as follows:
 
 - **Microsoft Azure**: Build an SAP BTP application and integrate with Microsfot Azure OpenAI using SAP Generative AI Hub.
 
-
+<!--
 ## Requirements
 
 The requirements to follow the exercises in this repository are:
@@ -54,7 +54,7 @@ To get started, sign up for your [SAP Analytics Cloud Trial.](https://www.sap.co
 5. [SAP AI Launchpad](https://help.sap.com/docs/ai-launchpad)
 
 6. [SAP AI Core](https://community.sap.com/topics/ai-core-artificial-intelligence) 
-
+-->
 ## Exercises
 
 Select any one of the scenarios you want to develop. 
