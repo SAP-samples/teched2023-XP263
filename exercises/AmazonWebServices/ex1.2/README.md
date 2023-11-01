@@ -1,7 +1,7 @@
-# Exercise 1.2 Setup Fiori UI Application in SAP Build Work Zone.
+# Exercise 1.2 Test the deployed application.
 
-
-## Step 1- Setup the SAP Build Work Zone
+<!--
+## Step 1 - Setup the SAP Build Work Zone
 
 1. 👉 Go back to your SAP BTP subaccount cockpit. Go to **Instance and Subscription**. Choose **Create** to add **SAP Build Work Zone, standard edition** as shown below. You should add for both Instance and Subscription.
 
@@ -68,8 +68,16 @@
     ![Alt text](./images/cap-dev-100.png)
 
 ## Step 3- Testing the Business Partner Validation App from End-to-End
+-->
 
-1. 👉 Now go back to the **Manage Business Partner** app in the **SAP Build WorkZone**. Click the **Go** Button to view the Business Partner entry fetched from the S4-Mock-Server.
+1.  Navigate to [HTML5 Applications](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/70d96fca-b36b-4215-81c8-c263e090bea5/html5applications) page in SAP BTP cockpit.
+
+2.  Search with your ID `0XX` as shown in the below example and open the application by clicking on the link.
+
+    ![Alt text](./images/HTML5Application.png)
+
+
+1. Once your application is opened, click the **Go** Button to view the Business Partner entry fetched from the S4-Mock-Server.
 
     ![Alt text](./images/cap-dev-101.png)
 

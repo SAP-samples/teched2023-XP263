@@ -250,7 +250,10 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
 
 ## Step 8 -  Testing the Business Partner Validation Application from End-to-End
 
-1. 👉 Go back to your SAP BTP Trial subaccount. Go to **Instance and Subscriptions**. Click the **Go to application** button of the **SAP Build Work Zone, standard edition** service subscription.
+1. Navigate to [HTML5 Applications](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/70d96fca-b36b-4215-81c8-c263e090bea5/html5applications) page in SAP BTP cockpit and open your deployed fiori app `(search with: 0XX)`
+
+
+<!-- 1.  👉 Go back to your SAP BTP Trial subaccount. Go to **Instance and Subscriptions**. Click the **Go to application** button of the **SAP Build Work Zone, standard edition** service subscription.
 
     ![Alt text](./images/aws-cap-dev-9.png)
 
@@ -260,9 +263,9 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
 
 3. 👉 Click Manage Business Partner App.
 
-    ![Alt text](./images/aws-cap-dev-11.png)
+    ![Alt text](./images/aws-cap-dev-11.png) -->
 
-4. 👉 Now click **Go** to browse all unblocked Business Partner Data fetching from S4-Mock-Server. Now you will see all the Business Partners are in the VERIFIED status.
+4. Now click **Go** to browse all unblocked Business Partner Data fetching from S4-Mock-Server. Now you will see all the Business Partners are in the VERIFIED status.
 
     ![Alt text](./images/aws-cap-dev-12.png)
 
