@@ -57,7 +57,7 @@ resources:
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: smart-converter-api-tfeindia
+        xsappname: smart-converter-api-tfeindia-${space}
         tenant-mode: dedicated
   # -------------------- DESTINATION SERVICE -------------------
   - name: smart-converter-llm-dest
