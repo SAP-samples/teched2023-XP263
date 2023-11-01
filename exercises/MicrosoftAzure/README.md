@@ -19,6 +19,7 @@ SAP AI Launchpad is an application in SAP BTP. With it, one can overview one's o
 </details>
 
 
+<!--
 **Chat-GPT, Large Language Models and Microsoft Azure Open AI Services**
 <details>
 ChatGPT is a large language model developed by OpenAI, based on the GPT (3.5 or GPT-4) architecture. It is a machine-learning algorithm that is capable of understanding and generating human-like text in response to user input. ChatGPT has been trained on a massive dataset of text from the internet, allowing it to generate text in a wide range of styles and formats.
@@ -35,7 +36,7 @@ React Native is a framework for building mobile applications using JavaScript an
 In addition to React Native, there are various tools and services available that can enhance and simplify the process of building mobile applications using this framework. One such tool is Expo, a comprehensive set of tools and services built around React Native. Expo aims to streamline the development process by providing an integrated development environment and access to pre-built components and libraries. Expo supports both JavaScript and TypeScript and includes features like live reloading, push notifications, and over-the-air updates, which can make the app development process faster and more efficient. By using Expo, developers can have a more seamless experience building React Native apps and gain access to many useful features and libraries.
 </details>
 
-
+-->
 ## Reference Architecture of an SAP BTP CAP Application using GPT Models of OpenAI
 
 You want to make use of one of the Large Language Models (LLMs) like the GPT family of LLMs offered by Microsoft Azure OpenAI in combination with an application running on SAP Business Technology Platform (BTP), here is our recommendation how to achieve this and also benefit from the BTP capabilities.

@@ -20,4 +20,14 @@ Follow the step-by-step simulator by clicking the link below. The following cred
 https://education.hana.ondemand.com/education/pub/techtemped/index.html?show=project!PR_22050D73F86DED80:uebung
 ```
 
-Once the credentials are obtained, users will be able to connect to SAP generative AI hub by updating destination credentials from their SAP BTP cockpit as performd in [Exercise 5: Update Destination Credentials in BTP Sub-Account](../ex3.5/README.md).
+Once you complete this, you will have the below details.
+
+1.  `URL`: https://api.ai.internalprod.eu-central-1.aws.ml.hana.ondemand.com/v2/inference/deployments/de1fa5d51981a06d
+
+2.  `clientid`: sb-60335585-18cf-4d9e-9e1a-6638291e9c29!b90831|xsuaa_std!b77089
+
+3.  `clientsecret`: 8a3634c5-7842-4ddd-9809-010cab27219e$LOBKWJZcYFVm6bzhaAbpJsQ7SvNfp-x059xJ4R_f4e0=
+
+4.  `token url`: https://tfe-dev.authentication.sap.hana.ondemand.com/oauth/token
+
+With these credentails, users will be able to connect to SAP generative AI hub by updating destination credentials from their SAP BTP cockpit as performd in [Exercise 5: Update Destination Credentials in BTP Sub-Account](../ex3.5/README.md).
