@@ -6,7 +6,27 @@ In the exercise of this unit, we will introduce how to integrate the Amazon Simp
  - Understand how to consume the Amazon SNS Topic programmatically within the SAP CAP project by using the AWS SDK for SNS.
 
 Pre-requisities:
-Please click on [AWS console](https://catalog.us-east-1.prod.workshops.aws/join?access-code=11ad-044a0b-18) to access Amazon Web Services account that you will be using for this exercise.
+1. Please click on [AWS workshop studio](https://catalog.us-east-1.prod.workshops.aws/join?access-code=11ad-044a0b-18) to access Amazon Web Services account that you will be using for this exercise.
+
+2. Click on **Email one-time password (OTP)**
+    
+   ![Alt text](./images/aws-signin-1.png)
+
+3. In the **Email** field, Enter your personal email id and click on **Send passcode**
+
+    ![Alt text](./images/aws-signin-2.png)
+
+4. You will receive email with the passcode.
+
+    ![Alt text](./images/aws-signin-3.png)
+
+5. Enter the passcode that you received in the above step and click on **Sign in**
+
+    ![Alt text](./images/aws-signin-4.png)
+
+6. Once the signin is successful, it redirects to event page. in the event page, click on **Open AWS console** to open the AWS console.
+
+    ![Alt text](./images/aws-signin-5.png)
 
 **You can find the complete sample code of this exercise [here](../sample-code)**.
 
@@ -22,9 +42,11 @@ Amazon Simple Notification Service is a regional service, please create the Amaz
 
 Please Note: There are changes in the user interface in SAP BTP and AWS services from the time the course was recorded. All these changes will be updated constantly in the GitHub repository.
 
-1. 👉 Open **Amazon Simple Notification Service Management Console**, click **Topics** on the left panel, then click the **Create Topic** button.
+1. In the **AWS console**, search for **Simple Notification Service** and click on **Simple Notification Service**
 
     ![Alt text](./images/aws-sns-1.png)
+
+1. 👉 Click **Topics** on the left panel, then click the **Create Topic** button.
 
     ![Alt text](./images/aws-sns-2.png)
 
