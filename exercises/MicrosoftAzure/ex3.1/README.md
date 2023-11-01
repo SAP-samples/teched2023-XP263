@@ -8,7 +8,7 @@ Search for your user under **Security -> Users**. Click on **...** to seelct Ass
 
   ![Alt text](../assets/pre-basrole.png)-->
 
-1. Login into your (SAP BTP subaccount)[https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/8a5f3874-ae3d-4f8c-af2f-01db54e73119]. Click the **Instance and Subscriptions** on the left menu, and then click the **Go to Application** button of the SAP Business Application Studio service subscription. Click on the Default Identity Provider to log in to SAP BAS.
+1. Login into your [SAP BTP subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/8a5f3874-ae3d-4f8c-af2f-01db54e73119). Click the **Instance and Subscriptions** on the left menu, and then click the **Go to Application** button of the SAP Business Application Studio service subscription. Click on the Default Identity Provider to log in to SAP BAS.
 
     ![Alt text](../assets/cap-dev-1.png)
 
