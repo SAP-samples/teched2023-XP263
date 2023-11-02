@@ -151,6 +151,6 @@
     },
     "sap.cloud": {
         "public": true,
-        "service": "x263.aws.002"
+        "service": "x263.aws.0XX"
     }
 }
