@@ -265,7 +265,7 @@ async function sendEmailNotification(bpID) {
     const AWS_SECRET_ACCESS_KEY = aws.iam.secretAccessKey;
     const businessPartnerID = bpID;
 
-    const modifiedUrl = launchpad.url.replace(/BusinessPartner=''/, `BusinessPartner='${bpID}'`);
+    //const modifiedUrl = launchpad.url.replace(/BusinessPartner=''/, `BusinessPartner='${bpID}'`);
 
     const snsClient = new SNSClient({
         region: REGION,
