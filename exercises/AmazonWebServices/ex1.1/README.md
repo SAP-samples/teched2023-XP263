@@ -44,11 +44,11 @@ In this section, you will focus on updating and deploying a Node.js CAP project 
     
     `/home/user/projects/teched2023-XP263/`
 
-    ![add workspace](./images/add_workspace.png)
+    ![add workspace](./images/add_workspace_1.png)
 
-7. 👉 Open the project by choosing the **projects** &rarr; **business-partner-validation** and choose **Open**.
+<!-- 7. 👉 Open the project by choosing the **projects** &rarr; **business-partner-validation** and choose **Open**.
 
-    ![add workspace](./images/cap-dev-4.png)
+    ![add workspace](./images/cap-dev-4.png) -->
 
 8.  Open `manifest.json` file in `"app=>teched-aws-ui=>webapp"`. Update the below highlighted values from `"XX"` to `Your System ID - 01 or 02 or 40`.
 
