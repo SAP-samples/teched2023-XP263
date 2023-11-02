@@ -123,7 +123,7 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
 
     ![Alt text](./images/aws-sns-16.png)
 
-2. 👉 Expand the **Access policy** tab. Overwrite the access policy as shown below. Then click the **Save Changes** button.
+2. 👉 Expand the **Access policy** tab. Overwrite the access policy as shown below - Update `<IAM-USER-ARN-WE-JUST-CREATED>` & `<AMAZON-SNS-TOPIC-ARN>`. Then click the **Save Changes** button.
 
     ```node.js
     {
@@ -134,10 +134,10 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
           "Sid": "__default_statement_ID",
           "Effect": "Allow",
           "Principal": {
-            "AWS": "IAM-USER-ARN-WE-JUST-CREATED"
+            "AWS": "<IAM-USER-ARN-WE-JUST-CREATED>"
           },
           "Action": "SNS:Publish",
-          "Resource": "AMAZON-SNS-TOPIC-ARN"
+          "Resource": "<AMAZON-SNS-TOPIC-ARN>"
         }
       ]
     }
