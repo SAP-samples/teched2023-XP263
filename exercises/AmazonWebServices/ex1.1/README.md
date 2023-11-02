@@ -31,6 +31,9 @@ In this section, you will focus on updating and deploying a Node.js CAP project 
       cd projects
    ```
 
+    ![Alt text](./images/terminal.png)
+
+
 5. 👉 Clone the SAP CAP Application for Business Partner Validation from the GitHub repository. 
 
    ```bash
