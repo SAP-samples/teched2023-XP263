@@ -70,14 +70,17 @@ In this section, we will introduce how to consume the external APIs by using the
 
 In this step, you will fetch the latest Business Partner data from the S4-Mock-Server by consuming the OP_API_BUSINESS_PARTNER_SRV API exposed by S4-Mock-Server application.
 
-Note: For this exercise, we have deployed and created the destination for accessing the mock server.
+You can check the service [HERE](https://technical-field-enablement-tfe-india-dev-dev-mock-srv.cfapps.eu20.hana.ondemand.com/op-api-business-partner-srv/)
+
+
+We also have deployed and created the destination for accessing the mock server. You can check it [HERE](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/70d96fca-b36b-4215-81c8-c263e090bea5/destinations). `[DO NOT UPDATE THIS! PLEASE!]`
+
+![add workspace](./images/ServiceDestination.png)
 
 
 ## Step 3 - Build your Business Partner Validation Application
 
 In this section, we will show you how to build and deploy your Business Partner Validation CAP project and Fiori UI Application to your SAP BTP subaccount as a Multi-Target Application (MTA)
-
-> - Make sure the SAP HANA DB in the SAP BTP Account is up and running. 
 
 1. 👉 **Right-click** on the **mta.yaml** file under your CAP project root directory, and then choose **Build MTA Project** from the menu.
 
@@ -93,7 +96,7 @@ In this section, we will show you how to build and deploy your Business Partner 
 
     ![Alt text](./images/cap-dev-76.png)
 
-2. 👉 The **Cloud Foundry **Sign-In** and Targets**** page will be popping up. Choose the **Credentials** as the **Select authentication method**, then **enter the username and select SSO Passcode**  and click the "Open a new broswer page..." link. 
+2. 👉 The **Cloud Foundry **Sign-In** and Targets**** page will be popping up. Then **enter the username and select SSO Passcode**  and click the "Open a new broswer page..." link. 
 
    ![ref](./images/step3cflogin.png)
 
@@ -111,7 +114,7 @@ In this section, we will show you how to build and deploy your Business Partner 
 
    ![ref](./images/step6cflogin.png)
 
-    ![Alt text](./images/cap-dev-77.png)
+    <!-- ![Alt text](./images/cap-dev-77.png) -->
 
 3. 👉 Select your SAP BTP subaccount and space, then click **Apply** to complete the sign-in. 
 
