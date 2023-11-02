@@ -157,7 +157,11 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
 
 1. 👉 Let's Install AWS SDK for Node.js in the SAP CAP Project. Open the Business Partner Validation project in the SAP Business Application Studio. Open a new terminal and then issue the command **npm install @aws-sdk/client-sns --save**.
 
-    ![Alt text](./images/aws-cap-dev-1.png)
+    ![Alt text](./images/install_sdk_aws.png)
+
+    ```node.js
+    npm install @aws-sdk/client-sns --save
+    ```
 
 2. 👉 After the installation is completed, open the **package.json** file under your project root directory. You will see that the AWS SDK - SNS Client has been added under the **dependencies** section.
 
