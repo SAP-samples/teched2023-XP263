@@ -100,7 +100,7 @@
 
     ![Alt text](./images/cap-dev-105.png)
 
-6. 👉 Now you will see that the updated ZipCode value 12345 has been persisted back to the S4-Mock-Server, and our application is working as desired. We are all set now.
+6. 👉 Now the data will be saved to the backend.
 
 
 Let's continue to - [Exercise 1.3 - Integrate the CAP Application with Amazon SNS](../ex1.3/README.md)
