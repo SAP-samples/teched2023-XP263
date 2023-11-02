@@ -34,7 +34,7 @@ In this section, you will focus on updating and deploying a Node.js CAP project 
 5. 👉 Clone the SAP CAP Application for Business Partner Validation from the GitHub repository. 
 
    ```bash
-      git clone -b code https://github.com/SAP-samples/teched2023-XP263.git
+      git clone -b handson-code https://github.com/SAP-samples/teched2023-XP263.git
    ```
 
 6. 👉 Choose **File** in the menu on the top and then select **Add Folder to Workspace** from the menu and click OK.
