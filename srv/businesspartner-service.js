@@ -276,8 +276,8 @@ async function sendEmailNotification(bpID) {
     });
 
     let message = `Business Partner ${businessPartnerID} Records Has Been Changed, Please Review and Perform the Validation ASAP. \n`;
-    message += `Please use below link to go the site.\n`;
-    message += modifiedUrl;
+    // message += `Please use below link to go the site.\n`;
+    // message += modifiedUrl;
 
     let params = {
 
