@@ -61,7 +61,7 @@ async function fetchAndSyncData(req) {
                     addresses('CityName'),
                     addresses('Country')
             })
-    }).where('BusinessPartnerIsBlocked=', false);
+    });
     const apiResponse = await mockserver.run(bpSelectQry);
 
     if (!apiResponse) {
