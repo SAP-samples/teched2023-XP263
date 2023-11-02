@@ -18,11 +18,11 @@ Your goal is to navigate through these steps and create a comprehensive data vie
 
 Refer to the provided solution below for a detailed, step-by-step guide on how to complete Exercise 2.
 
-1. 👉 Go to **SAP Datasphere Data Builder** and create a **New Graphical View**
+1. 👉 Go to **SAP Datasphere Data Builder** and create **New Graphical View**
     
 ![New View](images/V_Data_Builder.png)
 
-2. 👉 Open the **Shared Objects** from the Repository, expand the views and drag and drop the **"discount_by_category_date_view"** into the canvas.
+2. 👉 Open the **Shared Objects** from Repository, expand the views and drag and drop the **"discount_by_category_date_view"** into the canvas.
 
 3. 👉 Open the **Views** from the Repository and drop the **"Product_Sales_Country"** view into the canvas.
    
@@ -43,7 +43,7 @@ Refer to the provided solution below for a detailed, step-by-step guide on how t
 
 6. 👉 Keep the Projection columns unchanged
 
-7. 👉 Finalyse the view by giving a name, semantic type and expose for consumption
+7. 👉 Finalise the view by giving a name, semantic type and expose for consumption
     
     - Business Name: *Product_Sales_Country_Discount*
     - Technical Name: *Product_Sales_Country_Discount*
@@ -64,6 +64,15 @@ Refer to the provided solution below for a detailed, step-by-step guide on how t
 10. 👉 Create the following mapping: **DATE->Date**
     
     ![Join](images/assoc_mapping2.png)
+
+14. 👉 Now as we have successfully created the new view "Product Sales Country Discount".
+
+    To view the final data in **Product_Sales_Country_Discount** view, click on the **Data Viewer Icon**.
+
+    ![Join](images/viewfinal2.png)
+
+    > Note: Incase of **Delayed Data Viewing** message, scroll down and click on **View Data**, in order to load the data.
+    > ![New View](images/viewdata.png)
 
 11. 👉 Save and deploy the **Product_Sales_Country_Discount** view
     

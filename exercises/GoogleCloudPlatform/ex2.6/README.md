@@ -15,7 +15,7 @@ Your objective is to create a chart that accurately displays the quantity by pro
 
  ![Chart1](images/sacchart1.png)
 
-### Step-by-Step Solution Guide
+### Step by Step Solution Guide
 
 After assigning the dataset, you can start building your first charts
 
@@ -49,7 +49,7 @@ To complete this exercise, you will need to follow these steps:
 
 1. Select the appropriate chart type for displaying quantity by product category, such as a bar chart or a pie chart.
 2. Choose the appropriate visualization settings, such as the color scheme, labels, and axes, to ensure that the data is easy to read and visually appealing.
-3. Select the appropriate fields from the data source to display discounts by product category.
+3. Select the appropriate fields from the data source to display discount by product category.
 4. Configure any necessary filters or sorting options to ensure that the data is displayed accurately and in the desired order.
 5. Optionally you can add a reference line for the average discount.
 
@@ -57,7 +57,7 @@ Your objective is to create a chart that accurately displays the discount by pro
  
  ![Chart2](images/sacchart2.png)
 
-### Step-by-Step Solution Guide
+### Step by Step Solution Guide
 
 Similar to the previous approach create another chart to visualize the **Discount** per Product Category**
 
@@ -72,8 +72,8 @@ Similar to the previous approach create another chart to visualize the **Discoun
 
 3. 👉 Add a new **Calculation** as a **Measure**
     - Type: **Calculated Measure**
-    - Name: **DiscountC**
-    - Formula: **["AM_Product_Sales_Country_Discount":discount]** (This will be the Analytic Model Name which you created in SAP Datashpere in Exercise 1)
+    - Name: **DiscountCalc**
+    - Formula: **(["AM_Product_Sales_Country_Discount":discount]/["AM_Product_Sales_Country_Discount":Unique_Purchases])\*100** (This will be the Analytic Model Name which you created in SAP Datashpere in Exercise 1)
 
    ![SAC Chart](images/chart2calculatedc.png)
 
@@ -89,6 +89,10 @@ Similar to the previous approach create another chart to visualize the **Discoun
 6. 👉 Exclude the **(not set)** and **${productitem.product.origCatName}** attributes by selecting them and pressing **X**
 
    ![SAC Chart](images/char2exclude.png)
+
+8. 👉 Change the color of the chart to make it different from previous one by going into Color option in Builder, then select your choice of color.
+
+   ![SAC Chart](images/changecolor.png)
 
 7. 👉 Give some proper name ("Discount per Product Category") and your second chart is ready. Optionally you can add a reference line for the average discount.
 
@@ -111,7 +115,7 @@ Your objective is to create a chart that accurately displays the sales quantity 
 
  ![Chart3](images/sacchart3.png)
 
-### Step-by-Step Solution Guide
+### Step by Step Solution Guide
 
 1. 👉 Drag and drop from the left panel another **Chart** widget into the bottom container
 
@@ -135,6 +139,6 @@ Your objective is to create a chart that accurately displays the sales quantity 
 
 ## Congratulations!
 
-Congratulations on completing your Exercise 5! You have successfully created Charts in the Category Management Dashboard for displaying Data!
+Congratulations on completing your Exercise 5! You have successfully created Charts in Category Management Dashboard for displaying Data!
 
 Let's Continue to - [Exercise 2.7 - Creating the Charts in the Category Management Dashboard for Displaying Data](../ex2.7/README.md)

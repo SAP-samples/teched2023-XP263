@@ -1,4 +1,4 @@
-## Exercise 2.7- Creating Input Controls for the Dashboard
+# Exercise 2.7- Creating Input Controls for the Dashboard
 
 This exercise focuses on creating "Input Controls" for the dashboard to filter the data displayed on the dashboard. Input Controls allow users to interact with the dashboard and dynamically change the data displayed based on their preferences.
 
@@ -10,11 +10,11 @@ To complete this challenge, you will need to follow these steps:
 4. Set up the input control to provide options to the users to filter the data. For example, if the input control is a date range selector, the user should be able to select a specific range of dates to view.
 
 
-Your objective is to create input controls that allow users to filter the data displayed on the dashboard based on their preferences, such as selecting a specific product category or country. The input controls should be intuitive and easy to use and should be designed to enhance the user's experience and facilitate their decision-making process. Best of luck!
+Your objective is to create input controls that allow users to filter the data displayed on the dashboard based on their preferences, such as selecting a specific product category or country. The input controls should be intuitive and easy to use, and should be designed to enhance the user's experience and facilitate their decision-making process. Best of luck!
 
 ![Input Control](images/inputcontrol2.png)
 
-### Step-by-Step Solution Guide
+### Step by Step Solution Guide
 
 Finally, after having the charts, you can add some input controls to filter the data displayed on the dashboard 
 
@@ -46,11 +46,6 @@ Below you can find the final result of your dashboard:
 
 You can add more charts to the dashboard at any time to extend its capabilities and better meet the business requirements. The SAP Analytics Cloud platform offers a wide range of chart options, making it possible to display data in a variety of ways to suit different needs and preferences.
 
->An example of more extensive dashboard can be found below
-
- ![SAC Result](images/result2.png)
-
 ## Congratulations!
 
 Congratulations! You've now created your first dashboard using SAP Analytics Cloud to gain insights into sales data based on different product categories. Through this hands-on exercise, you learned how to use the platform to create a simple dashboard to analyze and visualize the data. 
-
