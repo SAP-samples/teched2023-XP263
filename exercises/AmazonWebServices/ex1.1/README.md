@@ -134,5 +134,5 @@ You should see the **business-partner-validation-srv** is under the **started** 
 
 Congratulations on completing your Exercise 1.1! You have successfully deployed an SAP CAP Application in SAP BTP.
 
-Let's continue to - [Exercise 1.2 - Setup Fiori UI Application in SAP Build Work Zone](../ex1.2/README.md)
+Let's continue to - [Exercise 1.2 - Test the deployed application](../ex1.2/README.md)
 
