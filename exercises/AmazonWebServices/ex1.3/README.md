@@ -72,9 +72,14 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
 
     ![Alt text](./images/aws-sns-7.png)
 
-2. 👉 In the **Specify permissions** screen, select **Service** as **SNS**, choose **Actions allowed** as **Publish**, and enter the **SNS Topic ARN** value with the one we just created. Click **Next**.
+2. 👉 In the **Specify permissions** screen, select **Service** as **SNS**, choose **Actions allowed** as **Publish**.
 
     ![Alt text](./images/aws-sns-8.png)
+
+3.  Click on `Add ARN to restrict access` and a popup will come. In the Resource ARN, enter the Topic ARN that you have created earlier and click on **add ARNs**.  Cick **Next**.
+
+    ![Alt text](./images/arn.png)
+
 
 3. 👉 In the **Review and Create** screen, give a proper, read-friendly name for this new IAM policy. Review everything, if it all looks good, click the **Create policy** blue button to create the new IAM policy. **Note Down the name of this policy**, as we will need it in the next step.
 
