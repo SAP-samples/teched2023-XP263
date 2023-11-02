@@ -2,7 +2,7 @@
 
 ## Start the React Native app
 
-1. Open the `app.json` file and paste the URL that you copied from the last exercise here `<REPLACEURL>`, as shown below.
+1. Open the `app.json` file in `mobile-app` direcotry and paste the URL that you copied from the last exercise here `<REPLACEURL>`, as shown below.
 
    ![mobile_app](../assets/REPLACEURL1.png)
 
