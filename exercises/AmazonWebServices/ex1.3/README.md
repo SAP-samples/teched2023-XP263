@@ -169,7 +169,7 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
 
 ## Step 6 - Modify the SAP CAP Project Code
 
-1. 👉 Let's **modify the package.json file** under the **project's root directory**, so that we can add the AWS SNS credentials, and also the frontend Fiori application's endpoint as the environment variables. Ensure you have the below details in package.json under the **cds.requires** section.
+1. 👉 Let's **modify the package.json file** under the **project's root directory**, so that we can add the AWS SNS credentials, and also the frontend Fiori application's endpoint as the environment variables. Ensure you have the below details in package.json under the **cds.requires** section. Update `region` and other variables starting with `REPLACE-` 
 
     ```node.js
     "cds":{
@@ -179,16 +179,13 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
         "aws": {
           "sns": {
             "topicArn": "REPLACE-WITH-YOUR-AWS-SNS-TOPIC-ARN",
-            "region": "REPLACE-WITH-YOUR-AWS-SNS-TOPIC-REGION"
+            "region": "us-east-1"
           },
           "iam": {
             "accessKey": "REPLACE-WITH-YOUR-AWS-IAM-USER-ACCESS-KEY",
             "secretAccessKey": "REPLACE-WITH-YOUR-AWS-IAM-USER-SECRET-ACCESS-KEY"
           }
-        },
-        "launchpad": {
-          "url": "REPLACE-WITH-YOUR-FRONTEND-FIORI-APPLICATION-URL"
-        },
+        }
       }
     }
     ```
