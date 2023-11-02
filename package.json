@@ -59,7 +59,7 @@
         }
       },
       "launchpad": {
-        "url": "REPLACE-WITH-YOUR-FIORI-APP-HOST-NAME-IN-THE-SAP-BUILD-WORK-ZONE/BusinessPartner(BusinessPartner='',IsActiveEntity=true)"
+        "url": "DUMMY"
       },
       "[production]": {
         "auth": {
