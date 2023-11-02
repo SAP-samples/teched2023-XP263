@@ -202,7 +202,7 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
 
     ![Alt text](./images/aws-cap-dev-4.png)
 
-3. 👉 Let's create a new async function, which will be responsible for sending out the email notification programmatically to the Amazon SNS Topic.
+3. 👉 Let's create a new async function (This is already there, you can go and check it), which will be responsible for sending out the email notification programmatically to the Amazon SNS Topic.
 
     ```node.js
     async function sendEmailNotification(bpID){
