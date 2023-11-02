@@ -303,7 +303,7 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
 
     ![Alt text](./images/aws-cap-dev-15.png)
 
-7. 👉 Open your email box, then you should see an email with the title **AWS Notifications******. Open this email and you should see the message to indicate us the Business Partner 1004155 record has been changed. The Fiori application of the Business Partner Validation app is also included in the email. We could click on this URL and it will redirect us back to the Fiori application.
+7. 👉 Open your email box, then you should see an email with the title **AWS Notifications******. Open this email and you should see the message to indicate us the Business Partner `BP ID` record has been changed.
 
     ![Alt text](./images/aws-cap-dev-16.png)
 
