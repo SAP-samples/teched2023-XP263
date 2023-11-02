@@ -28,8 +28,6 @@ Pre-requisities:
 
     ![Alt text](./images/aws-signin-5.png)
 
-**You can find the complete sample code of this exercise [here](../sample-code)**.
-
 ## Step 1 - Setup Amazon Simple Notification Service (SNS)
 
 > - Please note down below values after you finish this section
@@ -70,7 +68,7 @@ Please Note: There are changes in the user interface in SAP BTP and AWS services
 
 ## Step 2 - Setup Amazon IAM Access Policy
 
-1. 👉 Open the Amazon **Identity and Access Management (IAM)** management console. Select **Policies** on the left menu and then click the **Create Policy** blue button to create a new IAM policy.
+1. 👉 Open the Amazon **Identity and Access Management (IAM)** management console `(Search for 'IAM' in the search bar)`. Select **Policies** on the left menu and then click the **Create Policy** blue button to create a new IAM policy.
 
     ![Alt text](./images/aws-sns-7.png)
 
