@@ -61,12 +61,12 @@ Select any one of the scenarios you want to develop.
 
 >**Note**: HandsOn infrastructure may not work anymore. If you want to try these scenarios, we suggest you set up with your own tenant and landscape and also try these scenarios in their original Discovery Center Missions.
 
-- [Exercise 1 - Scenario with AWS](exercises/AmazonWebServices/README.md) - **[GitHub Amazon SNS & SAP CAP Integration]**(https://github.com/SAP-samples/cloud-cap-amazon-sns-integration)
+- [Exercise 1 - Scenario with AWS](exercises/AmazonWebServices/README.md) - **[GitHub Amazon SNS & SAP CAP Integration](https://github.com/SAP-samples/cloud-cap-amazon-sns-integration)**
 
     - [Exercise 1.1 - Build and Deploy SAP CAP Application](exercises/AmazonWebServices/ex1.1/README.md)
     - [Exercise 1.2 -  Configure Amazon SNS Service and integrate with SAP CAP Application](exercises/AmazonWebServices/ex1.2/README.md)
       
-- [Exercise 2 - Scenario with GCP](exercises/GoogleCloudPlatform/) - **[Original DC Mission]**(https://discovery-center.cloud.sap/missiondetail/3666/3709/)
+- [Exercise 2 - Scenario with GCP](exercises/GoogleCloudPlatform/) - **[Original DC Mission](https://discovery-center.cloud.sap/missiondetail/3666/3709/)**
     - [Exercise 2.1 - Getting Started](exercises/GoogleCloudPlatform/ex2.1/)
     - [Exercise 2.2 - Build and expose data views on SAP Datasphere](exercises/GoogleCloudPlatform/ex2.2/)
     - [Exercise 2.3 - Creating a new view of "Product Sales Country Discount"](exercises/GoogleCloudPlatform/ex2.3/)
@@ -75,7 +75,7 @@ Select any one of the scenarios you want to develop.
     - [Exercise 2.6 - Creating the Charts in the Category Management Dashboard for /Displaying Data](exercises/GoogleCloudPlatform/ex2.6)
     - [Exercise 2.7 - Creating Input Controls for the Dashboard](exercises/GoogleCloudPlatform/ex2.7/)
 
-- [Exercise 3 - Scenario with Azure](exercises/MicrosoftAzure/) - **[Original DC Mission]**(https://discovery-center.cloud.sap/missiondetail/4264/4522/)
+- [Exercise 3 - Scenario with Azure](exercises/MicrosoftAzure/) - **[Original DC Mission](https://discovery-center.cloud.sap/missiondetail/4264/4522/)**
     - [Exercise 3.1 - Prepatory Steps](exercises/MicrosoftAzure/ex3.1/README.md)
     - [Exercise 3.2 - Deploy CAP API to Cloud Foundry](exercises/MicrosoftAzure/ex3.2/README.md)
     - [Exercise 3.3 - Run App Locally on Web Browser](exercises/MicrosoftAzure/ex3.3/README.md)
